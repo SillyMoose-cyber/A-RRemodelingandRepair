@@ -1,13 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 
 const Header = () => {
   const location = useLocation();
@@ -57,24 +52,27 @@ const Header = () => {
           </nav>
 
           {/* Mobile menu */}
-          <div className="md:hidden">
-            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[300px]">
-                <nav className="flex flex-col space-y-6 mt-6">
+          <div className="md:hidden relative">
+            <Button 
+              variant="ghost" 
+              size="icon"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+            
+            {mobileMenuOpen && (
+              <div className="absolute right-0 top-full mt-2 w-64 bg-background border border-border rounded-lg shadow-lg z-50">
+                <nav className="flex flex-col py-4">
                   {navItems.map((item) => (
                     <Link
                       key={item.to}
                       to={item.to}
                       onClick={() => setMobileMenuOpen(false)}
                       className={cn(
-                        "text-lg font-medium transition-colors hover:text-primary",
+                        "px-4 py-3 text-lg font-medium transition-colors hover:bg-muted",
                         location.pathname === item.to
-                          ? "text-primary"
+                          ? "text-primary bg-muted"
                           : "text-muted-foreground"
                       )}
                     >
@@ -84,13 +82,13 @@ const Header = () => {
                   <Link
                     to="tel:5023707415"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-lg font-medium bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-3 rounded-md transition-colors text-center"
+                    className="mx-4 mt-2 text-lg font-medium bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-3 rounded-md transition-colors text-center"
                   >
                     Call Now
                   </Link>
                 </nav>
-              </SheetContent>
-            </Sheet>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -13,13 +13,13 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-container section-padding">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/014db96e-63d3-495c-9c6e-6cad27f31762.png" 
               alt="A&R Remodeling & Repair" 
-              className="h-10 w-auto"
+              className="h-12 md:h-16 w-auto"
             />
           </Link>
 

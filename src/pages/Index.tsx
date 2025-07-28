@@ -74,38 +74,29 @@ const Index = () => {
       {/* Hero Section */}
       <section className="section-padding py-20 bg-gradient-to-br from-background to-secondary/30">
         <div className="max-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge variant="secondary" className="mb-4">
-                Serving Central Kentucky
-              </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Quality Work. <span className="text-primary">No Nonsense.</span>
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                At A & R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8" asChild>
-                  <a href="tel:5023707415">
-                    <Phone className="h-5 w-5 mr-2" />
-                    Call (502) 370-7415
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8" asChild>
-                  <a href="/services">
-                    View Services
-                    <ArrowRight className="h-5 w-5 ml-2" />
-                  </a>
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/014db96e-63d3-495c-9c6e-6cad27f31762.png" 
-                alt="A&R Remodeling & Repair" 
-                className="w-full max-w-md mx-auto"
-              />
+          <div className="text-center max-w-4xl mx-auto">
+            <Badge variant="secondary" className="mb-4">
+              Serving Central Kentucky
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Quality Work. <span className="text-primary">No Nonsense.</span>
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              At A & R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-lg px-8" asChild>
+                <a href="tel:5023707415">
+                  <Phone className="h-5 w-5 mr-2" />
+                  Call (502) 370-7415
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
+                <a href="/services">
+                  View Services
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </a>
+              </Button>
             </div>
           </div>
         </div>

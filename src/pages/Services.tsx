@@ -83,7 +83,7 @@ const Services = () => {
               Repairs, remodels, upgrades — all under one roof.
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Whether it's a leaking pipe or a full bathroom transformation, A & R Remodeling & Repair brings skill and experience to every project.
+              Whether it's a leaking pipe or a full bathroom transformation, A&R Remodeling & Repair brings skill and experience to every project.
             </p>
             <p className="text-lg text-foreground">Here's what we can help with:</p>
           </div>

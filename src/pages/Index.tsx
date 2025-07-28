@@ -82,7 +82,7 @@ const Index = () => {
               Quality Work. <span className="text-primary">No Nonsense.</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              At A & R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
+              At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8" asChild>
@@ -107,7 +107,7 @@ const Index = () => {
         <div className="max-container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose A & R
+              Why Choose A&R
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Because getting the job done shouldn't be complicated. We believe in doing honest work, showing up on time, and treating your home like it's our own. That's it. No gimmicks. No runaround.
@@ -133,7 +133,7 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <p className="text-lg font-medium text-foreground">
-              When you hire A & R, you're not just checking a box.
+              When you hire A&R, you're not just checking a box.
             </p>
             <p className="text-lg font-medium text-primary">
               You're hiring a crew that actually cares.

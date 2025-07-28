@@ -18,7 +18,7 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/014db96e-63d3-495c-9c6e-6cad27f31762.png" 
-              alt="A&R Remodeling & Repair" 
+              alt="A&R Remodeling & Repair"
               className="h-12 md:h-16 w-auto"
             />
           </Link>

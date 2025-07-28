@@ -193,7 +193,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-8 md:mt-12">
-            <p className="text-lg text-blue-collar">
+            <p className="text-lg text-blue-collar font-bold">
               That's it. No overcomplicated steps. Just solid work from start to finish.
             </p>
           </div>

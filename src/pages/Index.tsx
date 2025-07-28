@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
+import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -109,10 +110,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Separator */}
-      <div className="max-container">
-        <Separator className="my-8" />
-      </div>
+      {/* Customer Reviews */}
+      <ReviewsCarousel />
 
       {/* Value Proposition */}
       <section className="section-padding py-16">

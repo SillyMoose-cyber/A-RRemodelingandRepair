@@ -96,30 +96,37 @@ const Index = () => {
         
         <div className="max-container relative z-10">
           <div className="text-center max-w-4xl mx-auto fade-in">
-            <Badge className="mb-4 md:mb-6 bg-primary text-primary-foreground hover:bg-primary/90">
-              Serving Central Kentucky
-            </Badge>
+            <div className="flex flex-wrap justify-center gap-2 mb-4 md:mb-6">
+              <Badge className="trust-badge">
+                ⭐ Georgetown, KY Based
+              </Badge>
+              <Badge className="trust-badge">
+                🏆 15+ Years Experience
+              </Badge>
+            </div>
           <h1 className="font-bold mb-4 md:mb-6 text-center">
-            <span className="block md:inline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">A&R</span>
+            <span className="block md:inline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl gradient-text">A&R</span>
             <span className="block md:inline whitespace-nowrap text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl"> Remodeling & Repair</span>
           </h1>
-            <h2 className="text-xl md:text-2xl xl:text-3xl font-bold mb-6 md:mb-8">
-              Quality Work. <span className="text-primary">No Nonsense.</span>
-            </h2>
+            <div className="callout-box mb-6 md:mb-8">
+              <h2 className="text-xl md:text-2xl xl:text-3xl font-bold">
+                Quality Work. <span className="accent-text">No Nonsense.</span>
+              </h2>
+            </div>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 leading-relaxed max-w-3xl mx-auto">
               At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="text-lg px-8" asChild>
+              <Button size="lg" className="text-lg px-8 magnetic-btn" asChild>
                 <a href="tel:5023707415">
-                  <Phone className="h-5 w-5 mr-2" />
+                  <Phone className="h-5 w-5 mr-2 icon-bounce" />
                   Call (502) 370-7415
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-8 magnetic-btn" asChild>
                 <a href="/services">
                   View Services
-                  <ArrowRight className="h-5 w-5 ml-2" />
+                  <ArrowRight className="h-5 w-5 ml-2 icon-bounce" />
                 </a>
               </Button>
             </div>
@@ -165,14 +172,18 @@ const Index = () => {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
       {/* Value Proposition */}
-      <section className="section-padding py-12 md:py-20">
-        <div className="max-container">
+      <section className="section-padding py-12 md:py-20 relative pattern-grid">
+        {/* Geometric Accent */}
+        <div className="geometric-accent w-32 h-32 top-10 right-10 rotate-45"></div>
+        <div className="geometric-accent w-24 h-24 bottom-20 left-10 -rotate-12"></div>
+        
+        <div className="max-container relative z-10">
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
               Why Choose A&R
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Because getting the job done shouldn't be complicated. We believe in doing honest work, showing up on time, and treating your home like it's our own. That's it. No gimmicks. No runaround.
+              Because getting the job done shouldn't be complicated. We believe in doing <span className="accent-text font-semibold">honest work</span>, showing up on time, and treating your home like it's our own. That's it. No gimmicks. No runaround.
             </p>
           </div>
 
@@ -180,13 +191,13 @@ const Index = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <Card key={index} className="text-center h-full hover-scale hover-glow transition-all duration-300 group relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                 <Card key={index} className="text-center h-full hover-scale transition-all duration-300 group relative overflow-hidden shadow-lg hover:shadow-warm border-0">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--accent-warm)/0.05)] to-[hsl(var(--accent-gold)/0.03)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <CardContent className="p-4 sm:p-6 relative z-10">
-                    <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-primary/10 to-primary/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="h-7 w-7 text-primary group-hover:text-[hsl(var(--accent-warm))] transition-colors duration-300" />
+                    <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-[hsl(var(--accent-warm)/0.1)] to-[hsl(var(--accent-gold)/0.1)] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 icon-bounce">
+                      <IconComponent className="h-7 w-7 text-[hsl(var(--accent-warm))] group-hover:text-[hsl(var(--accent-gold))] transition-colors duration-300" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-[hsl(var(--accent-warm))] transition-colors duration-300">{feature.title}</h3>
                     <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
                   </CardContent>
                 </Card>
@@ -195,12 +206,14 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-8 md:mt-12">
-            <p className="text-lg font-medium text-foreground">
-              When you hire A&R, you're not just checking a box.
-            </p>
-            <p className="text-lg font-medium text-primary">
-              You're hiring a crew that actually cares.
-            </p>
+            <div className="callout-box max-w-2xl mx-auto">
+              <p className="text-lg font-medium text-foreground mb-2">
+                When you hire A&R, you're not just checking a box.
+              </p>
+              <p className="text-xl font-bold accent-text">
+                You're hiring a crew that actually cares.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -227,7 +240,7 @@ const Index = () => {
                 )}
                 
                 <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center text-primary-foreground text-2xl font-bold hover-scale hover-glow transition-all duration-300 relative overflow-hidden">
+                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[hsl(var(--accent-warm))] to-[hsl(var(--accent-gold))] rounded-full flex items-center justify-center text-white text-2xl font-bold hover-scale transition-all duration-300 relative overflow-hidden shadow-warm icon-bounce" style={{ animationDelay: `${index * 0.2}s` }}>
                     <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <span className="relative z-10">{step.number}</span>
                   </div>
@@ -258,17 +271,18 @@ const Index = () => {
                 From leaky faucets to radiant floor systems, no job is too big or too small. We show up when we say we will, do the work right the first time, and leave your space cleaner than we found it. That's why so many of our customers call us back — and send their friends our way.
               </p>
               
-              <div className="bg-background/60 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-sm border border-border/50">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+              <div className="bg-gradient-to-br from-background/80 to-background/60 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-elevated border border-[hsl(var(--accent-warm)/0.2)] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[hsl(var(--accent-gold)/0.1)] to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 gradient-text relative z-10">
                   Ready to upgrade your space or fix what's broken?
                 </h3>
-                <div className="flex flex-col items-center gap-4">
-                  <p className="text-xl md:text-2xl text-primary font-semibold">
-                    📞 Call <a href="tel:5023707415" className="hover:underline transition-colors">(502) 370-7415</a>
+                <div className="flex flex-col items-center gap-4 relative z-10">
+                  <p className="text-xl md:text-2xl font-bold relative">
+                    📞 Call <a href="tel:5023707415" className="accent-text hover:underline transition-colors magnetic-btn">(502) 370-7415</a>
                   </p>
-                  <p className="text-base md:text-lg text-muted-foreground">
-                    for fast, reliable help.
-                  </p>
+                  <div className="trust-badge">
+                    ⚡ Fast, reliable help guaranteed
+                  </div>
                 </div>
               </div>
             </div>

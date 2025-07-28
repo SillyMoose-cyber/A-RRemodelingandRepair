@@ -1,8 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Header = () => {
   const location = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
     { to: "/", label: "Home" },
@@ -47,14 +56,41 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu */}
           <div className="md:hidden">
-            <Link
-              to="tel:5023707415"
-              className="text-sm font-medium text-primary hover:text-primary/80"
-            >
-              Call Now
-            </Link>
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px]">
+                <nav className="flex flex-col space-y-6 mt-6">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={cn(
+                        "text-lg font-medium transition-colors hover:text-primary",
+                        location.pathname === item.to
+                          ? "text-primary"
+                          : "text-muted-foreground"
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  <Link
+                    to="tel:5023707415"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-lg font-medium bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-3 rounded-md transition-colors text-center"
+                  >
+                    Call Now
+                  </Link>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>

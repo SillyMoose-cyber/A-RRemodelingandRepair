@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Logo and Company Info */}
           <div className="space-y-4">
             <img 
-              src="/lovable-uploads/014db96e-63d3-495c-9c6e-6cad27f31762.png" 
+              src="/lovable-uploads/a80afabf-b0f8-43e8-b759-e9649e5dafeb.png" 
               alt="A&R Remodeling & Repair" 
               className="h-14 w-auto drop-shadow-sm"
             />

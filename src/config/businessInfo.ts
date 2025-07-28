@@ -4,8 +4,9 @@
 export const businessInfo = {
   googleReviews: {
     rating: 5.0,
-    totalReviews: 47, // 👈 UPDATE THIS NUMBER when you get new reviews
-    lastUpdated: '2024-01-15',
+    totalReviews: 60,
+    displayText: "60+",
+    lastUpdated: '2024-07-28',
     profileUrl: 'https://g.page/ar-remodeling-repair' // Optional: Replace with your actual Google Business Profile URL
   },
   contact: {

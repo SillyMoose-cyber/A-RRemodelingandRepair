@@ -89,7 +89,7 @@ const Index = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-4">
               A&R Remodeling & Repair
             </h1>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold mb-6">
               Quality Work. <span className="text-primary">No Nonsense.</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">

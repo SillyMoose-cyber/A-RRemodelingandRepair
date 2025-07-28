@@ -15,7 +15,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" style={{backgroundColor: 'white', color: 'black'}}>
       <div className="max-container section-padding">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}

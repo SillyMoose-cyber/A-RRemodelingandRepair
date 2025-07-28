@@ -80,23 +80,23 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding py-20 bg-gradient-to-br from-background to-secondary/30">
+      <section className="section-padding py-12 md:py-20 bg-gradient-to-br from-background to-secondary/30">
         <div className="max-container">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge className="mb-4 bg-primary text-primary-foreground hover:bg-primary/90">
+            <Badge className="mb-6 bg-primary text-primary-foreground hover:bg-primary/90">
               Serving Central Kentucky
             </Badge>
-          <h1 className="font-bold mb-4 text-center">
-            <span className="block md:inline text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl">A&R</span>
-            <span className="block md:inline whitespace-nowrap text-2xl sm:text-3xl md:text-6xl lg:text-7xl xl:text-8xl"> Remodeling & Repair</span>
+          <h1 className="font-bold mb-6 text-center">
+            <span className="block md:inline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">A&R</span>
+            <span className="block md:inline whitespace-nowrap text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl"> Remodeling & Repair</span>
           </h1>
-            <h2 className="text-lg md:text-2xl xl:text-3xl font-bold mb-6">
+            <h2 className="text-xl md:text-2xl xl:text-3xl font-bold mb-8">
               Quality Work. <span className="text-primary">No Nonsense.</span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto">
               At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="text-lg px-8" asChild>
                 <a href="tel:5023707415">
                   <Phone className="h-5 w-5 mr-2" />
@@ -139,17 +139,17 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
                 <Card key={index} className="text-center h-full">
-                  <CardContent className="p-6">
+                  <CardContent className="p-4 sm:p-6">
                     <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                       <IconComponent className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3">{feature.title}</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
                   </CardContent>
                 </Card>
               );

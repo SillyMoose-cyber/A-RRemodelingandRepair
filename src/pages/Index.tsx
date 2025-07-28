@@ -86,9 +86,12 @@ const Index = () => {
             <Badge className="mb-4 bg-primary text-primary-foreground hover:bg-primary/90">
               Serving Central Kentucky
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Quality Work. <span className="text-primary">No Nonsense.</span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-4">
+              A&R Remodeling & Repair
             </h1>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Quality Work. <span className="text-primary">No Nonsense.</span>
+            </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
             </p>

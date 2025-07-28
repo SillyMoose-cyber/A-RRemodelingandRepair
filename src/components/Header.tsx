@@ -39,6 +39,12 @@ const Header = () => {
                 {item.label}
               </Link>
             ))}
+            <Link
+              to="tel:5023707415"
+              className="text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md transition-colors"
+            >
+              Call Now
+            </Link>
           </nav>
 
           {/* Mobile menu button */}

@@ -16,14 +16,17 @@ const FloatingCTA = () => {
     }
   };
 
+  if (!isMobile) {
+    return null;
+  }
+
   return (
     <Button
       onClick={handleClick}
-      className="floating-cta fixed bottom-6 right-6 md:top-6 md:bottom-auto rounded-full h-14 w-14 md:h-auto md:w-auto md:rounded-lg md:px-6 shadow-lg bg-primary hover:bg-primary/90 text-primary-foreground"
-      size={isMobile ? "icon" : "default"}
+      className="floating-cta fixed bottom-6 right-6 rounded-full h-14 w-14 shadow-lg bg-primary hover:bg-primary/90 text-primary-foreground"
+      size="icon"
     >
-      <Phone className="h-5 w-5 md:mr-2" />
-      {!isMobile && <span className="hidden md:inline">Call Now</span>}
+      <Phone className="h-5 w-5" />
     </Button>
   );
 };

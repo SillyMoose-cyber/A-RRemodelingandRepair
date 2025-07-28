@@ -87,36 +87,41 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding py-12 md:py-20 bg-gradient-to-br from-background to-secondary/30 relative overflow-hidden pattern-dots">
+      <section className="section-padding py-12 md:py-20 morphing-bg relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="pattern-dots absolute inset-0 opacity-5"></div>
+        
         {/* Floating Icons */}
-        <Hammer className="floating-icon w-12 h-12 top-20 left-10" style={{ animationDelay: '0s' }} />
-        <Zap className="floating-icon w-10 h-10 top-32 right-20" style={{ animationDelay: '2s' }} />
-        <Droplets className="floating-icon w-8 h-8 bottom-40 left-20" style={{ animationDelay: '4s' }} />
-        <Paintbrush className="floating-icon w-10 h-10 bottom-20 right-10" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 pointer-events-none">
+          <Hammer className="floating-icon absolute top-20 left-10 w-8 h-8 text-primary/20 bounce-in stagger-1" style={{'--delay': '0s'} as React.CSSProperties} />
+          <Zap className="floating-icon absolute top-32 right-16 w-6 h-6 text-accent-warm/30 bounce-in stagger-2" style={{'--delay': '1s'} as React.CSSProperties} />
+          <Droplets className="floating-icon absolute bottom-40 left-20 w-7 h-7 text-primary/25 bounce-in stagger-3" style={{'--delay': '2s'} as React.CSSProperties} />
+          <Paintbrush className="floating-icon absolute top-60 right-32 w-5 h-5 text-accent-warm/20 bounce-in stagger-4" style={{'--delay': '3s'} as React.CSSProperties} />
+        </div>
         
         <div className="max-container relative z-10">
-          <div className="text-center max-w-4xl mx-auto fade-in">
-            <Badge className="mb-4 md:mb-6 bg-primary text-primary-foreground hover:bg-primary/90">
+          <div className="text-center max-w-4xl mx-auto">
+            <Badge className="mb-4 md:mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
               Serving Central Kentucky
             </Badge>
-          <h1 className="font-bold mb-4 md:mb-6 text-center">
+          <h1 className="font-bold mb-4 md:mb-6 text-center text-white slide-up">
             <span className="block md:inline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">A&R</span>
             <span className="block md:inline whitespace-nowrap text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl"> Remodeling & Repair</span>
           </h1>
-            <h2 className="text-xl md:text-2xl xl:text-3xl font-bold mb-6 md:mb-8">
-              Quality Work. <span className="text-primary">No Nonsense.</span>
+            <h2 className="text-xl md:text-2xl xl:text-3xl font-bold mb-6 md:mb-8 text-white slide-up stagger-1">
+              Quality Work. <span className="gradient-text">No Nonsense.</span>
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/90 mb-8 md:mb-10 leading-relaxed max-w-3xl mx-auto slide-up stagger-2">
               At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="text-lg px-8" asChild>
+              <Button size="lg" className="text-lg px-8 magnetic-button slide-up stagger-3" asChild>
                 <a href="tel:5023707415">
                   <Phone className="h-5 w-5 mr-2" />
                   Call (502) 370-7415
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-8 glassmorphism border-white/30 text-white hover:bg-white/10 magnetic-button slide-up stagger-4" asChild>
                 <a href="/services">
                   View Services
                   <ArrowRight className="h-5 w-5 ml-2" />
@@ -128,24 +133,24 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding py-12 md:py-16 bg-gradient-to-r from-primary/5 via-accent-warm/5 to-primary/5">
-        <div className="max-container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="fade-in">
-              <div className="stats-counter mb-2">15+</div>
-              <p className="text-muted-foreground font-medium">Years Experience</p>
+      <section className="section-padding py-12 md:py-16 diagonal-divider">
+        <div className="max-container relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center card-3d p-6 rounded-lg glassmorphism">
+              <div className="stats-counter text-3xl md:text-4xl font-bold gradient-text mb-2" data-target="15">15+</div>
+              <p className="text-muted-foreground">Years Experience</p>
             </div>
-            <div className="fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="stats-counter mb-2">500+</div>
-              <p className="text-muted-foreground font-medium">Projects Completed</p>
+            <div className="text-center card-3d p-6 rounded-lg glassmorphism">
+              <div className="stats-counter text-3xl md:text-4xl font-bold gradient-text mb-2" data-target="500">500+</div>
+              <p className="text-muted-foreground">Projects Completed</p>
             </div>
-            <div className="fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="stats-counter mb-2">98%</div>
-              <p className="text-muted-foreground font-medium">Customer Satisfaction</p>
+            <div className="text-center card-3d p-6 rounded-lg glassmorphism">
+              <div className="stats-counter text-3xl md:text-4xl font-bold gradient-text mb-2" data-target="98">98%</div>
+              <p className="text-muted-foreground">Customer Satisfaction</p>
             </div>
-            <div className="fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="stats-counter mb-2">24hr</div>
-              <p className="text-muted-foreground font-medium">Response Time</p>
+            <div className="text-center card-3d p-6 rounded-lg glassmorphism">
+              <div className="stats-counter text-3xl md:text-4xl font-bold gradient-text mb-2" data-target="24">24hr</div>
+              <p className="text-muted-foreground">Response Time</p>
             </div>
           </div>
         </div>
@@ -155,9 +160,19 @@ const Index = () => {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
       {/* Customer Reviews */}
-      <section className="py-16 bg-muted/20">
+      <section className="section-padding py-16 bg-muted/10">
         <div className="max-container">
-          <ReviewsCarousel />
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+              What Our Customers Say
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Read testimonials from satisfied homeowners across Kentucky
+            </p>
+          </div>
+          <div className="glassmorphism p-8 rounded-2xl">
+            <ReviewsCarousel />
+          </div>
         </div>
       </section>
 
@@ -165,10 +180,10 @@ const Index = () => {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
       {/* Value Proposition */}
-      <section className="section-padding py-12 md:py-20">
-        <div className="max-container">
+      <section className="section-padding py-12 md:py-20 diagonal-divider">
+        <div className="max-container relative z-10">
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
               Why Choose A&R
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -180,11 +195,11 @@ const Index = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <Card key={index} className="text-center h-full hover-scale hover-glow transition-all duration-300 group relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <Card key={index} className="text-center h-full card-3d hover-scale hover-glow transition-all duration-500 group relative overflow-hidden bg-gradient-to-br from-card to-muted/10 border-primary/10">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent-warm/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <CardContent className="p-4 sm:p-6 relative z-10">
-                    <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-primary/10 to-primary/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="h-7 w-7 text-primary group-hover:text-[hsl(var(--accent-warm))] transition-colors duration-300" />
+                    <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
+                      <IconComponent className="h-7 w-7 text-white" />
                     </div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
                     <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
@@ -209,10 +224,10 @@ const Index = () => {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
       {/* Process Section */}
-      <section className="section-padding py-10 md:py-16 bg-muted/30">
+      <section className="section-padding py-10 md:py-16 bg-muted/5">
         <div className="max-container">
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Process</h2>
             <p className="text-xl text-muted-foreground">
               We keep it simple — so you can get back to normal faster.
             </p>
@@ -226,14 +241,17 @@ const Index = () => {
                   <div className="hidden lg:block absolute top-8 left-full w-6 h-0.5 bg-gradient-to-r from-primary to-primary/20 transform translate-x-4"></div>
                 )}
                 
-                <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center text-primary-foreground text-2xl font-bold hover-scale hover-glow transition-all duration-300 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <span className="relative z-10">{step.number}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{step.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-                </div>
+                <Card className="card-3d hover-scale transition-all duration-500 bg-gradient-to-br from-card to-muted/5 group overflow-hidden">
+                  <CardContent className="p-6 relative">
+                    <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center text-primary-foreground text-2xl font-bold magnetic-button hover:shadow-deep">
+                      {step.number}
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">{step.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                    {/* Progress indicator */}
+                    <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-primary to-accent-warm transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left w-full"></div>
+                  </CardContent>
+                </Card>
               </div>
             ))}
           </div>
@@ -250,23 +268,24 @@ const Index = () => {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
       {/* Service Highlights */}
-      <section className="section-padding py-12 md:py-16 bg-gradient-to-br from-accent/5 to-secondary/10">
-        <div className="max-container">
+      <section className="section-padding py-12 md:py-16 morphing-bg relative overflow-hidden">
+        <div className="absolute inset-0 glassmorphism"></div>
+        <div className="max-container relative z-10">
           <div className="text-center mb-8 md:mb-12">
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed">
                 From leaky faucets to radiant floor systems, no job is too big or too small. We show up when we say we will, do the work right the first time, and leave your space cleaner than we found it. That's why so many of our customers call us back — and send their friends our way.
               </p>
               
-              <div className="bg-background/60 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-sm border border-border/50">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+              <div className="glassmorphism rounded-lg p-6 md:p-8 border border-white/20">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white">
                   Ready to upgrade your space or fix what's broken?
                 </h3>
                 <div className="flex flex-col items-center gap-4">
-                  <p className="text-xl md:text-2xl text-primary font-semibold">
-                    📞 Call <a href="tel:5023707415" className="hover:underline transition-colors">(502) 370-7415</a>
+                  <p className="text-xl md:text-2xl gradient-text font-semibold">
+                    📞 Call <a href="tel:5023707415" className="hover:underline transition-colors magnetic-button">(502) 370-7415</a>
                   </p>
-                  <p className="text-base md:text-lg text-muted-foreground">
+                  <p className="text-base md:text-lg text-white/80">
                     for fast, reliable help.
                   </p>
                 </div>

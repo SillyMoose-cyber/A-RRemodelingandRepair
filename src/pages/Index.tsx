@@ -111,10 +111,17 @@ const Index = () => {
       </section>
 
       {/* Customer Reviews */}
-      <ReviewsCarousel />
+      <section className="py-16 bg-muted/20">
+        <div className="max-container">
+          <ReviewsCarousel />
+        </div>
+      </section>
+
+      {/* Decorative Separator */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
       {/* Value Proposition */}
-      <section className="section-padding py-16">
+      <section className="section-padding py-20">
         <div className="max-container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

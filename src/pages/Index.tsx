@@ -83,7 +83,7 @@ const Index = () => {
       <section className="section-padding py-20 bg-gradient-to-br from-background to-secondary/30">
         <div className="max-container">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-4">
+            <Badge className="mb-4 bg-primary text-primary-foreground hover:bg-primary/90">
               Serving Central Kentucky
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">

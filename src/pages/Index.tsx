@@ -204,17 +204,27 @@ const Index = () => {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
       {/* Service Highlights */}
-      <section className="section-padding py-10 md:py-16 bg-gradient-to-br from-accent/5 to-secondary/10">
+      <section className="section-padding py-12 md:py-16 bg-gradient-to-br from-accent/5 to-secondary/10">
         <div className="max-container">
           <div className="text-center mb-8 md:mb-12">
-            <p className="text-lg text-muted-foreground mb-4">
-              From leaky faucets to radiant floor systems, no job is too big or too small. We show up when we say we will, do the work right the first time, and leave your space cleaner than we found it. That's why so many of our customers call us back — and send their friends our way.
-            </p>
-            <div className="max-w-3xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Ready to upgrade your space or fix what's broken?</h3>
-              <p className="text-xl text-primary font-semibold">
-                📞 Call <a href="tel:5023707415" className="hover:underline">(502) 370-7415</a> for fast, reliable help.
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
+                From leaky faucets to radiant floor systems, no job is too big or too small. We show up when we say we will, do the work right the first time, and leave your space cleaner than we found it. That's why so many of our customers call us back — and send their friends our way.
               </p>
+              
+              <div className="bg-background/60 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-sm border border-border/50">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+                  Ready to upgrade your space or fix what's broken?
+                </h3>
+                <div className="flex flex-col items-center gap-4">
+                  <p className="text-xl md:text-2xl text-primary font-semibold">
+                    📞 Call <a href="tel:5023707415" className="hover:underline transition-colors">(502) 370-7415</a>
+                  </p>
+                  <p className="text-base md:text-lg text-muted-foreground">
+                    for fast, reliable help.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

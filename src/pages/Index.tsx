@@ -4,6 +4,7 @@ import FloatingCTA from "@/components/FloatingCTA";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 import { 
   CheckCircle, 
   Clock, 
@@ -108,6 +109,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Separator */}
+      <div className="max-container">
+        <Separator className="my-8" />
+      </div>
+
       {/* Value Proposition */}
       <section className="section-padding py-16">
         <div className="max-container">
@@ -148,6 +154,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Decorative Separator */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+
       {/* Process Section */}
       <section className="section-padding py-16 bg-muted/30">
         <div className="max-container">
@@ -178,8 +187,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Decorative Separator */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+
       {/* Service Highlights */}
-      <section className="section-padding py-16">
+      <section className="section-padding py-16 bg-gradient-to-br from-accent/5 to-secondary/10">
         <div className="max-container">
           <div className="text-center mb-12">
             <p className="text-lg text-muted-foreground mb-4">

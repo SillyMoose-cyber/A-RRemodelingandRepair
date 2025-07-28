@@ -8,6 +8,7 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import { Star } from "lucide-react";
+import { businessInfo } from "@/config/businessInfo";
 
 
 interface Review {
@@ -100,7 +101,7 @@ export const ReviewsCarousel = () => {
               <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
             ))}
             <span className="ml-2 text-sm text-muted-foreground">
-              5.0 • Google Reviews
+              {businessInfo.googleReviews.rating} • Based on {businessInfo.googleReviews.totalReviews} Google reviews
             </span>
           </div>
         </div>

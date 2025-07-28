@@ -1,3 +1,4 @@
+
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -21,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-muted/50 transition-all duration-300 hover:scale-105">
             <img 
-              src="/lovable-uploads/f380cdbb-6297-4680-ba62-4efc6b98d709.png" 
+              src="/lovable-uploads/014db96e-63d3-495c-9c6e-6cad27f31762.png" 
               alt="A&R Remodeling & Repair"
               className="h-16 md:h-20 w-auto drop-shadow-md"
             />

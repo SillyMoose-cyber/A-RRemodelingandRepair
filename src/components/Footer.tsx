@@ -8,9 +8,9 @@ const Footer = () => {
           {/* Logo and Company Info */}
           <div className="space-y-4">
             <img 
-              src="/lovable-uploads/014db96e-63d3-495c-9c6e-6cad27f31762.png" 
+              src="/lovable-uploads/e9a63fda-6c69-424a-b177-49ed66a49d8c.png" 
               alt="A&R Remodeling & Repair" 
-              className="h-12 w-auto"
+              className="h-14 w-auto drop-shadow-sm"
             />
             <p className="text-sm text-muted-foreground max-w-xs">
               Quality remodeling and repair services serving Central Kentucky with honest work and dependable results.

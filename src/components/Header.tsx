@@ -17,13 +17,13 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-container section-padding">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-muted/50 transition-all duration-300 hover:scale-105">
             <img 
-              src="/lovable-uploads/014db96e-63d3-495c-9c6e-6cad27f31762.png" 
+              src="/lovable-uploads/e9a63fda-6c69-424a-b177-49ed66a49d8c.png" 
               alt="A&R Remodeling & Repair"
-              className="h-12 md:h-16 w-auto"
+              className="h-16 md:h-20 w-auto drop-shadow-md"
             />
           </Link>
 

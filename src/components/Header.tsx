@@ -21,7 +21,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-muted/50 transition-all duration-300 hover:scale-105">
             <img 
-              src="/lovable-uploads/e9a63fda-6c69-424a-b177-49ed66a49d8c.png" 
+              src="/lovable-uploads/f380cdbb-6297-4680-ba62-4efc6b98d709.png" 
               alt="A&R Remodeling & Repair"
               className="h-16 md:h-20 w-auto drop-shadow-md"
             />

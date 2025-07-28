@@ -8,7 +8,7 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import { Star } from "lucide-react";
-import { formatDistanceToNow } from "date-fns";
+
 
 interface Review {
   id: number;
@@ -139,9 +139,6 @@ export const ReviewsCarousel = () => {
                           <span className="text-xs text-muted-foreground">
                             {review.location}
                           </span>
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(review.date, { addSuffix: true })}
                         </div>
                       </footer>
                     </CardContent>

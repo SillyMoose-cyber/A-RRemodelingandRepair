@@ -83,17 +83,17 @@ const Index = () => {
       <section className="section-padding py-12 md:py-20 bg-gradient-to-br from-background to-secondary/30">
         <div className="max-container">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge className="mb-6 bg-primary text-primary-foreground hover:bg-primary/90">
+            <Badge className="mb-4 md:mb-6 bg-primary text-primary-foreground hover:bg-primary/90">
               Serving Central Kentucky
             </Badge>
-          <h1 className="font-bold mb-6 text-center">
+          <h1 className="font-bold mb-4 md:mb-6 text-center">
             <span className="block md:inline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">A&R</span>
             <span className="block md:inline whitespace-nowrap text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl"> Remodeling & Repair</span>
           </h1>
-            <h2 className="text-xl md:text-2xl xl:text-3xl font-bold mb-8">
+            <h2 className="text-xl md:text-2xl xl:text-3xl font-bold mb-6 md:mb-8">
               Quality Work. <span className="text-primary">No Nonsense.</span>
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 leading-relaxed max-w-3xl mx-auto">
               At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -128,9 +128,9 @@ const Index = () => {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
       {/* Value Proposition */}
-      <section className="section-padding py-20">
+      <section className="section-padding py-12 md:py-20">
         <div className="max-container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Choose A&R
             </h2>
@@ -156,7 +156,7 @@ const Index = () => {
             })}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 md:mt-12">
             <p className="text-lg font-medium text-foreground">
               When you hire A&R, you're not just checking a box.
             </p>
@@ -171,16 +171,16 @@ const Index = () => {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
       {/* Process Section */}
-      <section className="section-padding py-16 bg-muted/30">
+      <section className="section-padding py-10 md:py-16 bg-muted/30">
         <div className="max-container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
             <p className="text-xl text-muted-foreground">
               We keep it simple — so you can get back to normal faster.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-2xl font-bold">
@@ -192,7 +192,7 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 md:mt-12">
             <p className="text-lg text-muted-foreground">
               That's it. No overcomplicated steps. Just solid work from start to finish.
             </p>
@@ -204,9 +204,9 @@ const Index = () => {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
       {/* Service Highlights */}
-      <section className="section-padding py-16 bg-gradient-to-br from-accent/5 to-secondary/10">
+      <section className="section-padding py-10 md:py-16 bg-gradient-to-br from-accent/5 to-secondary/10">
         <div className="max-container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <p className="text-lg text-muted-foreground mb-4">
               From leaky faucets to radiant floor systems, no job is too big or too small. We show up when we say we will, do the work right the first time, and leave your space cleaner than we found it. That's why so many of our customers call us back — and send their friends our way.
             </p>

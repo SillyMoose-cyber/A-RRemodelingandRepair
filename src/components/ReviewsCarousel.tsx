@@ -210,14 +210,16 @@ export const ReviewsCarousel = () => {
           <h2 className="text-2xl font-bold text-foreground mb-2">
             What Our Customers Say
           </h2>
-          <div className="flex items-center justify-center gap-1 mb-4">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-            ))}
-            <span className="ml-2 text-sm text-muted-foreground">
-              {businessInfo.googleReviews.rating} • Based on {businessInfo.googleReviews.displayText} Google reviews
-            </span>
-          </div>
+           <div className="flex items-center justify-center gap-2 mb-4 flex-wrap">
+             <div className="flex">
+               {[...Array(5)].map((_, i) => (
+                 <Star key={i} className="h-4 w-4 md:h-5 md:w-5 fill-yellow-400 text-yellow-400" />
+               ))}
+             </div>
+             <span className="text-base md:text-lg font-semibold">{businessInfo.googleReviews.rating}</span>
+             <span className="text-muted-foreground text-sm md:text-base">•</span>
+             <span className="text-muted-foreground text-sm md:text-base whitespace-nowrap">Based on {businessInfo.googleReviews.displayText} Google reviews</span>
+           </div>
         </div>
 
         <div className="relative">

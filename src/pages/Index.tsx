@@ -86,9 +86,10 @@ const Index = () => {
             <Badge className="mb-4 bg-primary text-primary-foreground hover:bg-primary/90">
               Serving Central Kentucky
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-4">
-              A&R Remodeling & Repair
-            </h1>
+          <h1 className="text-4xl md:text-7xl font-bold mb-4 text-center">
+            <span className="block">A&R</span>
+            <span className="block">Remodeling & Repair</span>
+          </h1>
             <h2 className="text-2xl md:text-4xl font-bold mb-6">
               Quality Work. <span className="text-primary">No Nonsense.</span>
             </h2>

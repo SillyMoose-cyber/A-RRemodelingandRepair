@@ -76,7 +76,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       
       {/* Hero Section */}
@@ -86,9 +86,9 @@ const Index = () => {
             <Badge className="mb-4 bg-primary text-primary-foreground hover:bg-primary/90">
               Serving Central Kentucky
             </Badge>
-          <h1 className="text-4xl md:text-7xl font-bold mb-4 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-4 text-center">
             <span className="block">A&R</span>
-            <span className="block whitespace-nowrap">Remodeling & Repair</span>
+            <span className="block text-2xl sm:text-3xl md:text-7xl">Remodeling & Repair</span>
           </h1>
             <h2 className="text-2xl md:text-4xl font-bold mb-6">
               Quality Work. <span className="text-primary">No Nonsense.</span>

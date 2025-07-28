@@ -37,6 +37,15 @@ All colors MUST be HSL.
     --ring: 220 90% 56%;
 
     --blue-collar: 217 94% 54%;
+    
+    /* Enhanced design tokens */
+    --primary-glow: 220 90% 70%;
+    --accent-warm: 35 77% 49%;
+    --success: 142 76% 36%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--accent)/0.3));
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.15);
+    --shadow-warm: 0 10px 30px -10px hsl(var(--accent-warm) / 0.2);
 
     --radius: 0.5rem;
 
@@ -142,5 +151,46 @@ All colors MUST be HSL.
 
   .max-container {
     @apply max-w-7xl mx-auto;
+  }
+
+  /* Interactive animations */
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-[0_0_40px_hsl(var(--primary)/0.15)];
+  }
+
+  .fade-in {
+    @apply animate-[fadeIn_0.6s_ease-out];
+  }
+
+  .stats-counter {
+    @apply font-bold text-2xl md:text-3xl text-primary;
+  }
+
+  .accent-text {
+    @apply text-[hsl(var(--accent-warm))] font-semibold;
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .floating-icon {
+    @apply absolute opacity-10 pointer-events-none;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
   }
 }

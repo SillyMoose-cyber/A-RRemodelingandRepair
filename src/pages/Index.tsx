@@ -15,7 +15,14 @@ import {
   Home,
   Phone,
   ArrowRight,
-  Award
+  Award,
+  Hammer,
+  Zap,
+  Droplets,
+  Paintbrush,
+  Star,
+  Calendar,
+  TrendingUp
 } from "lucide-react";
 
 const Index = () => {
@@ -80,9 +87,15 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding py-12 md:py-20 bg-gradient-to-br from-background to-secondary/30">
-        <div className="max-container">
-          <div className="text-center max-w-4xl mx-auto">
+      <section className="section-padding py-12 md:py-20 bg-gradient-to-br from-background to-secondary/30 relative overflow-hidden pattern-dots">
+        {/* Floating Icons */}
+        <Hammer className="floating-icon w-12 h-12 top-20 left-10" style={{ animationDelay: '0s' }} />
+        <Zap className="floating-icon w-10 h-10 top-32 right-20" style={{ animationDelay: '2s' }} />
+        <Droplets className="floating-icon w-8 h-8 bottom-40 left-20" style={{ animationDelay: '4s' }} />
+        <Paintbrush className="floating-icon w-10 h-10 bottom-20 right-10" style={{ animationDelay: '1s' }} />
+        
+        <div className="max-container relative z-10">
+          <div className="text-center max-w-4xl mx-auto fade-in">
             <Badge className="mb-4 md:mb-6 bg-primary text-primary-foreground hover:bg-primary/90">
               Serving Central Kentucky
             </Badge>
@@ -109,6 +122,30 @@ const Index = () => {
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </a>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="section-padding py-12 md:py-16 bg-gradient-to-r from-primary/5 via-accent-warm/5 to-primary/5">
+        <div className="max-container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="fade-in">
+              <div className="stats-counter mb-2">15+</div>
+              <p className="text-muted-foreground font-medium">Years Experience</p>
+            </div>
+            <div className="fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="stats-counter mb-2">500+</div>
+              <p className="text-muted-foreground font-medium">Projects Completed</p>
+            </div>
+            <div className="fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="stats-counter mb-2">98%</div>
+              <p className="text-muted-foreground font-medium">Customer Satisfaction</p>
+            </div>
+            <div className="fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="stats-counter mb-2">24hr</div>
+              <p className="text-muted-foreground font-medium">Response Time</p>
             </div>
           </div>
         </div>
@@ -143,12 +180,13 @@ const Index = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <Card key={index} className="text-center h-full">
-                  <CardContent className="p-4 sm:p-6">
-                    <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <IconComponent className="h-6 w-6 text-primary" />
+                <Card key={index} className="text-center h-full hover-scale hover-glow transition-all duration-300 group relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <CardContent className="p-4 sm:p-6 relative z-10">
+                    <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-primary/10 to-primary/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="h-7 w-7 text-primary group-hover:text-[hsl(var(--accent-warm))] transition-colors duration-300" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3">{feature.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
                     <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
                   </CardContent>
                 </Card>
@@ -182,12 +220,20 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {processSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-2xl font-bold">
-                  {step.number}
+              <div key={index} className="text-center relative group">
+                {/* Connection Line */}
+                {index < processSteps.length - 1 && (
+                  <div className="hidden lg:block absolute top-8 left-full w-6 h-0.5 bg-gradient-to-r from-primary to-primary/20 transform translate-x-4"></div>
+                )}
+                
+                <div className="relative">
+                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center text-primary-foreground text-2xl font-bold hover-scale hover-glow transition-all duration-300 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <span className="relative z-10">{step.number}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{step.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
               </div>
             ))}
           </div>

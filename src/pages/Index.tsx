@@ -76,7 +76,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground" style={{backgroundColor: 'white', color: 'black'}}>
+    <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}

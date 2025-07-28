@@ -110,6 +110,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Decorative Separator */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+
       {/* Customer Reviews */}
       <section className="py-16 bg-muted/20">
         <div className="max-container">

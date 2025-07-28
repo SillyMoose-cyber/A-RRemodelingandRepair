@@ -12,7 +12,8 @@ import {
   Users, 
   Home,
   Phone,
-  ArrowRight
+  ArrowRight,
+  Award
 } from "lucide-react";
 
 const Index = () => {
@@ -41,6 +42,11 @@ const Index = () => {
       icon: Users,
       title: "Local + Loyal",
       description: "Most of our work comes from referrals."
+    },
+    {
+      icon: Award,
+      title: "We Stand Behind Our Work",
+      description: "If it's not right, we'll make it right — no questions asked."
     }
   ];
 

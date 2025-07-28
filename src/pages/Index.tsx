@@ -110,9 +110,20 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Transition Section */}
+      <div className="py-8 bg-gradient-to-b from-secondary/20 to-muted/10"></div>
+
       {/* Customer Reviews */}
-      <section className="py-16 bg-muted/20">
+      <section className="py-20 bg-muted/20 relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
         <div className="max-container">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="w-8 h-px bg-gradient-to-r from-transparent to-primary"></div>
+              <div className="w-2 h-2 rounded-full bg-primary"></div>
+              <div className="w-8 h-px bg-gradient-to-l from-transparent to-primary"></div>
+            </div>
+          </div>
           <ReviewsCarousel />
         </div>
       </section>

@@ -40,15 +40,16 @@ All colors MUST be HSL.
     
     /* Enhanced design tokens */
     --primary-glow: 220 90% 70%;
-    --accent-warm: 35 77% 49%;
-    --accent-gold: 45 95% 60%;
+    --accent-blue: 214 100% 65%;
+    --accent-blue-light: 214 100% 85%;
+    --accent-blue-dark: 214 100% 45%;
     --success: 142 76% 36%;
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent-warm)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent-blue-dark)) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--accent)/0.3));
-    --gradient-accent: linear-gradient(90deg, hsl(var(--accent-warm)), hsl(var(--accent-gold)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent-blue)));
     --shadow-glow: 0 0 40px hsl(var(--primary) / 0.15);
-    --shadow-warm: 0 10px 30px -10px hsl(var(--accent-warm) / 0.2);
+    --shadow-blue: 0 10px 30px -10px hsl(var(--accent-blue) / 0.2);
     --shadow-elevated: 0 20px 40px -10px hsl(var(--primary) / 0.1);
     --pattern-grid: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.05) 1px, transparent 0);
     --blur-subtle: blur(40px);
@@ -182,7 +183,7 @@ All colors MUST be HSL.
   }
 
   .accent-text {
-    @apply text-[hsl(var(--accent-warm))] font-semibold;
+    @apply text-[hsl(var(--accent-blue))] font-semibold;
   }
 
   .gradient-text {
@@ -220,11 +221,11 @@ All colors MUST be HSL.
   }
 
   .trust-badge {
-    @apply bg-gradient-to-r from-[hsl(var(--accent-gold))] to-[hsl(var(--accent-warm))] text-black font-semibold px-3 py-1 rounded-full text-sm;
+    @apply bg-gradient-to-r from-[hsl(var(--accent-blue))] to-[hsl(var(--primary))] text-white font-semibold px-3 py-1 rounded-full text-sm;
   }
 
   .callout-box {
-    @apply relative bg-gradient-to-br from-[hsl(var(--accent-warm)/0.1)] to-[hsl(var(--accent-gold)/0.05)] border border-[hsl(var(--accent-warm)/0.3)] rounded-lg p-4;
+    @apply relative bg-gradient-to-br from-[hsl(var(--accent-blue)/0.1)] to-[hsl(var(--primary)/0.05)] border border-[hsl(var(--accent-blue)/0.3)] rounded-lg p-4;
   }
 
   .geometric-accent {

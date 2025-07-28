@@ -135,7 +135,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding py-12 md:py-16 bg-gradient-to-r from-primary/5 via-accent-warm/5 to-primary/5">
+      <section className="section-padding py-12 md:py-16 bg-gradient-to-r from-primary/5 via-accent-blue/5 to-primary/5">
         <div className="max-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="fade-in">
@@ -191,13 +191,13 @@ const Index = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                 <Card key={index} className="text-center h-full hover-scale transition-all duration-300 group relative overflow-hidden shadow-lg hover:shadow-warm border-0">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--accent-warm)/0.05)] to-[hsl(var(--accent-gold)/0.03)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                 <Card key={index} className="text-center h-full hover-scale transition-all duration-300 group relative overflow-hidden shadow-lg hover:shadow-blue border-0">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--accent-blue)/0.05)] to-[hsl(var(--primary)/0.03)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <CardContent className="p-4 sm:p-6 relative z-10">
-                    <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-[hsl(var(--accent-warm)/0.1)] to-[hsl(var(--accent-gold)/0.1)] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 icon-bounce">
-                      <IconComponent className="h-7 w-7 text-[hsl(var(--accent-warm))] group-hover:text-[hsl(var(--accent-gold))] transition-colors duration-300" />
+                    <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-[hsl(var(--accent-blue)/0.1)] to-[hsl(var(--primary)/0.1)] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 icon-bounce">
+                      <IconComponent className="h-7 w-7 text-[hsl(var(--accent-blue))] group-hover:text-[hsl(var(--primary))] transition-colors duration-300" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-[hsl(var(--accent-warm))] transition-colors duration-300">{feature.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-[hsl(var(--accent-blue))] transition-colors duration-300">{feature.title}</h3>
                     <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
                   </CardContent>
                 </Card>
@@ -240,7 +240,7 @@ const Index = () => {
                 )}
                 
                 <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[hsl(var(--accent-warm))] to-[hsl(var(--accent-gold))] rounded-full flex items-center justify-center text-white text-2xl font-bold hover-scale transition-all duration-300 relative overflow-hidden shadow-warm icon-bounce" style={{ animationDelay: `${index * 0.2}s` }}>
+                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[hsl(var(--accent-blue))] to-[hsl(var(--primary))] rounded-full flex items-center justify-center text-white text-2xl font-bold hover-scale transition-all duration-300 relative overflow-hidden shadow-blue icon-bounce" style={{ animationDelay: `${index * 0.2}s` }}>
                     <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <span className="relative z-10">{step.number}</span>
                   </div>
@@ -271,8 +271,8 @@ const Index = () => {
                 From leaky faucets to radiant floor systems, no job is too big or too small. We show up when we say we will, do the work right the first time, and leave your space cleaner than we found it. That's why so many of our customers call us back — and send their friends our way.
               </p>
               
-              <div className="bg-gradient-to-br from-background/80 to-background/60 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-elevated border border-[hsl(var(--accent-warm)/0.2)] relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[hsl(var(--accent-gold)/0.1)] to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="bg-gradient-to-br from-background/80 to-background/60 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-elevated border border-[hsl(var(--accent-blue)/0.2)] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[hsl(var(--accent-blue)/0.1)] to-transparent rounded-full -translate-y-16 translate-x-16"></div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 gradient-text relative z-10">
                   Ready to upgrade your space or fix what's broken?
                 </h3>

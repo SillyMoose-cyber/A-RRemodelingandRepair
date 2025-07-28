@@ -88,7 +88,7 @@ const Index = () => {
             </Badge>
           <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold mb-4 text-center">
             <span className="block">A&R</span>
-            <span className="block">Remodeling & Repair</span>
+            <span className="block whitespace-nowrap text-xl sm:text-2xl md:text-6xl lg:text-7xl">Remodeling & Repair</span>
           </h1>
             <h2 className="text-lg md:text-2xl xl:text-3xl font-bold mb-6">
               Quality Work. <span className="text-primary">No Nonsense.</span>

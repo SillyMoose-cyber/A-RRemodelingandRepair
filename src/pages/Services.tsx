@@ -41,15 +41,11 @@ const Services = () => {
         {/* Kentucky State Outline Background */}
         <div className="absolute inset-0 flex items-center justify-center opacity-5">
           <svg width="800" height="400" viewBox="0 0 800 400" className="max-w-full max-h-full">
-            <path d="M50 200 L120 180 L200 160 L280 140 L360 130 L440 135 L520 140 L600 150 L680 160 L750 170 L750 250 L720 280 L680 300 L620 320 L560 330 L500 335 L440 340 L380 345 L320 350 L260 340 L200 330 L140 320 L80 300 L50 280 Z" 
-                  fill="url(#kentuckyGradient)" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  className="text-primary/30"/>
+            <path d="M50 200 L120 180 L200 160 L280 140 L360 130 L440 135 L520 140 L600 150 L680 160 L750 170 L750 250 L720 280 L680 300 L620 320 L560 330 L500 335 L440 340 L380 345 L320 350 L260 340 L200 330 L140 320 L80 300 L50 280 Z" fill="url(#kentuckyGradient)" stroke="currentColor" strokeWidth="2" className="text-primary/30" />
             <defs>
               <linearGradient id="kentuckyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1"/>
-                <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.05"/>
+                <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+                <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.05" />
               </linearGradient>
             </defs>
           </svg>
@@ -57,43 +53,60 @@ const Services = () => {
         
         {/* Dynamic Blueprint Grid Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="h-full w-full" 
-               style={{
-                 backgroundImage: `
+          <div className="h-full w-full" style={{
+          backgroundImage: `
                    linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px),
                    linear-gradient(90deg, rgba(34, 197, 94, 0.3) 1px, transparent 1px),
                    linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
                    linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px)
                  `,
-                 backgroundSize: '100px 100px, 100px 100px, 20px 20px, 20px 20px'
-               }}>
+          backgroundSize: '100px 100px, 100px 100px, 20px 20px, 20px 20px'
+        }}>
           </div>
         </div>
         
         {/* Animated Construction Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Large floating tools */}
-          <div className="absolute top-16 left-[8%] w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-primary/10 animate-float" style={{animationDelay: '0s'}}>
+          <div className="absolute top-16 left-[8%] w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-primary/10 animate-float" style={{
+          animationDelay: '0s'
+        }}>
             <Wrench className="h-10 w-10 text-primary/80" />
           </div>
-          <div className="absolute top-20 right-[12%] w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-accent/10 animate-float" style={{animationDelay: '1.5s'}}>
+          <div className="absolute top-20 right-[12%] w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-accent/10 animate-float" style={{
+          animationDelay: '1.5s'
+        }}>
             <Home className="h-8 w-8 text-accent/80" />
           </div>
-          <div className="absolute top-40 left-[15%] w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/5 rounded-xl flex items-center justify-center backdrop-blur-sm border border-primary/10 animate-float" style={{animationDelay: '3s'}}>
+          <div className="absolute top-40 left-[15%] w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/5 rounded-xl flex items-center justify-center backdrop-blur-sm border border-primary/10 animate-float" style={{
+          animationDelay: '3s'
+        }}>
             <ChefHat className="h-7 w-7 text-primary/70" />
           </div>
-          <div className="absolute bottom-32 right-[18%] w-12 h-12 bg-gradient-to-br from-secondary/20 to-secondary/5 rounded-lg flex items-center justify-center backdrop-blur-sm border border-secondary/10 animate-float" style={{animationDelay: '2s'}}>
+          <div className="absolute bottom-32 right-[18%] w-12 h-12 bg-gradient-to-br from-secondary/20 to-secondary/5 rounded-lg flex items-center justify-center backdrop-blur-sm border border-secondary/10 animate-float" style={{
+          animationDelay: '2s'
+        }}>
             <Bath className="h-6 w-6 text-primary/70" />
           </div>
-          <div className="absolute bottom-40 left-[25%] w-10 h-10 bg-gradient-to-br from-accent/20 to-accent/5 rounded-lg flex items-center justify-center backdrop-blur-sm border border-accent/10 animate-float" style={{animationDelay: '4s'}}>
+          <div className="absolute bottom-40 left-[25%] w-10 h-10 bg-gradient-to-br from-accent/20 to-accent/5 rounded-lg flex items-center justify-center backdrop-blur-sm border border-accent/10 animate-float" style={{
+          animationDelay: '4s'
+        }}>
             <Thermometer className="h-5 w-5 text-accent/70" />
           </div>
           
           {/* Subtle construction particles */}
-          <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-primary/40 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-accent/30 rounded-full animate-pulse" style={{animationDelay: '2.5s'}}></div>
-          <div className="absolute top-1/2 left-1/5 w-1.5 h-1.5 bg-primary/50 rounded-full animate-pulse" style={{animationDelay: '3.5s'}}></div>
-          <div className="absolute bottom-1/3 right-1/3 w-2.5 h-2.5 bg-secondary/40 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-primary/40 rounded-full animate-pulse" style={{
+          animationDelay: '1s'
+        }}></div>
+          <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-accent/30 rounded-full animate-pulse" style={{
+          animationDelay: '2.5s'
+        }}></div>
+          <div className="absolute top-1/2 left-1/5 w-1.5 h-1.5 bg-primary/50 rounded-full animate-pulse" style={{
+          animationDelay: '3.5s'
+        }}></div>
+          <div className="absolute bottom-1/3 right-1/3 w-2.5 h-2.5 bg-secondary/40 rounded-full animate-pulse" style={{
+          animationDelay: '0.5s'
+        }}></div>
         </div>
         
         {/* Spotlights */}
@@ -106,28 +119,13 @@ const Services = () => {
             {/* Subtle Kentucky outline behind text */}
             <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
               <svg width="600" height="300" viewBox="0 0 600 300" className="max-w-full">
-                <path d="M40 150 L90 135 L150 120 L210 105 L270 98 L330 101 L390 105 L450 113 L510 120 L563 128 L563 188 L540 210 L510 225 L465 240 L420 248 L375 251 L330 255 L285 259 L240 255 L195 248 L150 240 L105 225 L60 210 L40 188 Z" 
-                      fill="none" 
-                      stroke="hsl(var(--primary))" 
-                      strokeWidth="3" 
-                      strokeOpacity="0.4"
-                      className="drop-shadow-lg"/>
+                <path d="M40 150 L90 135 L150 120 L210 105 L270 98 L330 101 L390 105 L450 113 L510 120 L563 128 L563 188 L540 210 L510 225 L465 240 L420 248 L375 251 L330 255 L285 259 L240 255 L195 248 L150 240 L105 225 L60 210 L40 188 Z" fill="none" stroke="hsl(var(--primary))" strokeWidth="3" strokeOpacity="0.4" className="drop-shadow-lg" />
               </svg>
             </div>
             
             <div className="text-center max-w-4xl mx-auto fade-in relative z-10">
               {/* Enhanced Trust Badges */}
-              <div className="flex flex-wrap justify-center gap-4 mb-10">
-                <Badge variant="outline" className="bg-white/10 backdrop-blur-md border-primary/30 text-white font-semibold px-5 py-3 text-sm shadow-lg hover:bg-white/20 transition-all duration-300">
-                  ⚡ Free Estimates
-                </Badge>
-                <Badge variant="outline" className="bg-white/10 backdrop-blur-md border-primary/30 text-white font-semibold px-5 py-3 text-sm shadow-lg hover:bg-white/20 transition-all duration-300">
-                  🏆 Licensed & Insured
-                </Badge>
-                <Badge variant="outline" className="bg-white/10 backdrop-blur-md border-primary/30 text-white font-semibold px-5 py-3 text-sm shadow-lg hover:bg-white/20 transition-all duration-300">
-                  📍 Georgetown Local
-                </Badge>
-              </div>
+              
               
               {/* Hero headline with enhanced styling */}
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 md:mb-10 leading-tight text-white drop-shadow-xl">

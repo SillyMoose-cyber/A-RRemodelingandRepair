@@ -78,54 +78,65 @@ const Services = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding py-16 md:py-24 bg-gradient-to-br from-background to-secondary/30 relative overflow-hidden pattern-dots">
-        {/* Floating Icons */}
+      <section className="section-padding py-16 md:py-24 bg-gradient-to-br from-background via-secondary/20 to-accent/20 relative overflow-hidden">
+        {/* Background Patterns */}
+        <div className="absolute inset-0 pattern-dots opacity-30"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-primary/10 to-transparent rounded-full -translate-x-48 -translate-y-48"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-accent/10 to-transparent rounded-full translate-x-48 translate-y-48"></div>
+        
+        {/* Enhanced Floating Icons */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center animate-float">
-            <Wrench className="h-6 w-6 text-primary/60" />
+          <div className="absolute top-20 left-10 w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center animate-float shadow-lg">
+            <Wrench className="h-8 w-8 text-primary" />
           </div>
-          <div className="absolute top-32 right-20 w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center animate-float" style={{animationDelay: '1s'}}>
-            <Bath className="h-4 w-4 text-accent/60" />
+          <div className="absolute top-32 right-20 w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{animationDelay: '1s'}}>
+            <Bath className="h-6 w-6 text-accent" />
           </div>
-          <div className="absolute bottom-20 left-20 w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center animate-float" style={{animationDelay: '2s'}}>
-            <Home className="h-5 w-5 text-secondary/60" />
+          <div className="absolute bottom-20 left-20 w-14 h-14 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{animationDelay: '2s'}}>
+            <Home className="h-7 w-7 text-primary" />
           </div>
-          <div className="absolute bottom-32 right-10 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center animate-float" style={{animationDelay: '0.5s'}}>
-            <ChefHat className="h-3 w-3 text-primary/60" />
+          <div className="absolute bottom-32 right-10 w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{animationDelay: '0.5s'}}>
+            <ChefHat className="h-5 w-5 text-primary" />
           </div>
+          <div className="absolute top-1/2 left-1/4 w-4 h-4 bg-accent/40 rounded-full animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary/40 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
         </div>
         
         <div className="max-container relative z-10">
           <div className="text-center max-w-4xl mx-auto fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 gradient-text">
-              Repairs, remodels, upgrades — all under one roof.
+            {/* Trust Badges */}
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              <div className="trust-badge">
+                ⚡ Licensed & Insured
+              </div>
+              <div className="trust-badge">
+                🏆 Georgetown's #1 Choice
+              </div>
+              <div className="trust-badge">
+                ⭐ 15+ Years Experience
+              </div>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 gradient-text leading-tight">
+              Professional Home Services You Can Trust
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 md:mb-12 leading-relaxed">
-              Whether it's a leaking pipe or a full bathroom transformation, A&R Remodeling & Repair brings skill and experience to every project.
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
+              From emergency repairs to complete renovations, we deliver exceptional craftsmanship with reliable service. Every project backed by our commitment to quality and customer satisfaction.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Stats Section */}
-      <section className="section-padding py-12 bg-gradient-to-r from-primary/5 to-accent/5 border-y border-border/50">
-        <div className="max-container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm md:text-base text-muted-foreground">Projects Completed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24h</div>
-              <div className="text-sm md:text-base text-muted-foreground">Response Time</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm md:text-base text-muted-foreground">Satisfaction Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">15+</div>
-              <div className="text-sm md:text-base text-muted-foreground">Years Experience</div>
+            
+            {/* Quick Contact */}
+            <div className="bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-elevated border border-primary/20 relative overflow-hidden max-w-lg mx-auto">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/10 to-transparent rounded-full -translate-y-12 translate-x-12"></div>
+              
+              <div className="relative z-10">
+                <p className="text-sm text-muted-foreground mb-2">Call for Free Estimate</p>
+                <div className="flex items-center justify-center gap-3">
+                  <Phone className="h-6 w-6 text-primary" />
+                  <p className="text-xl md:text-2xl font-bold">
+                    <a href="tel:5023707415" className="accent-text hover:underline transition-colors">(502) 370-7415</a>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

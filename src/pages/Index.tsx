@@ -87,14 +87,27 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding py-12 md:py-20 bg-gradient-to-br from-background to-secondary/30 relative overflow-hidden pattern-dots">
-        {/* Floating Icons */}
-        <Hammer className="floating-icon w-12 h-12 top-20 left-10" style={{ animationDelay: '0s' }} />
-        <Zap className="floating-icon w-10 h-10 top-32 right-20" style={{ animationDelay: '2s' }} />
-        <Droplets className="floating-icon w-8 h-8 bottom-40 left-20" style={{ animationDelay: '4s' }} />
-        <Paintbrush className="floating-icon w-10 h-10 bottom-20 right-10" style={{ animationDelay: '1s' }} />
+      <section className="section-padding py-12 md:py-20 relative overflow-hidden">
+        {/* Multi-layer Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/15"></div>
+        <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-accent/8"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%),radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.12),transparent_50%)]"></div>
         
-        <div className="max-container relative z-10">
+        {/* Animated Background Shapes */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-accent/15 to-primary/8 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
+        
+        {/* Enhanced Floating Icons with Glow */}
+        <Hammer className="floating-icon w-12 h-12 top-20 left-10 text-primary drop-shadow-[0_0_8px_hsl(var(--primary)/0.6)]" style={{ animationDelay: '0s' }} />
+        <Zap className="floating-icon w-10 h-10 top-32 right-20 text-accent drop-shadow-[0_0_6px_hsl(var(--accent)/0.6)]" style={{ animationDelay: '2s' }} />
+        <Droplets className="floating-icon w-8 h-8 bottom-40 left-20 text-primary drop-shadow-[0_0_4px_hsl(var(--primary)/0.6)]" style={{ animationDelay: '4s' }} />
+        <Paintbrush className="floating-icon w-10 h-10 bottom-20 right-10 text-accent drop-shadow-[0_0_6px_hsl(var(--accent)/0.6)]" style={{ animationDelay: '1s' }} />
+        
+        {/* Geometric Pattern Overlay */}
+        <div className="absolute inset-0 opacity-30 pattern-dots"></div>
+        
+        <div className="max-container relative z-20">
           <div className="text-center max-w-4xl mx-auto fade-in">
             <div className="flex flex-wrap justify-center gap-2 mb-4 md:mb-6">
               <Badge className="trust-badge">
@@ -117,13 +130,13 @@ const Index = () => {
               At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="text-lg px-8 magnetic-btn" asChild>
+              <Button size="lg" className="text-lg px-8 magnetic-btn shadow-[0_0_20px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_30px_hsl(var(--primary)/0.7)] transition-all duration-300" asChild>
                 <a href="tel:5023707415">
                   <Phone className="h-5 w-5 mr-2 icon-bounce" />
                   Call (502) 370-7415
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 magnetic-btn" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-8 magnetic-btn border-primary/30 hover:border-primary/60 hover:bg-primary/10 hover:shadow-[0_0_15px_hsl(var(--primary)/0.3)] transition-all duration-300" asChild>
                 <a href="/services">
                   View Services
                   <ArrowRight className="h-5 w-5 ml-2 icon-bounce" />

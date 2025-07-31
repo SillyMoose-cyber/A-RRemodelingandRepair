@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
-import { Star } from "lucide-react";
+import { Star, Users, User, UserCheck } from "lucide-react";
 import { businessInfo } from "@/config/businessInfo";
 
 
@@ -204,8 +204,32 @@ const reviews = reviewsData;
 
 export const ReviewsCarousel = () => {
   return (
-    <section className="section-padding py-12 bg-secondary/10">
-      <div className="max-container">
+    <section className="section-padding py-12 bg-secondary/10 relative overflow-hidden">
+      {/* Floating People Icons Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Users className="floating-icon absolute top-10 left-[8%] text-primary/20 h-8 w-8" style={{ animationDelay: '0s' }} />
+        <User className="floating-icon absolute top-20 right-[12%] text-primary/15 h-6 w-6" style={{ animationDelay: '1s' }} />
+        <UserCheck className="floating-icon absolute top-32 left-[15%] text-primary/25 h-7 w-7" style={{ animationDelay: '2s' }} />
+        <Users className="floating-icon absolute top-16 right-[25%] text-primary/20 h-9 w-9" style={{ animationDelay: '0.5s' }} />
+        <User className="floating-icon absolute top-44 left-[5%] text-primary/15 h-5 w-5" style={{ animationDelay: '1.5s' }} />
+        <UserCheck className="floating-icon absolute top-8 left-[30%] text-primary/30 h-6 w-6" style={{ animationDelay: '2.5s' }} />
+        <Users className="floating-icon absolute top-36 right-[8%] text-primary/20 h-7 w-7" style={{ animationDelay: '3s' }} />
+        <User className="floating-icon absolute top-12 right-[35%] text-primary/15 h-8 w-8" style={{ animationDelay: '0.8s' }} />
+        <UserCheck className="floating-icon absolute top-28 left-[25%] text-primary/25 h-5 w-5" style={{ animationDelay: '1.8s' }} />
+        <Users className="floating-icon absolute top-48 right-[18%] text-primary/20 h-6 w-6" style={{ animationDelay: '2.8s' }} />
+        <User className="floating-icon absolute bottom-32 left-[12%] text-primary/15 h-7 w-7" style={{ animationDelay: '3.5s' }} />
+        <UserCheck className="floating-icon absolute bottom-20 right-[22%] text-primary/25 h-8 w-8" style={{ animationDelay: '4s' }} />
+        <Users className="floating-icon absolute bottom-40 left-[8%] text-primary/20 h-6 w-6" style={{ animationDelay: '4.5s' }} />
+        <User className="floating-icon absolute bottom-16 right-[15%] text-primary/15 h-5 w-5" style={{ animationDelay: '5s' }} />
+        <UserCheck className="floating-icon absolute bottom-28 left-[20%] text-primary/30 h-7 w-7" style={{ animationDelay: '5.5s' }} />
+        <Users className="floating-icon absolute bottom-44 right-[5%] text-primary/20 h-9 w-9" style={{ animationDelay: '6s' }} />
+        <User className="floating-icon absolute bottom-12 left-[35%] text-primary/15 h-6 w-6" style={{ animationDelay: '6.5s' }} />
+        <UserCheck className="floating-icon absolute bottom-36 right-[30%] text-primary/25 h-8 w-8" style={{ animationDelay: '7s' }} />
+        <Users className="floating-icon absolute top-24 left-[45%] text-primary/20 h-5 w-5" style={{ animationDelay: '7.5s' }} />
+        <User className="floating-icon absolute bottom-24 left-[45%] text-primary/15 h-7 w-7" style={{ animationDelay: '8s' }} />
+      </div>
+      
+      <div className="max-container relative z-10">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-foreground mb-2">
             What Our Customers Say

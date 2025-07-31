@@ -187,6 +187,14 @@ const Index = () => {
         <div className="geometric-accent w-80 h-80 -top-40 -left-40 transform rotate-12"></div>
         
         <div className="max-container relative z-10">
+          {/* Logo centered above the heading */}
+          <div className="text-center mb-6">
+            <img 
+              src="/lovable-uploads/51066e8a-25f9-4e5d-a745-c036c9b49414.png" 
+              alt="A&R Remodeling & Repair Logo" 
+              className="w-32 h-32 mx-auto"
+            />
+          </div>
           <div className="text-center mb-6 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
               Why Choose A&R

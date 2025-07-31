@@ -276,28 +276,10 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Tool Belt Divider */}
-      <div className="relative h-16 bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5 overflow-hidden">
+      {/* Clean Professional Divider */}
+      <div className="relative h-12 bg-gradient-to-r from-primary/3 via-accent/5 to-primary/3">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="flex items-center gap-8">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/15 rounded-xl flex items-center justify-center animate-bounce-gentle">
-              <Wrench className="h-6 w-6 text-primary" />
-            </div>
-            <div className="w-2 h-2 bg-primary/40 rounded-full animate-pulse"></div>
-            <div className="w-10 h-10 bg-gradient-to-br from-accent/20 to-primary/15 rounded-lg flex items-center justify-center animate-bounce-gentle" style={{
-            animationDelay: '0.5s'
-          }}>
-              <Home className="h-5 w-5 text-accent" />
-            </div>
-            <div className="w-2 h-2 bg-accent/40 rounded-full animate-pulse" style={{
-            animationDelay: '1s'
-          }}></div>
-            <div className="w-8 h-8 bg-gradient-to-br from-primary/20 to-secondary/15 rounded-full flex items-center justify-center animate-bounce-gentle" style={{
-            animationDelay: '1s'
-          }}>
-              <TreePine className="h-4 w-4 text-primary" />
-            </div>
-          </div>
+          <div className="h-px w-96 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
         </div>
       </div>
 

@@ -3,78 +3,34 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Wrench, 
-  Droplets, 
-  Bath, 
-  ChefHat, 
-  Home, 
-  Thermometer, 
-  TreePine,
-  Phone,
-  ArrowRight
-} from "lucide-react";
-
+import { Wrench, Droplets, Bath, ChefHat, Home, Thermometer, TreePine, Phone, ArrowRight } from "lucide-react";
 const Services = () => {
-  const services = [
-    {
-      icon: Droplets,
-      title: "Plumbing Repairs",
-      items: [
-        "Faucet, toilet, and sink replacements",
-        "Leak detection and drain line repair",
-        "Water heater installation and upgrades"
-      ]
-    },
-    {
-      icon: Bath,
-      title: "Bathroom Remodels",
-      items: [
-        "Tub and shower replacements",
-        "Vanity and tile updates",
-        "Full redesign and layout changes"
-      ]
-    },
-    {
-      icon: ChefHat,
-      title: "Kitchen Renovations",
-      items: [
-        "Cabinet replacement and countertop upgrades",
-        "New plumbing and fixture installation",
-        "Backsplash, flooring, and lighting updates"
-      ]
-    },
-    {
-      icon: Home,
-      title: "Home Renovation Projects",
-      items: [
-        "Laundry rooms, breakfast nooks, basement updates",
-        "Whole-home remodels and new construction",
-        "Custom additions and layout changes"
-      ]
-    },
-    {
-      icon: Thermometer,
-      title: "Energy-Efficient Upgrades",
-      items: [
-        "Radiant floor heating systems",
-        "Whole-house fans and HVAC improvements",
-        "Smart utility and comfort enhancements"
-      ]
-    },
-    {
-      icon: TreePine,
-      title: "Outdoor & Specialty Spaces",
-      items: [
-        "Porches, decks, and patios",
-        "Outdoor living areas and ADU builds",
-        "Entryway, garage, or utility room remodels"
-      ]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+  const services = [{
+    icon: Droplets,
+    title: "Plumbing Repairs",
+    items: ["Faucet, toilet, and sink replacements", "Leak detection and drain line repair", "Water heater installation and upgrades"]
+  }, {
+    icon: Bath,
+    title: "Bathroom Remodels",
+    items: ["Tub and shower replacements", "Vanity and tile updates", "Full redesign and layout changes"]
+  }, {
+    icon: ChefHat,
+    title: "Kitchen Renovations",
+    items: ["Cabinet replacement and countertop upgrades", "New plumbing and fixture installation", "Backsplash, flooring, and lighting updates"]
+  }, {
+    icon: Home,
+    title: "Home Renovation Projects",
+    items: ["Laundry rooms, breakfast nooks, basement updates", "Whole-home remodels and new construction", "Custom additions and layout changes"]
+  }, {
+    icon: Thermometer,
+    title: "Energy-Efficient Upgrades",
+    items: ["Radiant floor heating systems", "Whole-house fans and HVAC improvements", "Smart utility and comfort enhancements"]
+  }, {
+    icon: TreePine,
+    title: "Outdoor & Specialty Spaces",
+    items: ["Porches, decks, and patios", "Outdoor living areas and ADU builds", "Entryway, garage, or utility room remodels"]
+  }];
+  return <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       
       {/* Hero Section */}
@@ -89,32 +45,34 @@ const Services = () => {
           <div className="absolute top-20 left-10 w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center animate-float shadow-lg">
             <Wrench className="h-8 w-8 text-primary" />
           </div>
-          <div className="absolute top-32 right-20 w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{animationDelay: '1s'}}>
+          <div className="absolute top-32 right-20 w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{
+          animationDelay: '1s'
+        }}>
             <Bath className="h-6 w-6 text-accent" />
           </div>
-          <div className="absolute bottom-20 left-20 w-14 h-14 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{animationDelay: '2s'}}>
+          <div className="absolute bottom-20 left-20 w-14 h-14 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{
+          animationDelay: '2s'
+        }}>
             <Home className="h-7 w-7 text-primary" />
           </div>
-          <div className="absolute bottom-32 right-10 w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{animationDelay: '0.5s'}}>
+          <div className="absolute bottom-32 right-10 w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{
+          animationDelay: '0.5s'
+        }}>
             <ChefHat className="h-5 w-5 text-primary" />
           </div>
           <div className="absolute top-1/2 left-1/4 w-4 h-4 bg-accent/40 rounded-full animate-pulse"></div>
-          <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary/40 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary/40 rounded-full animate-pulse" style={{
+          animationDelay: '1.5s'
+        }}></div>
         </div>
         
         <div className="max-container relative z-10">
           <div className="text-center max-w-4xl mx-auto fade-in">
             {/* Trust Badges */}
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <div className="trust-badge">
-                ⚡ Licensed & Insured
-              </div>
-              <div className="trust-badge">
-                🏆 Georgetown's #1 Choice
-              </div>
-              <div className="trust-badge">
-                ⭐ 15+ Years Experience
-              </div>
+              
+              
+              
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 gradient-text leading-tight">
@@ -125,19 +83,7 @@ const Services = () => {
             </p>
             
             {/* Quick Contact */}
-            <div className="bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-elevated border border-primary/20 relative overflow-hidden max-w-lg mx-auto">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/10 to-transparent rounded-full -translate-y-12 translate-x-12"></div>
-              
-              <div className="relative z-10">
-                <p className="text-sm text-muted-foreground mb-2">Call for Free Estimate</p>
-                <div className="flex items-center justify-center gap-3">
-                  <Phone className="h-6 w-6 text-primary" />
-                  <p className="text-xl md:text-2xl font-bold">
-                    <a href="tel:5023707415" className="accent-text hover:underline transition-colors">(502) 370-7415</a>
-                  </p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -189,7 +135,9 @@ const Services = () => {
         <div className="geometric-accent w-32 h-32 top-10 right-10 rotate-45 opacity-20"></div>
         <div className="geometric-accent w-24 h-24 bottom-20 left-10 -rotate-12 opacity-20"></div>
         <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-primary/30 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-accent/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-accent/30 rounded-full animate-pulse" style={{
+        animationDelay: '1s'
+      }}></div>
         
         <div className="max-container relative z-10">
           <div className="text-center mb-12 md:mb-16">
@@ -203,10 +151,9 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service, index) => {
-              const IconComponent = service.icon;
-              const isEven = index % 2 === 0;
-              return (
-                <Card key={index} className={`h-full hover-scale transition-all duration-300 group relative overflow-hidden shadow-lg hover:shadow-blue border-0 ${isEven ? 'md:transform md:translate-y-4' : ''}`}>
+            const IconComponent = service.icon;
+            const isEven = index % 2 === 0;
+            return <Card key={index} className={`h-full hover-scale transition-all duration-300 group relative overflow-hidden shadow-lg hover:shadow-blue border-0 ${isEven ? 'md:transform md:translate-y-4' : ''}`}>
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/5 to-transparent rounded-full -translate-y-10 translate-x-10"></div>
                   <CardContent className="p-6 relative z-10">
@@ -219,17 +166,14 @@ const Services = () => {
                       </div>
                     </div>
                     <ul className="space-y-3">
-                      {service.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="text-sm sm:text-base text-muted-foreground flex items-start group/item">
+                      {service.items.map((item, itemIndex) => <li key={itemIndex} className="text-sm sm:text-base text-muted-foreground flex items-start group/item">
                           <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2.5 mr-3 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></span>
                           <span className="group-hover/item:text-foreground transition-colors duration-200">{item}</span>
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
         </div>
       </section>
@@ -240,11 +184,9 @@ const Services = () => {
           <div className="text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 gradient-text">Serving Georgetown & Surrounding Areas</h3>
             <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-              {['Georgetown', 'Lexington', 'Frankfort', 'Versailles', 'Midway', 'Lawrenceburg', 'Bardstown', 'Louisville Metro'].map((area, index) => (
-                <Badge key={index} variant="secondary" className="text-sm px-3 py-1 hover:bg-primary/10 transition-colors duration-200">
+              {['Georgetown', 'Lexington', 'Frankfort', 'Versailles', 'Midway', 'Lawrenceburg', 'Bardstown', 'Louisville Metro'].map((area, index) => <Badge key={index} variant="secondary" className="text-sm px-3 py-1 hover:bg-primary/10 transition-colors duration-200">
                   {area}
-                </Badge>
-              ))}
+                </Badge>)}
             </div>
           </div>
         </div>
@@ -302,8 +244,6 @@ const Services = () => {
 
       <Footer />
       <FloatingCTA />
-    </div>
-  );
+    </div>;
 };
-
 export default Services;

@@ -130,13 +130,11 @@ const Services = () => {
               {/* Hero headline with enhanced styling */}
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 md:mb-10 leading-tight text-white drop-shadow-xl">
                 Transform Your Home with
-                <span className="block text-white font-extrabold px-6 py-3 mx-auto w-fit rounded-xl relative" style={{
-                  background: 'rgba(0, 0, 0, 0.4)',
-                  backdropFilter: 'blur(10px)',
-                  textShadow: '0 0 30px hsl(var(--primary) / 0.8), 0 0 50px hsl(var(--accent) / 0.6), 0 4px 15px rgba(0,0,0,0.8)',
-                  boxShadow: '0 0 40px hsl(var(--primary) / 0.3), 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  WebkitTextStroke: '0.5px hsl(var(--primary) / 0.3)'
+                <span className="block text-white font-bold px-4 py-2 mx-auto w-fit rounded-lg relative" style={{
+                  background: 'rgba(0, 0, 0, 0.15)',
+                  backdropFilter: 'blur(4px)',
+                  textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 0 15px hsl(var(--primary) / 0.3)',
+                  border: '1px solid rgba(255,255,255,0.1)'
                 }}>
                   Expert Care
                 </span>

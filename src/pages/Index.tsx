@@ -58,14 +58,39 @@ const Index = () => {
         {/* Kentucky-Inspired Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-slate-900/80 to-blue-900/70"></div>
         
-        {/* Kentucky State Outline Background */}
+        {/* Accurate Kentucky State Outline Background */}
         <div className="absolute inset-0 flex items-center justify-center opacity-8">
-          <svg width="1000" height="500" viewBox="0 0 1000 500" className="max-w-full max-h-full">
-            <path d="M80 250 L150 230 L250 200 L350 175 L450 163 L550 168 L650 175 L750 188 L850 200 L920 213 L920 313 L890 350 L850 375 L770 400 L690 413 L610 418 L530 423 L450 428 L370 425 L290 413 L210 400 L130 375 L80 350 Z" fill="url(#kentuckyGradient)" stroke="currentColor" strokeWidth="3" className="text-primary/30" />
+          <svg width="1200" height="500" viewBox="0 0 1200 500" className="max-w-full max-h-full">
+            {/* Accurate Kentucky state outline with proper geographical features */}
+            <path d="M100 280 L120 270 L140 265 L180 258 L220 253 L280 248 L340 245 L400 243 L480 242 L560 243 L640 245 L720 248 L800 252 L860 256 L920 261 L970 267 L1020 274 L1060 282 L1080 290 L1095 300 L1100 315 L1095 330 L1085 345 L1070 360 L1050 372 L1020 380 L985 385 L945 388 L900 390 L850 391 L800 391 L750 390 L700 388 L650 385 L600 381 L550 376 L500 370 L450 363 L400 355 L350 346 L300 336 L250 325 L200 313 L160 300 L130 287 L110 282 Z" fill="url(#kentuckyGradient)" stroke="currentColor" strokeWidth="2" className="text-primary/40" />
+            {/* Western Purchase region detail */}
+            <path d="M100 280 L115 275 L130 278 L142 285 L145 295 L140 305 L130 312 L115 315 L105 310 L100 300 Z" fill="url(#kentuckyGradient)" stroke="currentColor" strokeWidth="1" className="text-primary/30" />
+            {/* Eastern mountain region detail */}
+            <path d="M1020 274 L1040 270 L1060 275 L1075 285 L1080 300 L1075 315 L1065 325 L1050 330 L1035 325 L1025 315 L1020 300 Z" fill="url(#kentuckyGradient)" stroke="currentColor" strokeWidth="1" className="text-primary/30" />
+            
+            {/* Kentucky-themed floating elements */}
+            <g className="animate-float" style={{animationDelay: '0.5s'}}>
+              {/* Horseshoe */}
+              <path d="M200 350 Q190 340 185 325 Q185 310 200 300 Q215 310 215 325 Q210 340 200 350 M190 345 L190 355 M210 345 L210 355" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.3" />
+            </g>
+            
+            <g className="animate-float" style={{animationDelay: '1.5s'}}>
+              {/* Bourbon barrel */}
+              <ellipse cx="400" cy="180" rx="12" ry="18" fill="hsl(var(--accent))" opacity="0.2" />
+              <rect x="388" y="170" width="24" height="20" rx="2" fill="hsl(var(--accent))" opacity="0.15" />
+            </g>
+            
+            <g className="animate-float" style={{animationDelay: '2.5s'}}>
+              {/* Kentucky State Capitol dome */}
+              <circle cx="600" cy="150" r="15" fill="hsl(var(--primary))" opacity="0.2" />
+              <rect x="595" y="165" width="10" height="20" fill="hsl(var(--primary))" opacity="0.15" />
+            </g>
+            
             <defs>
               <linearGradient id="kentuckyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.15" />
-                <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.08" />
+                <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.12" />
+                <stop offset="50%" stopColor="hsl(221 83% 53%)" stopOpacity="0.08" />
+                <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.06" />
               </linearGradient>
             </defs>
           </svg>
@@ -85,7 +110,7 @@ const Index = () => {
           </div>
         </div>
         
-        {/* Enhanced Floating Construction Elements */}
+        {/* Enhanced Floating Construction & Kentucky Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-16 left-[8%] w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-primary/10 animate-float" style={{
           animationDelay: '0s'
@@ -106,6 +131,33 @@ const Index = () => {
           animationDelay: '3s'
         }}>
             <Zap className="h-7 w-7 text-accent/70" />
+          </div>
+          
+          {/* Kentucky-themed floating elements */}
+          <div className="absolute top-32 left-[15%] w-18 h-18 bg-gradient-to-br from-blue-600/15 to-blue-400/5 rounded-full flex items-center justify-center backdrop-blur-sm border border-blue-400/10 animate-float" style={{
+          animationDelay: '4s'
+        }}>
+            <svg width="24" height="24" viewBox="0 0 24 24" className="text-blue-500/70">
+              <path d="M12 2 L8 8 H16 L12 2 Z M8 10 Q6 12 8 14 Q12 18 12 18 Q12 18 16 14 Q18 12 16 10 Z" fill="currentColor" />
+            </svg>
+          </div>
+          
+          <div className="absolute bottom-28 right-[8%] w-16 h-16 bg-gradient-to-br from-amber-600/15 to-amber-400/5 rounded-lg flex items-center justify-center backdrop-blur-sm border border-amber-400/10 animate-float" style={{
+          animationDelay: '5s'
+        }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" className="text-amber-600/70">
+              <rect x="6" y="8" width="12" height="10" rx="2" fill="currentColor" opacity="0.7" />
+              <rect x="7" y="6" width="10" height="2" rx="1" fill="currentColor" opacity="0.5" />
+              <rect x="8" y="18" width="8" height="2" rx="1" fill="currentColor" opacity="0.5" />
+            </svg>
+          </div>
+          
+          <div className="absolute top-44 right-[25%] w-14 h-14 bg-gradient-to-br from-green-600/15 to-green-400/5 rounded-xl flex items-center justify-center backdrop-blur-sm border border-green-400/10 animate-float" style={{
+          animationDelay: '6s'
+        }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" className="text-green-600/70">
+              <path d="M3 12 L3 18 Q3 20 5 20 L19 20 Q21 20 21 18 L21 12 M3 12 L12 3 L21 12 M9 16 L9 12 L15 12 L15 16" fill="none" stroke="currentColor" strokeWidth="2" />
+            </svg>
           </div>
         </div>
         
@@ -221,12 +273,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Construction Wave Divider */}
-      <div className="relative h-20 overflow-hidden">
+      {/* Kentucky River Wave Divider */}
+      <div className="relative h-20 overflow-hidden bg-gradient-to-b from-accent/10 via-primary/5 to-background">
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,60 Q300,0 600,60 T1200,60 L1200,120 L0,120 Z" fill="hsl(var(--primary) / 0.05)" />
-          <path d="M0,80 Q300,20 600,80 T1200,80 L1200,120 L0,120 Z" fill="hsl(var(--background))" />
+          {/* Kentucky River inspired flowing waves */}
+          <path d="M0,60 Q150,10 300,50 Q450,90 600,40 Q750,0 900,50 Q1050,90 1200,30 L1200,120 L0,120 Z" fill="hsl(221 83% 53% / 0.08)" />
+          <path d="M0,80 Q200,30 400,70 Q600,110 800,60 Q1000,20 1200,70 L1200,120 L0,120 Z" fill="hsl(var(--background))" />
+          {/* Ohio River border curve */}
+          <path d="M0,45 Q300,5 600,35 Q900,65 1200,25" stroke="hsl(var(--primary) / 0.2)" strokeWidth="2" fill="none" strokeDasharray="10,5" />
         </svg>
+        
+        {/* Kentucky-themed floating elements */}
         <div className="absolute top-1/2 left-1/5 w-10 h-10 bg-gradient-to-br from-primary/15 to-accent/10 rounded-full flex items-center justify-center animate-float">
           <Hammer className="h-5 w-5 text-primary" />
         </div>
@@ -234,6 +291,13 @@ const Index = () => {
         animationDelay: '2s'
       }}>
           <Home className="h-4 w-4 text-accent" />
+        </div>
+        
+        {/* Horseshoe element */}
+        <div className="absolute top-1/3 left-1/2 w-6 h-6 animate-float" style={{animationDelay: '3s'}}>
+          <svg viewBox="0 0 24 24" className="w-full h-full text-primary/30">
+            <path d="M12 4 Q8 4 6 8 Q6 12 8 16 L8 20 L10 20 L10 16 Q8 12 8 8 Q8 6 12 6 Q16 6 16 8 Q16 12 14 16 L14 20 L16 20 L16 16 Q18 12 18 8 Q16 4 12 4 Z" fill="currentColor" />
+          </svg>
         </div>
       </div>
 
@@ -296,15 +360,33 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Blueprint Zigzag Divider */}
+      {/* Bourbon Barrel Stave Divider */}
       <div className="relative h-24 overflow-hidden bg-gradient-to-b from-background to-accent/5">
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0 L100,60 L200,0 L300,60 L400,0 L500,60 L600,0 L700,60 L800,0 L900,60 L1000,0 L1100,60 L1200,0 L1200,120 L0,120 Z" fill="none" stroke="hsl(var(--primary) / 0.3)" strokeWidth="2" strokeDasharray="5,5" />
-          <path d="M0,120 L100,60 L200,120 L300,60 L400,120 L500,60 L600,120 L700,60 L800,120 L900,60 L1000,120 L1100,60 L1200,120 Z" fill="hsl(var(--background))" />
+          {/* Bourbon barrel stave pattern with wood grain */}
+          <path d="M0,20 L50,0 L100,20 L150,0 L200,20 L250,0 L300,20 L350,0 L400,20 L450,0 L500,20 L550,0 L600,20 L650,0 L700,20 L750,0 L800,20 L850,0 L900,20 L950,0 L1000,20 L1050,0 L1100,20 L1150,0 L1200,20 L1200,120 L0,120 Z" fill="none" stroke="hsl(var(--primary) / 0.25)" strokeWidth="3" />
+          <path d="M0,40 L75,20 L150,40 L225,20 L300,40 L375,20 L450,40 L525,20 L600,40 L675,20 L750,40 L825,20 L900,40 L975,20 L1050,40 L1125,20 L1200,40 L1200,120 L0,120 Z" fill="hsl(var(--background))" />
+          
+          {/* Wood grain texture lines */}
+          <g stroke="hsl(var(--accent) / 0.15)" strokeWidth="1" fill="none">
+            <path d="M25,30 Q50,25 75,30 Q100,35 125,30" />
+            <path d="M175,30 Q200,25 225,30 Q250,35 275,30" />
+            <path d="M325,30 Q350,25 375,30 Q400,35 425,30" />
+            <path d="M475,30 Q500,25 525,30 Q550,35 575,30" />
+            <path d="M625,30 Q650,25 675,30 Q700,35 725,30" />
+            <path d="M775,30 Q800,25 825,30 Q850,35 875,30" />
+            <path d="M925,30 Q950,25 975,30 Q1000,35 1025,30" />
+            <path d="M1075,30 Q1100,25 1125,30 Q1150,35 1175,30" />
+          </g>
         </svg>
-        <div className="absolute top-1/2 left-1/4 w-3 h-3 bg-primary/30 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/4 right-1/3 w-2 h-2 bg-accent/30 rounded-full animate-pulse" style={{
+        
+        {/* Bourbon barrel elements */}
+        <div className="absolute top-1/2 left-1/4 w-4 h-6 bg-amber-600/20 rounded-sm animate-pulse border border-amber-600/30"></div>
+        <div className="absolute top-1/3 right-1/3 w-3 h-5 bg-amber-700/20 rounded-sm animate-pulse border border-amber-700/30" style={{
         animationDelay: '1s'
+      }}></div>
+        <div className="absolute top-2/3 left-2/3 w-3 h-4 bg-amber-800/20 rounded-sm animate-pulse border border-amber-800/30" style={{
+        animationDelay: '2s'
       }}></div>
       </div>
 
@@ -330,8 +412,27 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Kentucky Pride Divider */}
-      <div className="relative h-16 bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5">
+      {/* Horse Farm Fencing Divider */}
+      <div className="relative h-16 bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5 overflow-hidden">
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 64" preserveAspectRatio="none">
+          {/* Kentucky horse farm fence pattern */}
+          <g stroke="hsl(var(--primary) / 0.3)" strokeWidth="2" fill="none">
+            {/* Horizontal fence rails */}
+            <line x1="0" y1="20" x2="1200" y2="20" />
+            <line x1="0" y1="35" x2="1200" y2="35" />
+            <line x1="0" y1="50" x2="1200" y2="50" />
+            
+            {/* Fence posts */}
+            <line x1="100" y1="15" x2="100" y2="55" strokeWidth="3" />
+            <line x1="250" y1="15" x2="250" y2="55" strokeWidth="3" />
+            <line x1="400" y1="15" x2="400" y2="55" strokeWidth="3" />
+            <line x1="550" y1="15" x2="550" y2="55" strokeWidth="3" />
+            <line x1="700" y1="15" x2="700" y2="55" strokeWidth="3" />
+            <line x1="850" y1="15" x2="850" y2="55" strokeWidth="3" />
+            <line x1="1000" y1="15" x2="1000" y2="55" strokeWidth="3" />
+          </g>
+        </svg>
+        
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="flex items-center gap-4 text-primary/20">
             <div className="h-px w-32 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>

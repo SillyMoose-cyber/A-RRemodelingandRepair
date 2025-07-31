@@ -78,17 +78,25 @@ const Services = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding py-12 md:py-20 bg-gradient-to-br from-background to-secondary/30 relative overflow-hidden pattern-dots">
+      <section className="section-padding py-16 md:py-24 bg-gradient-to-br from-background to-secondary/30 relative overflow-hidden pattern-dots">
+        {/* Floating Icons */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center animate-float">
+            <Wrench className="h-6 w-6 text-primary/60" />
+          </div>
+          <div className="absolute top-32 right-20 w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center animate-float" style={{animationDelay: '1s'}}>
+            <Bath className="h-4 w-4 text-accent/60" />
+          </div>
+          <div className="absolute bottom-20 left-20 w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center animate-float" style={{animationDelay: '2s'}}>
+            <Home className="h-5 w-5 text-secondary/60" />
+          </div>
+          <div className="absolute bottom-32 right-10 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center animate-float" style={{animationDelay: '0.5s'}}>
+            <ChefHat className="h-3 w-3 text-primary/60" />
+          </div>
+        </div>
+        
         <div className="max-container relative z-10">
           <div className="text-center max-w-4xl mx-auto fade-in">
-            <div className="flex flex-wrap justify-center gap-2 mb-4 md:mb-6">
-              <Badge className="trust-badge">
-                ⭐ Georgetown, KY Based
-              </Badge>
-              <Badge className="trust-badge">
-                🏆 15+ Years Experience
-              </Badge>
-            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 gradient-text">
               Repairs, remodels, upgrades — all under one roof.
             </h1>
@@ -99,19 +107,83 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Service Stats Section */}
+      <section className="section-padding py-12 bg-gradient-to-r from-primary/5 to-accent/5 border-y border-border/50">
+        <div className="max-container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-sm md:text-base text-muted-foreground">Projects Completed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24h</div>
+              <div className="text-sm md:text-base text-muted-foreground">Response Time</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">100%</div>
+              <div className="text-sm md:text-base text-muted-foreground">Satisfaction Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">15+</div>
+              <div className="text-sm md:text-base text-muted-foreground">Years Experience</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Decorative Separator */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
+      {/* Services Overview */}
+      <section className="section-padding py-16 md:py-20 bg-gradient-to-br from-accent/10 to-secondary/10 relative">
+        <div className="max-container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+              What We Do Best
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Every project is unique, but our approach remains consistent: quality workmanship, clear communication, and results that exceed expectations.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center">
+                <Wrench className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Expert Repairs</h3>
+              <p className="text-muted-foreground">Quick fixes and complex repairs handled with precision and care.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center">
+                <Home className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Full Remodels</h3>
+              <p className="text-muted-foreground">Transform your space with comprehensive renovation solutions.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center">
+                <ArrowRight className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Smart Upgrades</h3>
+              <p className="text-muted-foreground">Modern improvements that add value and functionality to your home.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
-      <section className="section-padding py-12 md:py-20 relative pattern-grid">
-        {/* Geometric Accent */}
-        <div className="geometric-accent w-32 h-32 top-10 right-10 rotate-45"></div>
-        <div className="geometric-accent w-24 h-24 bottom-20 left-10 -rotate-12"></div>
+      <section className="section-padding py-16 md:py-20 relative pattern-grid">
+        {/* Enhanced Geometric Accents */}
+        <div className="geometric-accent w-32 h-32 top-10 right-10 rotate-45 opacity-20"></div>
+        <div className="geometric-accent w-24 h-24 bottom-20 left-10 -rotate-12 opacity-20"></div>
+        <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-primary/30 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-accent/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
         
         <div className="max-container relative z-10">
-          <div className="text-center mb-10 md:mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
-              Our Services
+              Our Complete Service List
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               From quick repairs to complete renovations, we handle it all with the same level of care and expertise.
@@ -121,19 +193,25 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service, index) => {
               const IconComponent = service.icon;
+              const isEven = index % 2 === 0;
               return (
-                <Card key={index} className="text-center h-full hover-scale transition-all duration-300 group relative overflow-hidden shadow-lg hover:shadow-blue border-0">
+                <Card key={index} className={`h-full hover-scale transition-all duration-300 group relative overflow-hidden shadow-lg hover:shadow-blue border-0 ${isEven ? 'md:transform md:translate-y-4' : ''}`}>
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <CardContent className="p-4 sm:p-6 relative z-10">
-                    <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 icon-bounce">
-                      <IconComponent className="h-7 w-7 text-primary group-hover:text-primary transition-colors duration-300" />
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/5 to-transparent rounded-full -translate-y-10 translate-x-10"></div>
+                  <CardContent className="p-6 relative z-10">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 icon-bounce flex-shrink-0">
+                        <IconComponent className="h-7 w-7 text-primary group-hover:text-primary transition-colors duration-300" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
+                      </div>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
-                    <ul className="space-y-2 text-left">
+                    <ul className="space-y-3">
                       {service.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="text-sm sm:text-base text-muted-foreground flex items-start">
-                          <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                          {item}
+                        <li key={itemIndex} className="text-sm sm:text-base text-muted-foreground flex items-start group/item">
+                          <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2.5 mr-3 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></span>
+                          <span className="group-hover/item:text-foreground transition-colors duration-200">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -145,29 +223,64 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Service Areas Section */}
+      <section className="section-padding py-12 bg-gradient-to-r from-secondary/10 to-accent/10 border-y border-border/50">
+        <div className="max-container">
+          <div className="text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 gradient-text">Serving Georgetown & Surrounding Areas</h3>
+            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+              {['Georgetown', 'Lexington', 'Frankfort', 'Versailles', 'Midway', 'Lawrenceburg', 'Bardstown', 'Louisville Metro'].map((area, index) => (
+                <Badge key={index} variant="secondary" className="text-sm px-3 py-1 hover:bg-primary/10 transition-colors duration-200">
+                  {area}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Decorative Separator */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
 
       {/* CTA Section */}
-      <section className="section-padding py-12 md:py-16 bg-gradient-to-br from-accent/5 to-secondary/10">
-        <div className="max-container">
+      <section className="section-padding py-16 md:py-20 bg-gradient-to-br from-accent/5 to-secondary/10 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 pattern-dots opacity-30"></div>
+        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-primary/5 to-transparent rounded-full -translate-x-32 -translate-y-32"></div>
+        <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-accent/5 to-transparent rounded-full translate-x-32 translate-y-32"></div>
+        
+        <div className="max-container relative z-10">
           <div className="text-center mb-8 md:mb-12">
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 gradient-text">
-                Ready to get started?
+              <h3 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
+                Let's Build Something Great Together
               </h3>
-              <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
-                Call us today for a free estimate. We'll walk you through your options and help you find the right solution for your home and budget.
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 leading-relaxed">
+                Ready to transform your space? Call us for a free consultation and estimate. We'll discuss your vision, timeline, and budget to create the perfect solution for your home.
               </p>
               
-              <div className="bg-gradient-to-br from-background/80 to-background/60 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-elevated border border-primary/20 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-elevated border border-primary/20 relative overflow-hidden max-w-2xl mx-auto">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-                <div className="flex flex-col items-center gap-4 relative z-10">
-                  <p className="text-xl md:text-2xl font-bold relative">
-                    📞 Call <a href="tel:5023707415" className="accent-text hover:underline transition-colors magnetic-btn">(502) 370-7415</a>
-                  </p>
-                  <div className="trust-badge">
-                    ⚡ Fast, reliable help guaranteed
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-accent/10 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center justify-center gap-3 mb-6">
+                    <Phone className="h-8 w-8 text-primary animate-pulse" />
+                    <p className="text-2xl md:text-3xl font-bold">
+                      <a href="tel:5023707415" className="accent-text hover:underline transition-colors magnetic-btn">(502) 370-7415</a>
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-wrap justify-center gap-3">
+                    <div className="trust-badge">
+                      ⚡ Free Estimates
+                    </div>
+                    <div className="trust-badge">
+                      🏆 Licensed & Insured
+                    </div>
+                    <div className="trust-badge">
+                      ⭐ 5-Star Service
+                    </div>
                   </div>
                 </div>
               </div>

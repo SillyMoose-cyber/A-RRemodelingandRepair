@@ -55,29 +55,63 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="section-padding py-8 md:py-20 relative overflow-hidden">
-        {/* Layered background effects */}
-        <div className="absolute inset-0" style={{
-        background: 'var(--gradient-hero)'
-      }}></div>
-        <div className="absolute inset-0 pattern-dots"></div>
+        {/* Kentucky-Inspired Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-slate-900/80 to-blue-900/70"></div>
         
-        {/* Floating construction icons */}
-        <Hammer className="floating-icon w-8 h-8 top-10 left-10 animate-float" style={{
-        animationDelay: '0s'
-      }} />
-        <Paintbrush className="floating-icon w-6 h-6 top-32 right-20 animate-float" style={{
-        animationDelay: '2s'
-      }} />
-        <Zap className="floating-icon w-7 h-7 bottom-40 left-16 animate-float" style={{
-        animationDelay: '4s'
-      }} />
-        <Droplets className="floating-icon w-5 h-5 top-48 right-32 animate-float" style={{
-        animationDelay: '1s'
-      }} />
+        {/* Kentucky State Outline Background */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-8">
+          <svg width="1000" height="500" viewBox="0 0 1000 500" className="max-w-full max-h-full">
+            <path d="M80 250 L150 230 L250 200 L350 175 L450 163 L550 168 L650 175 L750 188 L850 200 L920 213 L920 313 L890 350 L850 375 L770 400 L690 413 L610 418 L530 423 L450 428 L370 425 L290 413 L210 400 L130 375 L80 350 Z" fill="url(#kentuckyGradient)" stroke="currentColor" strokeWidth="3" className="text-primary/30" />
+            <defs>
+              <linearGradient id="kentuckyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.15" />
+                <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.08" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
         
-        {/* Geometric accent shapes */}
-        <div className="geometric-accent w-96 h-96 -top-48 -right-48 transform rotate-45"></div>
-        <div className="geometric-accent w-64 h-64 -bottom-32 -left-32 transform -rotate-12"></div>
+        {/* Blueprint Grid Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="h-full w-full" style={{
+          backgroundImage: `
+                   linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px),
+                   linear-gradient(90deg, rgba(34, 197, 94, 0.3) 1px, transparent 1px),
+                   linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
+                   linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px)
+                 `,
+          backgroundSize: '100px 100px, 100px 100px, 20px 20px, 20px 20px'
+        }}>
+          </div>
+        </div>
+        
+        {/* Enhanced Floating Construction Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-16 left-[8%] w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-primary/10 animate-float" style={{
+          animationDelay: '0s'
+        }}>
+            <Hammer className="h-10 w-10 text-primary/80" />
+          </div>
+          <div className="absolute top-20 right-[12%] w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-accent/10 animate-float" style={{
+          animationDelay: '1.5s'
+        }}>
+            <Home className="h-8 w-8 text-accent/80" />
+          </div>
+          <div className="absolute bottom-32 right-[18%] w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/5 rounded-lg flex items-center justify-center backdrop-blur-sm border border-secondary/10 animate-float" style={{
+          animationDelay: '2s'
+        }}>
+            <Paintbrush className="h-6 w-6 text-primary/70" />
+          </div>
+          <div className="absolute bottom-40 left-[25%] w-14 h-14 bg-gradient-to-br from-accent/20 to-accent/5 rounded-lg flex items-center justify-center backdrop-blur-sm border border-accent/10 animate-float" style={{
+          animationDelay: '3s'
+        }}>
+            <Zap className="h-7 w-7 text-accent/70" />
+          </div>
+        </div>
+        
+        {/* Spotlights */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-radial from-primary/10 via-primary/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-radial from-accent/8 via-accent/3 to-transparent rounded-full blur-3xl"></div>
         
         <div className="max-container relative z-10">
           <div className="text-center max-w-4xl mx-auto">
@@ -89,8 +123,8 @@ const Index = () => {
                 🏆 15+ Years Experience
               </Badge>
             </div>
-          <h1 className="font-bold mb-4 md:mb-6 text-center">
-            <span className="block md:inline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl gradient-text">A&R</span>
+            <h1 className="font-bold mb-4 md:mb-6 text-center text-white drop-shadow-xl">
+            <span className="block md:inline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x">A&R</span>
             <span className="block md:inline whitespace-nowrap text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl"> Remodeling & Repair</span>
           </h1>
             <div className="callout-box mb-4 md:mb-8">
@@ -98,7 +132,7 @@ const Index = () => {
                 Quality Work. <span className="accent-text">No Nonsense.</span>
               </h2>
             </div>
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 md:mb-10 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-blue-100 mb-4 md:mb-10 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
               At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
             </p>
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
@@ -119,10 +153,37 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Diagonal Divider */}
+      <div className="relative h-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10"></div>
+        <svg className="absolute bottom-0 w-full h-24" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,120 L1200,0 L1200,120 Z" fill="hsl(var(--background))" />
+        </svg>
+        <div className="absolute top-1/3 right-1/3 w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center animate-float" style={{
+        animationDelay: '1s'
+      }}>
+          <Home className="h-3 w-3 text-accent" />
+        </div>
+      </div>
+
       {/* Stats Section */}
-      <section className="section-padding py-8 md:py-16 bg-muted/30 relative overflow-hidden">
-        {/* Background pattern and floating elements */}
-        <div className="absolute inset-0 pattern-grid opacity-5"></div>
+      <section className="section-padding py-8 md:py-16 bg-gradient-to-br from-accent/10 to-secondary/10 relative overflow-hidden">
+        {/* Kentucky County Outlines Background */}
+        <div className="absolute inset-0 opacity-5">
+          <svg width="100%" height="100%" viewBox="0 0 400 300">
+            <g stroke="hsl(var(--primary))" strokeWidth="1" fill="none" opacity="0.3">
+              <rect x="20" y="50" width="60" height="40" rx="5" />
+              <rect x="90" y="70" width="45" height="35" rx="3" />
+              <rect x="150" y="60" width="55" height="45" rx="4" />
+              <rect x="220" y="80" width="50" height="30" rx="3" />
+              <rect x="290" y="65" width="70" height="50" rx="5" />
+              <rect x="40" y="110" width="65" height="35" rx="4" />
+              <rect x="120" y="130" width="40" height="40" rx="3" />
+              <rect x="180" y="120" width="60" height="35" rx="4" />
+              <rect x="260" y="140" width="55" height="45" rx="3" />
+            </g>
+          </svg>
+        </div>
         <TrendingUp className="floating-icon w-6 h-6 top-8 right-20 animate-float" style={{
         animationDelay: '1.5s'
       }} />
@@ -160,12 +221,31 @@ const Index = () => {
         </div>
       </section>
 
-      <Separator className="my-4 md:my-8" />
+      {/* Construction Wave Divider */}
+      <div className="relative h-20 overflow-hidden">
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 Q300,0 600,60 T1200,60 L1200,120 L0,120 Z" fill="hsl(var(--primary) / 0.05)" />
+          <path d="M0,80 Q300,20 600,80 T1200,80 L1200,120 L0,120 Z" fill="hsl(var(--background))" />
+        </svg>
+        <div className="absolute top-1/2 left-1/5 w-10 h-10 bg-gradient-to-br from-primary/15 to-accent/10 rounded-full flex items-center justify-center animate-float">
+          <Hammer className="h-5 w-5 text-primary" />
+        </div>
+        <div className="absolute top-1/4 right-1/4 w-8 h-8 bg-gradient-to-br from-accent/15 to-primary/10 rounded-lg flex items-center justify-center animate-float" style={{
+        animationDelay: '2s'
+      }}>
+          <Home className="h-4 w-4 text-accent" />
+        </div>
+      </div>
 
       {/* Value Proposition */}
-      <section className="section-padding py-8 md:py-20 bg-muted/20 relative overflow-hidden">
-        {/* Background enhancements */}
-        <div className="absolute inset-0 pattern-dots opacity-30"></div>
+      <section className="section-padding py-8 md:py-20 bg-gradient-to-br from-muted/30 to-accent/15 relative overflow-hidden">
+        {/* Kentucky Landscape Silhouette */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 opacity-10">
+          <svg width="100%" height="100%" viewBox="0 0 1200 128" preserveAspectRatio="none">
+            <path d="M0,128 L0,80 Q150,60 300,80 Q450,50 600,70 Q750,40 900,60 Q1050,80 1200,65 L1200,128 Z" fill="hsl(var(--primary))" />
+            <path d="M0,128 L0,95 Q200,75 400,90 Q600,65 800,85 Q1000,70 1200,80 L1200,128 Z" fill="hsl(var(--accent))" />
+          </svg>
+        </div>
         <Shield className="floating-icon w-7 h-7 top-16 left-12 animate-float" style={{
         animationDelay: '2s'
       }} />
@@ -175,9 +255,6 @@ const Index = () => {
         <CheckCircle className="floating-icon w-5 h-5 top-40 right-40 animate-float" style={{
         animationDelay: '1s'
       }} />
-        
-        {/* Geometric overlays */}
-        <div className="geometric-accent w-80 h-80 -top-40 -left-40 transform rotate-12"></div>
         
         <div className="max-container relative z-10">
           <div className="text-center mb-6 md:mb-16">
@@ -219,12 +296,28 @@ const Index = () => {
         </div>
       </section>
 
-      <Separator className="my-4 md:my-8" />
+      {/* Blueprint Zigzag Divider */}
+      <div className="relative h-24 overflow-hidden bg-gradient-to-b from-background to-accent/5">
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 L100,60 L200,0 L300,60 L400,0 L500,60 L600,0 L700,60 L800,0 L900,60 L1000,0 L1100,60 L1200,0 L1200,120 L0,120 Z" fill="none" stroke="hsl(var(--primary) / 0.3)" strokeWidth="2" strokeDasharray="5,5" />
+          <path d="M0,120 L100,60 L200,120 L300,60 L400,120 L500,60 L600,120 L700,60 L800,120 L900,60 L1000,120 L1100,60 L1200,120 Z" fill="hsl(var(--background))" />
+        </svg>
+        <div className="absolute top-1/2 left-1/4 w-3 h-3 bg-primary/30 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/4 right-1/3 w-2 h-2 bg-accent/30 rounded-full animate-pulse" style={{
+        animationDelay: '1s'
+      }}></div>
+      </div>
 
       {/* Customer Reviews */}
-      <section className="py-8 md:py-16 relative overflow-hidden">
-        {/* Subtle background texture */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-muted/10 to-background"></div>
+      <section className="py-8 md:py-16 relative overflow-hidden bg-gradient-to-br from-background via-muted/5 to-accent/10">
+        {/* Kentucky Craftsmanship Theme Background */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="h-full w-full" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23000' fillOpacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundSize: '60px 60px'
+        }}>
+          </div>
+        </div>
         <Users className="floating-icon w-6 h-6 top-12 left-20 animate-float" style={{
         animationDelay: '3s'
       }} />
@@ -237,10 +330,19 @@ const Index = () => {
         </div>
       </section>
 
-      <Separator className="my-4 md:my-8" />
+      {/* Kentucky Pride Divider */}
+      <div className="relative h-16 bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="flex items-center gap-4 text-primary/20">
+            <div className="h-px w-32 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+            <span className="text-xs font-semibold tracking-widest">KENTUCKY CRAFTSMANSHIP</span>
+            <div className="h-px w-32 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+          </div>
+        </div>
+      </div>
 
       {/* Process Section */}
-      <section className="section-padding py-8 md:py-20 bg-muted/30 relative overflow-hidden">
+      <section className="section-padding py-8 md:py-20 bg-gradient-to-br from-muted/40 to-primary/5 relative overflow-hidden">
         {/* Enhanced Background Elements */}
         <div className="absolute inset-0 pattern-grid opacity-5"></div>
         <div className="absolute inset-0 pattern-dots opacity-10"></div>
@@ -331,12 +433,31 @@ const Index = () => {
         </div>
       </section>
 
-      <Separator className="my-4 md:my-8" />
+      {/* Final Diagonal Transition */}
+      <div className="relative h-20 overflow-hidden">
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 L1200,80 L1200,120 L0,120 Z" fill="hsl(var(--accent) / 0.08)" />
+          <path d="M0,40 L1200,120 L0,120 Z" fill="hsl(var(--background))" />
+        </svg>
+        <div className="absolute top-1/2 left-1/2 w-8 h-8 bg-gradient-to-br from-primary/15 to-accent/10 rounded-full flex items-center justify-center animate-float">
+          <Wrench className="h-4 w-4 text-primary" />
+        </div>
+      </div>
 
       {/* Service Highlights */}
-      <section className="section-padding py-8 md:py-16 bg-muted/20 relative overflow-hidden">
-        {/* Final section enhancements */}
-        <div className="absolute inset-0 pattern-dots opacity-20"></div>
+      <section className="section-padding py-8 md:py-16 bg-gradient-to-br from-accent/10 to-secondary/15 relative overflow-hidden">
+        {/* Georgetown Pride Background */}
+        <div className="absolute inset-0 opacity-8">
+          <svg width="100%" height="100%" viewBox="0 0 800 400">
+            <defs>
+              <pattern id="kentuckyPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                <circle cx="50" cy="50" r="2" fill="hsl(var(--primary))" opacity="0.1"/>
+                <rect x="45" y="20" width="10" height="5" fill="hsl(var(--accent))" opacity="0.05"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#kentuckyPattern)"/>
+          </svg>
+        </div>
         <Home className="floating-icon w-8 h-8 top-12 left-24 animate-float" style={{
         animationDelay: '0.5s'
       }} />
@@ -350,8 +471,13 @@ const Index = () => {
         animationDelay: '3.2s'
       }} />
         
-        {/* Large geometric background */}
-        <div className="geometric-accent w-[120%] h-64 -bottom-32 -left-20 transform rotate-3"></div>
+        {/* Kentucky State Pride Accent */}
+        <div className="absolute -bottom-20 -right-20 w-96 h-96 opacity-5">
+          <svg viewBox="0 0 400 200" className="w-full h-full">
+            <path d="M20 100 L60 90 L120 80 L180 70 L240 65 L300 68 L360 75 L380 100 L360 125 L300 135 L240 140 L180 135 L120 130 L60 125 L20 115 Z" fill="hsl(var(--primary))" opacity="0.3"/>
+            <text x="200" y="105" textAnchor="middle" className="text-xs fill-primary" opacity="0.4">KENTUCKY</text>
+          </svg>
+        </div>
         
         <div className="max-container relative z-10">
           <div className="text-center mb-4 md:mb-12">

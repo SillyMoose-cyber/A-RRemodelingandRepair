@@ -210,7 +210,7 @@ const Index = () => {
       <Separator className="my-4 md:my-8" />
 
       {/* Customer Reviews */}
-      <section className="py-10 md:py-16">
+      <section className="py-8 md:py-16">
         <div className="max-container">
           <ReviewsCarousel />
         </div>

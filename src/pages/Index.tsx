@@ -87,7 +87,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding py-12 md:py-20 relative overflow-hidden">
+      <section className="section-padding py-8 md:py-20 relative overflow-hidden">
         {/* Clean gradient background */}
         <div className="absolute inset-0" style={{ background: 'var(--gradient-hero)' }}></div>
         
@@ -105,15 +105,15 @@ const Index = () => {
             <span className="block md:inline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl gradient-text">A&R</span>
             <span className="block md:inline whitespace-nowrap text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl"> Remodeling & Repair</span>
           </h1>
-            <div className="callout-box mb-6 md:mb-8">
+            <div className="callout-box mb-4 md:mb-8">
               <h2 className="text-xl md:text-2xl xl:text-3xl font-bold">
                 Quality Work. <span className="accent-text">No Nonsense.</span>
               </h2>
             </div>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground mb-4 md:mb-10 leading-relaxed max-w-3xl mx-auto">
               At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
               <Button size="lg" className="text-lg px-8" asChild>
                 <a href="tel:5023707415">
                   <Phone className="h-5 w-5 mr-2" />
@@ -132,29 +132,29 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding py-12 md:py-16 bg-muted/30">
+      <section className="section-padding py-8 md:py-16 bg-muted/30">
         <div className="max-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="group">
-              <div className="card-subtle rounded-xl p-6 hover:shadow-md transition-all duration-300">
+              <div className="card-subtle rounded-xl p-4 md:p-6 hover:shadow-md transition-all duration-300">
                 <div className="stats-counter mb-2 text-primary">15+</div>
                 <p className="text-foreground font-medium">Years Experience</p>
               </div>
             </div>
             <div className="group">
-              <div className="card-subtle rounded-xl p-6 hover:shadow-md transition-all duration-300">
+              <div className="card-subtle rounded-xl p-4 md:p-6 hover:shadow-md transition-all duration-300">
                 <div className="stats-counter mb-2 text-primary">500+</div>
                 <p className="text-foreground font-medium">Projects Completed</p>
               </div>
             </div>
             <div className="group">
-              <div className="card-subtle rounded-xl p-6 hover:shadow-md transition-all duration-300">
+              <div className="card-subtle rounded-xl p-4 md:p-6 hover:shadow-md transition-all duration-300">
                 <div className="stats-counter mb-2 text-primary">98%</div>
                 <p className="text-foreground font-medium">Customer Satisfaction</p>
               </div>
             </div>
             <div className="group">
-              <div className="card-subtle rounded-xl p-6 hover:shadow-md transition-all duration-300">
+              <div className="card-subtle rounded-xl p-4 md:p-6 hover:shadow-md transition-all duration-300">
                 <div className="stats-counter mb-2 text-primary">24hr</div>
                 <p className="text-foreground font-medium">Response Time</p>
               </div>
@@ -163,21 +163,21 @@ const Index = () => {
         </div>
       </section>
 
-      <Separator className="my-8" />
+      <Separator className="my-4 md:my-8" />
 
       {/* Customer Reviews */}
-      <section className="py-16">
+      <section className="py-10 md:py-16">
         <div className="max-container">
           <ReviewsCarousel />
         </div>
       </section>
 
-      <Separator className="my-8" />
+      <Separator className="my-4 md:my-8" />
 
       {/* Value Proposition */}
-      <section className="section-padding py-12 md:py-20 bg-muted/20">
+      <section className="section-padding py-8 md:py-20 bg-muted/20">
         <div className="max-container">
-          <div className="text-center mb-10 md:mb-16">
+          <div className="text-center mb-6 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
               Why Choose A&R
             </h2>
@@ -203,7 +203,7 @@ const Index = () => {
             })}
           </div>
 
-          <div className="text-center mt-8 md:mt-12">
+          <div className="text-center mt-4 md:mt-12">
             <div className="callout-box max-w-2xl mx-auto">
               <p className="text-lg font-medium text-foreground mb-2">
                 When you hire A&R, you're not just checking a box.
@@ -216,12 +216,12 @@ const Index = () => {
         </div>
       </section>
 
-      <Separator className="my-8" />
+      <Separator className="my-4 md:my-8" />
 
       {/* Process Section */}
-      <section className="section-padding py-10 md:py-16">
+      <section className="section-padding py-6 md:py-16">
         <div className="max-container">
-          <div className="text-center mb-10 md:mb-16">
+          <div className="text-center mb-6 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Process</h2>
             <p className="text-xl text-muted-foreground">
               We keep it simple — so you can get back to normal faster.
@@ -237,7 +237,7 @@ const Index = () => {
                 )}
                 
                 <div className="relative">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold">
+                  <div className="w-16 h-16 mx-auto mb-4 md:mb-6 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold">
                     {step.number}
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
@@ -247,7 +247,7 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-8 md:mt-12">
+          <div className="text-center mt-4 md:mt-12">
             <div className="callout-box max-w-2xl mx-auto">
               <p className="text-lg font-medium">
                 That's it. No overcomplicated steps. Just solid work from start to finish.
@@ -257,18 +257,18 @@ const Index = () => {
         </div>
       </section>
 
-      <Separator className="my-8" />
+      <Separator className="my-4 md:my-8" />
 
       {/* Service Highlights */}
-      <section className="section-padding py-12 md:py-16 bg-muted/20">
+      <section className="section-padding py-8 md:py-16 bg-muted/20">
         <div className="max-container">
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-4 md:mb-12">
             <div className="max-w-4xl mx-auto">
               <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                 From leaky faucets to radiant floor systems, no job is too big or too small. We show up when we say we will, do the work right the first time, and leave your space cleaner than we found it. That's why so many of our customers call us back — and send their friends our way.
               </p>
               
-              <div className="card-elevated rounded-2xl p-6 md:p-8 text-center">
+              <div className="card-elevated rounded-2xl p-4 md:p-8 text-center">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 gradient-text">
                   Ready to upgrade your space or fix what's broken?
                 </h3>

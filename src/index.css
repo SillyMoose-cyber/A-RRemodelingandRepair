@@ -199,7 +199,7 @@ All colors MUST be HSL.
   }
 
   .pattern-grid {
-    background-image: var(--pattern-grid);
+    background-image: linear-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / 0.05) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 

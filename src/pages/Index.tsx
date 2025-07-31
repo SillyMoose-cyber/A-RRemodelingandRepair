@@ -88,8 +88,19 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="section-padding py-8 md:py-20 relative overflow-hidden">
-        {/* Clean gradient background */}
+        {/* Layered background effects */}
         <div className="absolute inset-0" style={{ background: 'var(--gradient-hero)' }}></div>
+        <div className="absolute inset-0 pattern-dots"></div>
+        
+        {/* Floating construction icons */}
+        <Hammer className="floating-icon w-8 h-8 top-10 left-10 animate-float" style={{ animationDelay: '0s' }} />
+        <Paintbrush className="floating-icon w-6 h-6 top-32 right-20 animate-float" style={{ animationDelay: '2s' }} />
+        <Zap className="floating-icon w-7 h-7 bottom-40 left-16 animate-float" style={{ animationDelay: '4s' }} />
+        <Droplets className="floating-icon w-5 h-5 top-48 right-32 animate-float" style={{ animationDelay: '1s' }} />
+        
+        {/* Geometric accent shapes */}
+        <div className="geometric-accent w-96 h-96 -top-48 -right-48 transform rotate-45"></div>
+        <div className="geometric-accent w-64 h-64 -bottom-32 -left-32 transform -rotate-12"></div>
         
         <div className="max-container relative z-10">
           <div className="text-center max-w-4xl mx-auto">
@@ -113,52 +124,57 @@ const Index = () => {
             <p className="text-lg md:text-xl text-muted-foreground mb-4 md:mb-10 leading-relaxed max-w-3xl mx-auto">
               At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-              <Button size="lg" className="text-lg px-8" asChild>
-                <a href="tel:5023707415">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Call (502) 370-7415
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
-                <a href="/services">
-                  View Services
-                  <ArrowRight className="h-5 w-5 ml-2" />
-                </a>
-              </Button>
-            </div>
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
+                <Button size="lg" className="text-lg px-8 magnetic-btn hover-glow" asChild>
+                  <a href="tel:5023707415">
+                    <Phone className="h-5 w-5 mr-2" />
+                    Call (502) 370-7415
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 magnetic-btn" asChild>
+                  <a href="/services">
+                    View Services
+                    <ArrowRight className="h-5 w-5 ml-2" />
+                  </a>
+                </Button>
+              </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding py-8 md:py-16 bg-muted/30">
-        <div className="max-container">
+      <section className="section-padding py-8 md:py-16 bg-muted/30 relative overflow-hidden">
+        {/* Background pattern and floating elements */}
+        <div className="absolute inset-0 pattern-grid opacity-5"></div>
+        <TrendingUp className="floating-icon w-6 h-6 top-8 right-20 animate-float" style={{ animationDelay: '1.5s' }} />
+        <Star className="floating-icon w-5 h-5 bottom-12 left-24 animate-float" style={{ animationDelay: '3s' }} />
+        
+        <div className="max-container relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="group">
-              <div className="card-subtle rounded-xl p-4 md:p-6 hover:shadow-md transition-all duration-300">
-                <div className="stats-counter mb-2 text-primary">15+</div>
-                <p className="text-foreground font-medium">Years Experience</p>
+              <div className="group">
+                <div className="card-elevated rounded-xl p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
+                  <div className="stats-counter mb-2 text-primary">15+</div>
+                  <p className="text-foreground font-medium">Years Experience</p>
+                </div>
               </div>
-            </div>
-            <div className="group">
-              <div className="card-subtle rounded-xl p-4 md:p-6 hover:shadow-md transition-all duration-300">
-                <div className="stats-counter mb-2 text-primary">500+</div>
-                <p className="text-foreground font-medium">Projects Completed</p>
+              <div className="group">
+                <div className="card-elevated rounded-xl p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
+                  <div className="stats-counter mb-2 text-primary">500+</div>
+                  <p className="text-foreground font-medium">Projects Completed</p>
+                </div>
               </div>
-            </div>
-            <div className="group">
-              <div className="card-subtle rounded-xl p-4 md:p-6 hover:shadow-md transition-all duration-300">
-                <div className="stats-counter mb-2 text-primary">98%</div>
-                <p className="text-foreground font-medium">Customer Satisfaction</p>
+              <div className="group">
+                <div className="card-elevated rounded-xl p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
+                  <div className="stats-counter mb-2 text-primary">98%</div>
+                  <p className="text-foreground font-medium">Customer Satisfaction</p>
+                </div>
               </div>
-            </div>
-            <div className="group">
-              <div className="card-subtle rounded-xl p-4 md:p-6 hover:shadow-md transition-all duration-300">
-                <div className="stats-counter mb-2 text-primary">24hr</div>
-                <p className="text-foreground font-medium">Response Time</p>
+              <div className="group">
+                <div className="card-elevated rounded-xl p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
+                  <div className="stats-counter mb-2 text-primary">24hr</div>
+                  <p className="text-foreground font-medium">Response Time</p>
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
@@ -166,8 +182,17 @@ const Index = () => {
       <Separator className="my-4 md:my-8" />
 
       {/* Value Proposition */}
-      <section className="section-padding py-8 md:py-20 bg-muted/20">
-        <div className="max-container">
+      <section className="section-padding py-8 md:py-20 bg-muted/20 relative overflow-hidden">
+        {/* Background enhancements */}
+        <div className="absolute inset-0 pattern-dots opacity-30"></div>
+        <Shield className="floating-icon w-7 h-7 top-16 left-12 animate-float" style={{ animationDelay: '2s' }} />
+        <Award className="floating-icon w-6 h-6 bottom-20 right-16 animate-float" style={{ animationDelay: '4s' }} />
+        <CheckCircle className="floating-icon w-5 h-5 top-40 right-40 animate-float" style={{ animationDelay: '1s' }} />
+        
+        {/* Geometric overlays */}
+        <div className="geometric-accent w-80 h-80 -top-40 -left-40 transform rotate-12"></div>
+        
+        <div className="max-container relative z-10">
           <div className="text-center mb-6 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
               Why Choose A&R
@@ -181,9 +206,9 @@ const Index = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                 <Card key={index} className="text-center h-full card-elevated hover:shadow-lg transition-all duration-300 group">
+                 <Card key={index} className="text-center h-full card-elevated hover:shadow-lg hover-scale transition-all duration-300 group fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                   <CardContent className="p-4 sm:p-6">
-                    <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                    <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center icon-bounce">
                       <IconComponent className="h-7 w-7 text-primary" />
                     </div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-3">{feature.title}</h3>
@@ -210,8 +235,13 @@ const Index = () => {
       <Separator className="my-4 md:my-8" />
 
       {/* Customer Reviews */}
-      <section className="py-8 md:py-16">
-        <div className="max-container">
+      <section className="py-8 md:py-16 relative overflow-hidden">
+        {/* Subtle background texture */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-muted/10 to-background"></div>
+        <Users className="floating-icon w-6 h-6 top-12 left-20 animate-float" style={{ animationDelay: '3s' }} />
+        <Star className="floating-icon w-5 h-5 bottom-16 right-24 animate-float" style={{ animationDelay: '1.5s' }} />
+        
+        <div className="max-container relative z-10">
           <ReviewsCarousel />
         </div>
       </section>
@@ -219,8 +249,19 @@ const Index = () => {
       <Separator className="my-4 md:my-8" />
 
       {/* Process Section */}
-      <section className="section-padding py-6 md:py-16">
-        <div className="max-container">
+      <section className="section-padding py-6 md:py-16 relative overflow-hidden">
+        {/* Process background enhancements */}
+        <div className="absolute inset-0 pattern-grid opacity-5"></div>
+        <Calendar className="floating-icon w-6 h-6 top-20 left-16 animate-float" style={{ animationDelay: '1s' }} />
+        <Hammer className="floating-icon w-7 h-7 bottom-24 right-20 animate-float" style={{ animationDelay: '3s' }} />
+        <Clock className="floating-icon w-5 h-5 top-48 right-12 animate-float" style={{ animationDelay: '2s' }} />
+        
+        {/* Connecting line background elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent hidden lg:block"></div>
+        </div>
+        
+        <div className="max-container relative z-10">
           <div className="text-center mb-6 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Process</h2>
             <p className="text-xl text-muted-foreground">
@@ -230,14 +271,14 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {processSteps.map((step, index) => (
-              <div key={index} className="text-center relative group">
+              <div key={index} className="text-center relative group fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
                 {/* Connection Line */}
                 {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-6 h-0.5 transform translate-x-4 bg-border"></div>
+                  <div className="hidden lg:block absolute top-8 left-full w-6 h-0.5 transform translate-x-4 bg-gradient-to-r from-primary to-primary/50"></div>
                 )}
                 
                 <div className="relative">
-                  <div className="w-16 h-16 mx-auto mb-4 md:mb-6 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold">
+                  <div className="w-16 h-16 mx-auto mb-4 md:mb-6 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold hover-scale hover-glow transition-all duration-300">
                     {step.number}
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
@@ -260,8 +301,18 @@ const Index = () => {
       <Separator className="my-4 md:my-8" />
 
       {/* Service Highlights */}
-      <section className="section-padding py-8 md:py-16 bg-muted/20">
-        <div className="max-container">
+      <section className="section-padding py-8 md:py-16 bg-muted/20 relative overflow-hidden">
+        {/* Final section enhancements */}
+        <div className="absolute inset-0 pattern-dots opacity-20"></div>
+        <Home className="floating-icon w-8 h-8 top-12 left-24 animate-float" style={{ animationDelay: '0.5s' }} />
+        <Paintbrush className="floating-icon w-6 h-6 bottom-20 left-16 animate-float" style={{ animationDelay: '2.5s' }} />
+        <Droplets className="floating-icon w-7 h-7 top-32 right-28 animate-float" style={{ animationDelay: '1.8s' }} />
+        <Zap className="floating-icon w-5 h-5 bottom-32 right-40 animate-float" style={{ animationDelay: '3.2s' }} />
+        
+        {/* Large geometric background */}
+        <div className="geometric-accent w-[120%] h-64 -bottom-32 -left-20 transform rotate-3"></div>
+        
+        <div className="max-container relative z-10">
           <div className="text-center mb-4 md:mb-12">
             <div className="max-w-4xl mx-auto">
               <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">

@@ -250,9 +250,14 @@ const Services = () => {
           <div className="text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 gradient-text">Serving Georgetown & Surrounding Areas</h3>
             <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-              {['Georgetown', 'Lexington', 'Frankfort', 'Versailles', 'Midway', 'Lawrenceburg', 'Bardstown', 'Louisville Metro'].map((area, index) => <Badge key={index} variant="secondary" className="text-sm px-3 py-1 hover:bg-primary/10 transition-colors duration-200">
+              {['Georgetown', 'Lexington', 'Frankfort', 'Versailles', 'Midway'].map((area, index) => (
+                <Badge key={index} variant="secondary" className="text-sm px-3 py-1 hover:bg-primary/10 transition-colors duration-200">
                   {area}
-                </Badge>)}
+                </Badge>
+              ))}
+              <Badge variant="outline" className="text-sm px-3 py-1 bg-gradient-to-r from-primary/20 to-accent/20 border-primary/30 text-primary font-medium hover:bg-primary/10 transition-all duration-200 animate-pulse">
+                And More...
+              </Badge>
             </div>
           </div>
         </div>

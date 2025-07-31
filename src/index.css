@@ -38,21 +38,30 @@ All colors MUST be HSL.
 
     --blue-collar: 217 94% 54%;
     
-    /* Clean, professional design tokens */
+    /* Blue collar industrial color palette */
     --primary-light: 220 90% 70%;
     --accent-blue: 214 100% 60%;
     --success: 142 76% 36%;
+    --construction-orange: 25 95% 55%;
+    --safety-yellow: 54 100% 62%;
+    --steel-gray: 220 9% 46%;
+    --concrete-gray: 220 5% 65%;
+    --workshop-brown: 24 20% 40%;
     
-    /* Subtle gradients for professional look */
+    /* Industrial gradients with character */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)/0.05) 0%, hsl(var(--accent-blue)/0.03) 100%);
-    --gradient-section: linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--card)) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent-blue)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--steel-gray)/0.15) 0%, hsl(var(--concrete-gray)/0.1) 50%, hsl(var(--primary)/0.05) 100%);
+    --gradient-section: linear-gradient(135deg, hsl(var(--concrete-gray)/0.1) 0%, hsl(var(--card)) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--construction-orange)));
+    --gradient-industrial: linear-gradient(45deg, hsl(var(--steel-gray)/0.8), hsl(var(--concrete-gray)/0.6));
+    --gradient-metal: linear-gradient(135deg, hsl(220 15% 85%) 0%, hsl(220 10% 75%) 25%, hsl(220 15% 85%) 50%, hsl(220 8% 70%) 75%, hsl(220 12% 80%) 100%);
     
-    /* Clean shadows */
-    --shadow-soft: 0 2px 8px hsl(var(--foreground) / 0.1);
-    --shadow-medium: 0 4px 16px hsl(var(--foreground) / 0.1);
-    --shadow-large: 0 8px 32px hsl(var(--foreground) / 0.15);
+    /* Industrial shadows and textures */
+    --shadow-soft: 0 2px 8px hsl(var(--steel-gray) / 0.15);
+    --shadow-medium: 0 4px 16px hsl(var(--steel-gray) / 0.2);
+    --shadow-large: 0 8px 32px hsl(var(--steel-gray) / 0.25);
+    --shadow-tool: 0 6px 20px hsl(var(--construction-orange) / 0.3);
+    --shadow-industrial: inset 0 1px 3px hsl(var(--steel-gray) / 0.2), 0 1px 2px hsl(var(--steel-gray) / 0.1);
 
     --radius: 0.5rem;
 
@@ -194,18 +203,68 @@ All colors MUST be HSL.
   }
 
   .pattern-dots {
-    background-image: radial-gradient(hsl(var(--primary) / 0.08) 1px, transparent 1px);
+    background-image: radial-gradient(hsl(var(--steel-gray) / 0.12) 1px, transparent 1px);
     background-size: 20px 20px;
   }
 
   .pattern-grid {
-    background-image: linear-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-image: linear-gradient(hsl(var(--steel-gray) / 0.08) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--steel-gray) / 0.08) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
+  /* Industrial texture patterns */
+  .pattern-concrete {
+    background: 
+      radial-gradient(circle at 20% 80%, hsl(var(--concrete-gray) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--steel-gray) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(var(--concrete-gray) / 0.03) 0%, transparent 50%);
+  }
+
+  .pattern-metal {
+    background: var(--gradient-metal);
+    position: relative;
+  }
+
+  .pattern-metal::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      linear-gradient(90deg, transparent 0%, hsl(220 20% 90% / 0.1) 1px, transparent 2px),
+      linear-gradient(180deg, transparent 0%, hsl(220 15% 85% / 0.1) 1px, transparent 2px);
+    background-size: 3px 3px;
+  }
+
+  .pattern-blueprint {
+    background: 
+      linear-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative;
+  }
+
+  .pattern-blueprint::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      linear-gradient(hsl(var(--primary) / 0.08) 2px, transparent 2px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.08) 2px, transparent 2px);
+    background-size: 200px 200px;
+  }
+
   .floating-icon {
-    @apply absolute opacity-10 pointer-events-none;
+    @apply absolute pointer-events-none;
+    opacity: 0.12;
     animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 2px 4px hsl(var(--steel-gray) / 0.1));
+  }
+
+  .floating-icon-large {
+    @apply absolute pointer-events-none;
+    opacity: 0.08;
+    animation: float 8s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px hsl(var(--steel-gray) / 0.15));
   }
 
   .magnetic-btn {
@@ -221,11 +280,35 @@ All colors MUST be HSL.
   }
 
   .trust-badge {
-    @apply bg-gradient-to-r from-primary to-primary/80 text-white font-semibold px-3 py-1 rounded-full text-sm;
+    @apply bg-gradient-to-r from-construction-orange to-safety-yellow text-white font-bold px-3 py-1 text-sm;
+    border-radius: 2px;
+    box-shadow: 
+      0 2px 4px hsl(var(--construction-orange) / 0.3),
+      inset 0 1px 0 hsl(0 0% 100% / 0.2);
+    text-shadow: 0 1px 2px hsl(0 0% 0% / 0.3);
   }
 
   .callout-box {
-    @apply relative border border-primary/20 rounded-lg p-4 bg-muted/50;
+    @apply relative border-2 border-primary/30 p-4 bg-muted/50;
+    border-radius: 2px;
+    background: 
+      linear-gradient(135deg, hsl(var(--muted)/0.8) 0%, hsl(var(--card)) 100%),
+      var(--pattern-concrete);
+    box-shadow: var(--shadow-industrial);
+  }
+
+  .callout-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, 
+      hsl(var(--construction-orange)) 0%, 
+      hsl(var(--primary)) 50%, 
+      hsl(var(--safety-yellow)) 100%
+    );
   }
 
   .card-subtle {
@@ -235,12 +318,82 @@ All colors MUST be HSL.
   .card-elevated {
     @apply bg-card border border-border;
     box-shadow: var(--shadow-medium);
+    position: relative;
+  }
+
+  /* Industrial card styling */
+  .card-industrial {
+    @apply bg-card border-2 border-border;
+    background: 
+      linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)/0.3) 100%),
+      var(--pattern-metal);
+    box-shadow: 
+      var(--shadow-industrial),
+      0 0 0 1px hsl(var(--steel-gray) / 0.1);
+    position: relative;
+  }
+
+  .card-industrial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+      hsl(var(--construction-orange)) 0% 20%, 
+      hsl(var(--safety-yellow)) 20% 40%, 
+      hsl(var(--primary)) 40% 60%,
+      hsl(var(--construction-orange)) 60% 80%,
+      hsl(var(--safety-yellow)) 80% 100%
+    );
+    opacity: 0.7;
+  }
+
+  .card-clipboard {
+    @apply bg-card border border-border;
+    background: 
+      linear-gradient(25deg, hsl(var(--card)) 0%, hsl(225 10% 95%) 100%);
+    box-shadow: 
+      var(--shadow-medium),
+      inset 0 1px 0 hsl(0 0% 100% / 0.8),
+      inset 0 -1px 0 hsl(var(--steel-gray) / 0.1);
+    position: relative;
+  }
+
+  .card-clipboard::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 8px;
+    background: linear-gradient(135deg, hsl(var(--steel-gray)) 0%, hsl(var(--concrete-gray)) 100%);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px hsl(var(--steel-gray) / 0.3);
   }
 
   .geometric-accent {
     position: absolute;
-    background: linear-gradient(45deg, transparent, hsl(var(--primary) / 0.05), transparent);
+    background: linear-gradient(45deg, transparent, hsl(var(--steel-gray) / 0.08), transparent);
     pointer-events: none;
+  }
+
+  /* Tool shadows and construction equipment silhouettes */
+  .tool-shadow {
+    position: absolute;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .equipment-silhouette {
+    position: absolute;
+    opacity: 0.05;
+    pointer-events: none;
+    background: linear-gradient(135deg, hsl(var(--steel-gray)), hsl(var(--concrete-gray)));
+    z-index: 1;
   }
 
   @keyframes fadeIn {

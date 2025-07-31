@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { CheckCircle, Clock, DollarSign, Shield, Users, Home, Phone, ArrowRight, Award, Hammer, Zap, Droplets, Paintbrush, Star, Calendar, TrendingUp, Calculator, Wrench, PaintBucket, HardHat, Ruler, Drill } from "lucide-react";
+import { CheckCircle, Clock, DollarSign, Shield, Users, Home, Phone, ArrowRight, Award, Hammer, Zap, Droplets, Paintbrush, Star, Calendar, TrendingUp, Calculator, Wrench, PaintBucket, HardHat, Ruler, Drill, Settings, Cog, RotateCcw, Bolt, Nut, Gauge, Compass, Square } from "lucide-react";
 const Index = () => {
   const features = [{
     icon: Clock,
@@ -55,29 +55,47 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="section-padding py-8 md:py-20 relative overflow-hidden">
-        {/* Layered background effects */}
+        {/* Industrial layered background */}
         <div className="absolute inset-0" style={{
         background: 'var(--gradient-hero)'
       }}></div>
-        <div className="absolute inset-0 pattern-dots"></div>
+        <div className="absolute inset-0 pattern-concrete"></div>
+        <div className="absolute inset-0 pattern-blueprint opacity-30"></div>
         
-        {/* Floating construction icons */}
-        <Hammer className="floating-icon w-8 h-8 top-10 left-10 animate-float" style={{
-        animationDelay: '0s'
-      }} />
-        <Paintbrush className="floating-icon w-6 h-6 top-32 right-20 animate-float" style={{
-        animationDelay: '2s'
-      }} />
-        <Zap className="floating-icon w-7 h-7 bottom-40 left-16 animate-float" style={{
-        animationDelay: '4s'
-      }} />
-        <Droplets className="floating-icon w-5 h-5 top-48 right-32 animate-float" style={{
-        animationDelay: '1s'
-      }} />
+        {/* Massive floating construction icon array */}
+        <Hammer className="floating-icon w-12 h-12 top-8 left-8 text-construction-orange/15" style={{animationDelay: '0s'}} />
+        <Paintbrush className="floating-icon w-8 h-8 top-24 right-16 text-primary/12" style={{animationDelay: '2s'}} />
+        <Zap className="floating-icon w-10 h-10 bottom-32 left-12 text-safety-yellow/18" style={{animationDelay: '4s'}} />
+        <Droplets className="floating-icon w-7 h-7 top-40 right-24 text-primary/15" style={{animationDelay: '1s'}} />
+        <Wrench className="floating-icon w-9 h-9 top-16 left-32 text-steel-gray/20" style={{animationDelay: '3s'}} />
+        <Settings className="floating-icon w-6 h-6 bottom-48 right-8 text-construction-orange/12" style={{animationDelay: '5s'}} />
+        <Wrench className="floating-icon w-11 h-11 top-52 left-20 text-steel-gray/15" style={{animationDelay: '1.5s'}} />
+        <Settings className="floating-icon w-8 h-8 bottom-20 right-40 text-primary/14" style={{animationDelay: '2.5s'}} />
+        <HardHat className="floating-icon w-10 h-10 top-32 right-8 text-safety-yellow/16" style={{animationDelay: '3.5s'}} />
+        <Ruler className="floating-icon w-7 h-7 bottom-40 left-40 text-steel-gray/18" style={{animationDelay: '4.5s'}} />
+        <Drill className="floating-icon w-9 h-9 top-60 right-32 text-construction-orange/14" style={{animationDelay: '0.8s'}} />
+        <Cog className="floating-icon w-6 h-6 bottom-12 left-48 text-primary/12" style={{animationDelay: '1.8s'}} />
+        <Settings className="floating-icon w-8 h-8 top-20 left-56 text-steel-gray/16" style={{animationDelay: '2.8s'}} />
+        <Wrench className="floating-icon w-7 h-7 bottom-28 right-20 text-construction-orange/13" style={{animationDelay: '3.8s'}} />
+        <PaintBucket className="floating-icon w-10 h-10 top-44 left-4 text-primary/15" style={{animationDelay: '4.8s'}} />
+        <Bolt className="floating-icon w-5 h-5 bottom-52 right-12 text-steel-gray/14" style={{animationDelay: '5.8s'}} />
+        <Nut className="floating-icon w-6 h-6 top-12 right-52 text-safety-yellow/12" style={{animationDelay: '6s'}} />
+        <Gauge className="floating-icon w-8 h-8 bottom-16 left-24 text-construction-orange/16" style={{animationDelay: '0.3s'}} />
+        <Compass className="floating-icon w-7 h-7 top-36 right-44 text-primary/13" style={{animationDelay: '1.3s'}} />
+        <Square className="floating-icon w-9 h-9 bottom-44 left-16 text-steel-gray/17" style={{animationDelay: '2.3s'}} />
         
-        {/* Geometric accent shapes */}
-        <div className="geometric-accent w-96 h-96 -top-48 -right-48 transform rotate-45"></div>
-        <div className="geometric-accent w-64 h-64 -bottom-32 -left-32 transform -rotate-12"></div>
+        {/* Large construction equipment silhouettes */}
+        <div className="equipment-silhouette w-40 h-32 -top-16 -right-20 transform rotate-12 rounded-lg"></div>
+        <div className="equipment-silhouette w-48 h-24 -bottom-12 -left-24 transform -rotate-6 rounded-lg"></div>
+        <div className="equipment-silhouette w-32 h-20 top-1/2 -left-16 transform rotate-45 rounded-lg"></div>
+        
+        {/* Tool shadow overlays */}
+        <div className="tool-shadow w-64 h-64 top-20 right-20 transform rotate-45">
+          <div className="w-full h-full bg-gradient-to-br from-steel-gray/8 to-transparent rounded-lg"></div>
+        </div>
+        <div className="tool-shadow w-48 h-48 bottom-32 left-32 transform -rotate-30">
+          <div className="w-full h-full bg-gradient-to-tl from-construction-orange/6 to-transparent rounded-lg"></div>
+        </div>
         
         <div className="max-container relative z-10">
           <div className="text-center max-w-4xl mx-auto">
@@ -121,39 +139,43 @@ const Index = () => {
 
       {/* Stats Section */}
       <section className="section-padding py-8 md:py-16 bg-muted/30 relative overflow-hidden">
-        {/* Background pattern and floating elements */}
-        <div className="absolute inset-0 pattern-grid opacity-5"></div>
-        <TrendingUp className="floating-icon w-6 h-6 top-8 right-20 animate-float" style={{
-        animationDelay: '1.5s'
-      }} />
-        <Star className="floating-icon w-5 h-5 bottom-12 left-24 animate-float" style={{
-        animationDelay: '3s'
-      }} />
+        {/* Industrial dashboard background */}
+        <div className="absolute inset-0 pattern-metal"></div>
+        <div className="absolute inset-0 pattern-grid opacity-8"></div>
+        
+        {/* Floating gauges and measurement tools */}
+        <TrendingUp className="floating-icon w-8 h-8 top-8 right-20 text-construction-orange/15" style={{animationDelay: '1.5s'}} />
+        <Star className="floating-icon w-6 h-6 bottom-12 left-24 text-safety-yellow/18" style={{animationDelay: '3s'}} />
+        <Gauge className="floating-icon w-10 h-10 top-20 left-16 text-steel-gray/16" style={{animationDelay: '0.5s'}} />
+        <Calculator className="floating-icon w-7 h-7 bottom-20 right-32 text-primary/14" style={{animationDelay: '2.5s'}} />
+        <Ruler className="floating-icon w-9 h-9 top-32 right-8 text-construction-orange/12" style={{animationDelay: '4s'}} />
+        <Compass className="floating-icon w-6 h-6 bottom-32 left-40 text-steel-gray/15" style={{animationDelay: '1.8s'}} />
+        <Square className="floating-icon w-8 h-8 top-12 left-48 text-safety-yellow/13" style={{animationDelay: '3.2s'}} />
         
         <div className="max-container relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="group">
-                <div className="card-elevated rounded-xl p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
+                <div className="card-industrial rounded-sm p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
                   <div className="stats-counter mb-2 text-primary">15+</div>
-                  <p className="text-foreground font-medium">Years Experience</p>
+                  <p className="text-foreground font-bold">Years Experience</p>
                 </div>
               </div>
               <div className="group">
-                <div className="card-elevated rounded-xl p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
+                <div className="card-industrial rounded-sm p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
                   <div className="stats-counter mb-2 text-primary">500+</div>
-                  <p className="text-foreground font-medium">Projects Completed</p>
+                  <p className="text-foreground font-bold">Projects Completed</p>
                 </div>
               </div>
               <div className="group">
-                <div className="card-elevated rounded-xl p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
+                <div className="card-industrial rounded-sm p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
                   <div className="stats-counter mb-2 text-primary">98%</div>
-                  <p className="text-foreground font-medium">Customer Satisfaction</p>
+                  <p className="text-foreground font-bold">Customer Satisfaction</p>
                 </div>
               </div>
               <div className="group">
-                <div className="card-elevated rounded-xl p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
+                <div className="card-industrial rounded-sm p-4 md:p-6 hover:shadow-lg hover-scale transition-all duration-300">
                   <div className="stats-counter mb-2 text-primary">24hr</div>
-                  <p className="text-foreground font-medium">Response Time</p>
+                  <p className="text-foreground font-bold">Response Time</p>
                 </div>
               </div>
           </div>
@@ -164,20 +186,27 @@ const Index = () => {
 
       {/* Value Proposition */}
       <section className="section-padding py-8 md:py-20 bg-muted/20 relative overflow-hidden">
-        {/* Background enhancements */}
-        <div className="absolute inset-0 pattern-dots opacity-30"></div>
-        <Shield className="floating-icon w-7 h-7 top-16 left-12 animate-float" style={{
-        animationDelay: '2s'
-      }} />
-        <Award className="floating-icon w-6 h-6 bottom-20 right-16 animate-float" style={{
-        animationDelay: '4s'
-      }} />
-        <CheckCircle className="floating-icon w-5 h-5 top-40 right-40 animate-float" style={{
-        animationDelay: '1s'
-      }} />
+        {/* Toolbox/workshop background */}
+        <div className="absolute inset-0 pattern-concrete"></div>
+        <div className="absolute inset-0 pattern-dots opacity-40"></div>
         
-        {/* Geometric overlays */}
-        <div className="geometric-accent w-80 h-80 -top-40 -left-40 transform rotate-12"></div>
+        {/* Dense floating tool arrangement */}
+        <Shield className="floating-icon w-9 h-9 top-16 left-12 text-construction-orange/18" style={{animationDelay: '2s'}} />
+        <Award className="floating-icon w-8 h-8 bottom-20 right-16 text-safety-yellow/16" style={{animationDelay: '4s'}} />
+        <CheckCircle className="floating-icon w-7 h-7 top-40 right-40 text-primary/15" style={{animationDelay: '1s'}} />
+        <Hammer className="floating-icon w-10 h-10 top-8 right-8 text-steel-gray/14" style={{animationDelay: '0.5s'}} />
+        <Wrench className="floating-icon w-6 h-6 bottom-32 left-20 text-construction-orange/13" style={{animationDelay: '1.5s'}} />
+        <Settings className="floating-icon w-8 h-8 top-24 left-48 text-primary/16" style={{animationDelay: '2.5s'}} />
+        <Drill className="floating-icon w-7 h-7 bottom-12 right-32 text-steel-gray/15" style={{animationDelay: '3.5s'}} />
+        <Wrench className="floating-icon w-9 h-9 top-52 right-20 text-safety-yellow/14" style={{animationDelay: '4.5s'}} />
+        <PaintBucket className="floating-icon w-6 h-6 bottom-48 left-40 text-construction-orange/12" style={{animationDelay: '5.5s'}} />
+        <Ruler className="floating-icon w-8 h-8 top-32 left-8 text-primary/17" style={{animationDelay: '6s'}} />
+        <HardHat className="floating-icon w-10 h-10 bottom-8 right-48 text-steel-gray/16" style={{animationDelay: '0.8s'}} />
+        <Settings className="floating-icon w-7 h-7 top-48 left-32 text-safety-yellow/13" style={{animationDelay: '1.8s'}} />
+        
+        {/* Tool storage/workshop geometric overlays */}
+        <div className="geometric-accent w-96 h-48 -top-24 -left-48 transform rotate-6"></div>
+        <div className="equipment-silhouette w-64 h-32 -bottom-16 -right-32 transform -rotate-12 rounded-lg"></div>
         
         <div className="max-container relative z-10">
           <div className="text-center mb-6 md:mb-16">
@@ -192,15 +221,15 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {features.map((feature, index) => {
             const IconComponent = feature.icon;
-            return <Card key={index} className="text-center h-full card-elevated hover:shadow-lg hover-scale transition-all duration-300 group fade-in" style={{
+            return <Card key={index} className="text-center h-full card-clipboard hover:shadow-lg hover-scale transition-all duration-300 group fade-in" style={{
               animationDelay: `${index * 0.1}s`
             }}>
                   <CardContent className="p-4 sm:p-6">
-                    <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center icon-bounce">
-                      <IconComponent className="h-7 w-7 text-primary" />
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-construction-orange/20 to-safety-yellow/20 rounded-sm flex items-center justify-center icon-bounce border-2 border-steel-gray/20">
+                      <IconComponent className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3">{feature.title}</h3>
-                    <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 text-steel-gray">{feature.title}</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground font-medium">{feature.description}</p>
                   </CardContent>
                 </Card>;
           })}
@@ -302,22 +331,22 @@ const Index = () => {
                       </div>
                     </div>}
                   
-                  {/* Interactive Step Card */}
-                  <div className="card-elevated hover-scale hover-glow magnetic-btn p-6 rounded-xl bg-card/70 backdrop-blur-sm border border-border/50 transition-all duration-300 group">
+                  {/* Industrial Process Card */}
+                  <div className="card-clipboard hover-scale hover-glow magnetic-btn p-6 rounded-sm bg-card/90 backdrop-blur-sm border-2 border-steel-gray/30 transition-all duration-300 group relative">
                     <div className="relative inline-block mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <span className="relative z-10">{step.number}</span>
+                      <div className="w-24 h-24 rounded-sm bg-gradient-to-br from-construction-orange to-safety-yellow flex items-center justify-center text-white font-black text-2xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden border-2 border-steel-gray/30">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <span className="relative z-10 text-shadow">{step.number}</span>
                       </div>
                       
-                      {/* Construction Icon */}
-                      <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-accent rounded-full flex items-center justify-center shadow-md group-hover:animate-bounce">
-                        <StepIcon className="w-4 h-4 text-white" />
+                      {/* Construction Tool Badge */}
+                      <div className="absolute -bottom-3 -right-3 w-10 h-10 bg-gradient-to-br from-steel-gray to-concrete-gray rounded-sm flex items-center justify-center shadow-lg group-hover:animate-bounce border border-steel-gray/50">
+                        <StepIcon className="w-5 h-5 text-white" />
                       </div>
                     </div>
                     
-                    <h3 className="text-xl font-semibold mb-3 gradient-text group-hover:scale-105 transition-transform duration-300">{step.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                    <h3 className="text-xl font-bold mb-3 text-steel-gray group-hover:scale-105 transition-transform duration-300">{step.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed font-medium">{step.description}</p>
                   </div>
                 </div>;
           })}

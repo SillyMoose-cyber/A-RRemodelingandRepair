@@ -22,7 +22,13 @@ import {
   Paintbrush,
   Star,
   Calendar,
-  TrendingUp
+  TrendingUp,
+  Calculator,
+  Wrench,
+  PaintBucket,
+  HardHat,
+  Ruler,
+  Drill
 } from "lucide-react";
 
 const Index = () => {
@@ -249,50 +255,97 @@ const Index = () => {
       <Separator className="my-4 md:my-8" />
 
       {/* Process Section */}
-      <section className="section-padding py-6 md:py-16 relative overflow-hidden">
-        {/* Process background enhancements */}
+      <section className="section-padding py-8 md:py-20 bg-muted/30 relative overflow-hidden">
+        {/* Enhanced Background Elements */}
         <div className="absolute inset-0 pattern-grid opacity-5"></div>
-        <Calendar className="floating-icon w-6 h-6 top-20 left-16 animate-float" style={{ animationDelay: '1s' }} />
-        <Hammer className="floating-icon w-7 h-7 bottom-24 right-20 animate-float" style={{ animationDelay: '3s' }} />
-        <Clock className="floating-icon w-5 h-5 top-48 right-12 animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute inset-0 pattern-dots opacity-10"></div>
         
-        {/* Connecting line background elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent hidden lg:block"></div>
+        {/* Floating Construction Icons */}
+        <div className="absolute top-10 left-10 floating-icon">
+          <Hammer className="w-6 h-6 text-primary/20" />
+        </div>
+        <div className="absolute bottom-20 right-20 floating-icon" style={{ animationDelay: '1s' }}>
+          <Wrench className="w-8 h-8 text-accent/20" />
+        </div>
+        <div className="absolute top-32 right-32 floating-icon" style={{ animationDelay: '2s' }}>
+          <PaintBucket className="w-5 h-5 text-secondary/20" />
+        </div>
+        <div className="absolute bottom-32 left-32 floating-icon" style={{ animationDelay: '3s' }}>
+          <HardHat className="w-7 h-7 text-primary/15" />
+        </div>
+        <div className="absolute top-1/2 left-16 floating-icon" style={{ animationDelay: '4s' }}>
+          <Ruler className="w-6 h-6 text-accent/15" />
+        </div>
+        <div className="absolute top-20 right-16 floating-icon" style={{ animationDelay: '5s' }}>
+          <Drill className="w-5 h-5 text-secondary/15" />
         </div>
         
-        <div className="max-container relative z-10">
-          <div className="text-center mb-6 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Process</h2>
-            <p className="text-xl text-muted-foreground">
-              We keep it simple — so you can get back to normal faster.
+        {/* Geometric Accent Shapes */}
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-br from-accent/5 to-secondary/5 rounded-full blur-xl"></div>
+        
+        <div className="max-container">
+          <div className="text-center mb-20 fade-in">
+            <h2 className="text-4xl font-bold mb-4 gradient-text">Our Process</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Simple, transparent, and designed to deliver <span className="accent-text">exceptional results</span> every time
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center relative group fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                {/* Connection Line */}
-                {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-6 h-0.5 transform translate-x-4 bg-gradient-to-r from-primary to-primary/50"></div>
-                )}
-                
-                <div className="relative">
-                  <div className="w-16 h-16 mx-auto mb-4 md:mb-6 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold hover-scale hover-glow transition-all duration-300">
-                    {step.number}
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            {processSteps.map((step, index) => {
+              const stepIcons = [Phone, Calculator, Hammer, CheckCircle];
+              const StepIcon = stepIcons[index];
+              
+              return (
+                <div key={index} className="text-center relative fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
+                  {/* Enhanced Connection Line with Arrow */}
+                  {index < processSteps.length - 1 && (
+                    <div className="hidden lg:block absolute top-12 left-full w-12 h-0.5 transform translate-x-6">
+                      <div className="w-full h-full bg-gradient-to-r from-primary via-accent to-primary opacity-40 animate-pulse"></div>
+                      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1">
+                        <div className="w-2 h-2 bg-primary rotate-45 opacity-60"></div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Interactive Step Card */}
+                  <div className="card-elevated hover-scale hover-glow magnetic-btn p-6 rounded-xl bg-card/70 backdrop-blur-sm border border-border/50 transition-all duration-300 group">
+                    <div className="relative inline-block mb-6">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <span className="relative z-10">{step.number}</span>
+                      </div>
+                      
+                      {/* Construction Icon */}
+                      <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-accent rounded-full flex items-center justify-center shadow-md group-hover:animate-bounce">
+                        <StepIcon className="w-4 h-4 text-white" />
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold mb-3 gradient-text group-hover:scale-105 transition-transform duration-300">{step.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
-
-          <div className="text-center mt-4 md:mt-12">
-            <div className="callout-box max-w-2xl mx-auto">
-              <p className="text-lg font-medium">
-                That's it. No overcomplicated steps. Just solid work from start to finish.
+          
+          <div className="mt-20 text-center fade-in" style={{ animationDelay: '1s' }}>
+            <div className="card-elevated bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm rounded-xl p-10 border border-border/50 shadow-lg max-w-3xl mx-auto hover-glow">
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mr-4">
+                  <Star className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold gradient-text">Ready to Get Started?</h3>
+              </div>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Transform your space with our proven process. Let's start with a <span className="accent-text">free consultation</span> to discuss your vision.
               </p>
+              <Button size="lg" className="magnetic-btn bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <Phone className="w-5 h-5 mr-2" />
+                Get Your Free Consultation
+              </Button>
             </div>
           </div>
         </div>

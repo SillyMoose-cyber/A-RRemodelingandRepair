@@ -274,23 +274,58 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Tool Belt Divider */}
-      <div className="relative h-16 bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5 overflow-hidden">
+      {/* Enhanced Construction Tools Divider */}
+      <div className="relative h-32 bg-gradient-to-r from-background via-primary/5 to-background overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="h-full w-full" style={{
+            backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+                             radial-gradient(circle at 80% 50%, hsl(var(--accent) / 0.1) 0%, transparent 50%)`,
+          }}></div>
+        </div>
+        
+        {/* Horizontal construction line */}
+        <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent transform -translate-y-px"></div>
+        
+        {/* Construction tools arranged professionally */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="flex items-center gap-8">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/15 rounded-xl flex items-center justify-center animate-bounce-gentle">
-              <Wrench className="h-6 w-6 text-primary" />
+          <div className="flex items-center justify-center space-x-16 max-w-4xl mx-auto">
+            {/* Tool 1 */}
+            <div className="relative group">
+              <div className="w-16 h-16 bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-sm rounded-2xl border border-primary/20 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                <Wrench className="h-8 w-8 text-primary group-hover:text-primary/80 transition-colors duration-300" />
+              </div>
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-primary/20 rounded-full border-2 border-background"></div>
             </div>
-            <div className="w-2 h-2 bg-primary/40 rounded-full animate-pulse"></div>
-            <div className="w-10 h-10 bg-gradient-to-br from-accent/20 to-primary/15 rounded-lg flex items-center justify-center animate-bounce-gentle" style={{animationDelay: '0.5s'}}>
-              <Home className="h-5 w-5 text-accent" />
+            
+            {/* Connector line */}
+            <div className="w-12 h-px bg-gradient-to-r from-primary/40 to-accent/40"></div>
+            
+            {/* Tool 2 */}
+            <div className="relative group">
+              <div className="w-14 h-14 bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-sm rounded-xl border border-accent/20 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                <Home className="h-7 w-7 text-accent group-hover:text-accent/80 transition-colors duration-300" />
+              </div>
+              <div className="absolute -top-1 -left-1 w-3 h-3 bg-accent/20 rounded-full border-2 border-background"></div>
             </div>
-            <div className="w-2 h-2 bg-accent/40 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-            <div className="w-8 h-8 bg-gradient-to-br from-primary/20 to-secondary/15 rounded-full flex items-center justify-center animate-bounce-gentle" style={{animationDelay: '1s'}}>
-              <TreePine className="h-4 w-4 text-primary" />
+            
+            {/* Connector line */}
+            <div className="w-12 h-px bg-gradient-to-r from-accent/40 to-primary/40"></div>
+            
+            {/* Tool 3 */}
+            <div className="relative group">
+              <div className="w-12 h-12 bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-sm rounded-lg border border-primary/20 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                <TreePine className="h-6 w-6 text-primary group-hover:text-primary/80 transition-colors duration-300" />
+              </div>
+              <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-primary/20 rounded-full border-2 border-background"></div>
             </div>
           </div>
         </div>
+        
+        {/* Subtle floating elements */}
+        <div className="absolute top-4 left-1/4 w-2 h-2 bg-primary/30 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-6 right-1/3 w-1.5 h-1.5 bg-accent/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-6 right-1/4 w-1 h-1 bg-primary/40 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
       </div>
 
       {/* Service Areas Section */}

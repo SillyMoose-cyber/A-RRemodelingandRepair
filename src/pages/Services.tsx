@@ -34,7 +34,7 @@ const Services = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding py-16 md:py-24 relative overflow-hidden">
+      <section className="section-padding py-12 md:py-20 relative overflow-hidden">
         {/* Kentucky-Inspired Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-slate-900/80 to-blue-900/70"></div>
         
@@ -154,13 +154,25 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Decorative Separator */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+      {/* Diagonal Divider */}
+      <div className="relative h-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10"></div>
+        <svg className="absolute bottom-0 w-full h-24" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,120 L1200,0 L1200,120 Z" fill="hsl(var(--background))" />
+        </svg>
+        {/* Floating construction tools */}
+        <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center animate-float">
+          <Wrench className="h-4 w-4 text-primary" />
+        </div>
+        <div className="absolute top-1/3 right-1/3 w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center animate-float" style={{animationDelay: '1s'}}>
+          <Home className="h-3 w-3 text-accent" />
+        </div>
+      </div>
 
       {/* Services Overview */}
-      <section className="section-padding py-16 md:py-20 bg-gradient-to-br from-accent/10 to-secondary/10 relative">
+      <section className="section-padding py-12 md:py-16 bg-gradient-to-br from-accent/10 to-secondary/10 relative">
         <div className="max-container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
               What We Do Best
             </h2>
@@ -169,7 +181,7 @@ const Services = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center">
                 <Wrench className="h-8 w-8 text-primary" />
@@ -195,8 +207,26 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Construction Wave Divider */}
+      <div className="relative h-20 overflow-hidden">
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 Q300,0 600,60 T1200,60 L1200,120 L0,120 Z" fill="hsl(var(--primary) / 0.05)" />
+          <path d="M0,80 Q300,20 600,80 T1200,80 L1200,120 L0,120 Z" fill="hsl(var(--background))" />
+        </svg>
+        {/* Animated construction elements */}
+        <div className="absolute top-1/2 left-1/5 w-10 h-10 bg-gradient-to-br from-primary/15 to-accent/10 rounded-full flex items-center justify-center animate-float">
+          <Bath className="h-5 w-5 text-primary" />
+        </div>
+        <div className="absolute top-1/4 right-1/4 w-8 h-8 bg-gradient-to-br from-accent/15 to-primary/10 rounded-lg flex items-center justify-center animate-float" style={{animationDelay: '2s'}}>
+          <ChefHat className="h-4 w-4 text-accent" />
+        </div>
+        <div className="absolute bottom-1/4 left-1/2 w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center animate-pulse">
+          <Thermometer className="h-3 w-3 text-primary" />
+        </div>
+      </div>
+
       {/* Services Grid */}
-      <section className="section-padding py-16 md:py-20 relative pattern-grid">
+      <section className="section-padding py-12 md:py-16 relative pattern-grid">
         {/* Enhanced Geometric Accents */}
         <div className="geometric-accent w-32 h-32 top-10 right-10 rotate-45 opacity-20"></div>
         <div className="geometric-accent w-24 h-24 bottom-20 left-10 -rotate-12 opacity-20"></div>
@@ -206,7 +236,7 @@ const Services = () => {
       }}></div>
         
         <div className="max-container relative z-10">
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-8 md:mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
               Our Complete Service List
             </h2>
@@ -222,8 +252,8 @@ const Services = () => {
             return <Card key={index} className={`h-full hover-scale transition-all duration-300 group relative overflow-hidden shadow-lg hover:shadow-blue border-0 ${isEven ? 'md:transform md:translate-y-4' : ''}`}>
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/5 to-transparent rounded-full -translate-y-10 translate-x-10"></div>
-                  <CardContent className="p-6 relative z-10">
-                    <div className="flex items-start gap-4 mb-4">
+                   <CardContent className="p-5 relative z-10">
+                     <div className="flex items-start gap-3 mb-3">
                       <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 icon-bounce flex-shrink-0">
                         <IconComponent className="h-7 w-7 text-primary group-hover:text-primary transition-colors duration-300" />
                       </div>
@@ -231,12 +261,12 @@ const Services = () => {
                         <h3 className="text-lg sm:text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
                       </div>
                     </div>
-                    <ul className="space-y-3">
-                      {service.items.map((item, itemIndex) => <li key={itemIndex} className="text-sm sm:text-base text-muted-foreground flex items-start group/item">
-                          <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2.5 mr-3 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></span>
-                          <span className="group-hover/item:text-foreground transition-colors duration-200">{item}</span>
-                        </li>)}
-                    </ul>
+                     <ul className="space-y-2">
+                       {service.items.map((item, itemIndex) => <li key={itemIndex} className="text-sm sm:text-base text-muted-foreground flex items-start group/item">
+                           <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></span>
+                           <span className="group-hover/item:text-foreground transition-colors duration-200">{item}</span>
+                         </li>)}
+                     </ul>
                   </CardContent>
                 </Card>;
           })}
@@ -244,11 +274,30 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Tool Belt Divider */}
+      <div className="relative h-16 bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5 overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="flex items-center gap-8">
+            <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/15 rounded-xl flex items-center justify-center animate-bounce-gentle">
+              <Wrench className="h-6 w-6 text-primary" />
+            </div>
+            <div className="w-2 h-2 bg-primary/40 rounded-full animate-pulse"></div>
+            <div className="w-10 h-10 bg-gradient-to-br from-accent/20 to-primary/15 rounded-lg flex items-center justify-center animate-bounce-gentle" style={{animationDelay: '0.5s'}}>
+              <Home className="h-5 w-5 text-accent" />
+            </div>
+            <div className="w-2 h-2 bg-accent/40 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+            <div className="w-8 h-8 bg-gradient-to-br from-primary/20 to-secondary/15 rounded-full flex items-center justify-center animate-bounce-gentle" style={{animationDelay: '1s'}}>
+              <TreePine className="h-4 w-4 text-primary" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Service Areas Section */}
-      <section className="section-padding py-12 bg-gradient-to-r from-secondary/10 to-accent/10 border-y border-border/50">
+      <section className="section-padding py-8 bg-gradient-to-r from-secondary/10 to-accent/10 border-y border-border/50">
         <div className="max-container">
           <div className="text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 gradient-text">Serving Georgetown & Surrounding Areas</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 gradient-text">Serving Georgetown & Surrounding Areas</h3>
             <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
               {['Georgetown', 'Lexington', 'Frankfort', 'Versailles', 'Midway'].map((area, index) => <Badge key={index} variant="secondary" className="text-sm px-3 py-1 hover:bg-primary/10 transition-colors duration-200">
                   {area}
@@ -261,23 +310,40 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Decorative Separator */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+      {/* Blueprint Zigzag Divider */}
+      <div className="relative h-24 overflow-hidden bg-gradient-to-b from-background to-accent/5">
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 L100,60 L200,0 L300,60 L400,0 L500,60 L600,0 L700,60 L800,0 L900,60 L1000,0 L1100,60 L1200,0 L1200,120 L0,120 Z" 
+                fill="none" 
+                stroke="hsl(var(--primary) / 0.3)" 
+                strokeWidth="2" 
+                strokeDasharray="5,5" />
+          <path d="M0,120 L1200,120 L1200,80 L0,80 Z" fill="hsl(var(--accent) / 0.05)" />
+        </svg>
+        {/* Construction blueprint elements */}
+        <div className="absolute top-1/3 left-1/6 w-4 h-4 border-2 border-primary/30 bg-background rounded-sm flex items-center justify-center">
+          <div className="w-1 h-1 bg-primary/50 rounded-full"></div>
+        </div>
+        <div className="absolute top-2/3 right-1/5 w-6 h-6 border-2 border-accent/30 bg-background rounded-full flex items-center justify-center">
+          <div className="w-2 h-2 bg-accent/50 rounded-full"></div>
+        </div>
+        <div className="absolute top-1/2 left-1/2 w-3 h-3 border border-primary/40 bg-primary/10 rounded-sm rotate-45"></div>
+      </div>
 
       {/* CTA Section */}
-      <section className="section-padding py-16 md:py-20 bg-gradient-to-br from-accent/5 to-secondary/10 relative overflow-hidden">
+      <section className="section-padding py-12 md:py-16 bg-gradient-to-br from-accent/5 to-secondary/10 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 pattern-dots opacity-30"></div>
         <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-primary/5 to-transparent rounded-full -translate-x-32 -translate-y-32"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-accent/5 to-transparent rounded-full translate-x-32 translate-y-32"></div>
         
         <div className="max-container relative z-10">
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-6 md:mb-8">
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
+              <h3 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
                 Let's Build Something Great Together
               </h3>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                 Ready to transform your space? Call us for a free consultation and estimate. We'll discuss your vision, timeline, and budget to create the perfect solution for your home.
               </p>
               

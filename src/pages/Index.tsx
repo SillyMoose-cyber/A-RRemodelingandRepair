@@ -371,9 +371,12 @@ const Index = () => {
         <div className="max-container relative z-10">
           <div className="text-center mb-4 md:mb-12">
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
-                From leaky faucets to radiant floor systems, no job is too big or too small. We show up when we say we will, do the work right the first time, and leave your space cleaner than we found it. That's why so many of our customers call us back — and send their friends our way.
-              </p>
+              {/* Enhanced paragraph with card styling */}
+              <div className="card-elevated rounded-2xl p-6 md:p-8 mb-6 md:mb-8 backdrop-blur-sm bg-card/80 border border-border/20">
+                <p className="text-xl md:text-2xl leading-relaxed font-medium text-foreground">
+                  From leaky faucets to radiant floor systems, <span className="accent-text font-semibold">no job is too big or too small</span>. We show up when we say we will, <span className="accent-text font-semibold">do the work right the first time</span>, and leave your space cleaner than we found it. That's why so many of our customers <span className="accent-text font-semibold">call us back — and send their friends our way</span>.
+                </p>
+              </div>
               
               <div className="card-elevated rounded-2xl p-4 md:p-8 text-center">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 gradient-text">

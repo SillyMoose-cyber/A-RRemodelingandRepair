@@ -38,35 +38,21 @@ All colors MUST be HSL.
 
     --blue-collar: 217 94% 54%;
     
-    /* Rich design tokens for vibrant aesthetics */
-    --primary-glow: 220 90% 70%;
-    --accent-blue: 214 100% 65%;
-    --accent-blue-light: 214 100% 85%;
-    --accent-blue-dark: 214 100% 45%;
+    /* Clean, professional design tokens */
+    --primary-light: 220 90% 70%;
+    --accent-blue: 214 100% 60%;
     --success: 142 76% 36%;
-    --warm-orange: 25 95% 65%;
-    --warm-purple: 270 75% 65%;
-    --cool-teal: 180 85% 60%;
-    --vibrant-pink: 330 85% 65%;
     
-    /* Rich gradient backgrounds - much higher opacity */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent-blue-dark)) 50%, hsl(var(--warm-purple)) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(var(--warm-orange)/0.25) 0%, hsl(var(--warm-purple)/0.15) 100%);
-    --gradient-cool: linear-gradient(135deg, hsl(var(--cool-teal)/0.2) 0%, hsl(var(--accent-blue)/0.25) 100%);
-    --gradient-vibrant: linear-gradient(135deg, hsl(var(--vibrant-pink)/0.15) 0%, hsl(var(--primary)/0.2) 50%, hsl(var(--cool-teal)/0.15) 100%);
-    --gradient-section-1: linear-gradient(135deg, hsl(var(--primary)/0.15) 0%, hsl(var(--warm-orange)/0.1) 100%);
-    --gradient-section-2: linear-gradient(135deg, hsl(var(--cool-teal)/0.12) 0%, hsl(var(--accent-blue)/0.18) 100%);
-    --gradient-section-3: linear-gradient(135deg, hsl(var(--warm-purple)/0.1) 0%, hsl(var(--vibrant-pink)/0.15) 100%);
+    /* Subtle gradients for professional look */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)/0.05) 0%, hsl(var(--accent-blue)/0.03) 100%);
+    --gradient-section: linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--card)) 100%);
     --gradient-accent: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent-blue)));
     
-    /* Enhanced shadows with color */
-    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.25);
-    --shadow-blue: 0 10px 30px -10px hsl(var(--accent-blue) / 0.3);
-    --shadow-warm: 0 10px 30px -10px hsl(var(--warm-orange) / 0.2);
-    --shadow-elevated: 0 20px 40px -10px hsl(var(--primary) / 0.2);
-    --pattern-grid: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.08) 1px, transparent 0);
-    --blur-subtle: blur(40px);
+    /* Clean shadows */
+    --shadow-soft: 0 2px 8px hsl(var(--foreground) / 0.1);
+    --shadow-medium: 0 4px 16px hsl(var(--foreground) / 0.1);
+    --shadow-large: 0 8px 32px hsl(var(--foreground) / 0.15);
 
     --radius: 0.5rem;
 
@@ -197,11 +183,11 @@ All colors MUST be HSL.
   }
 
   .accent-text {
-    @apply text-[hsl(var(--accent-blue))] font-semibold;
+    @apply text-primary font-semibold;
   }
 
   .gradient-text {
-    background: var(--gradient-hero);
+    background: var(--gradient-primary);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -239,23 +225,16 @@ All colors MUST be HSL.
   }
 
   .callout-box {
-    @apply relative border border-primary/30 rounded-lg p-4;
-    background: var(--gradient-warm);
+    @apply relative border border-primary/20 rounded-lg p-4 bg-muted/50;
   }
 
-  .card-tinted {
-    background: linear-gradient(135deg, hsl(var(--primary)/0.08) 0%, hsl(var(--accent-blue)/0.05) 100%);
-    border: 1px solid hsl(var(--primary)/0.2);
+  .card-subtle {
+    @apply bg-card border border-border shadow-sm;
   }
 
-  .card-warm {
-    background: linear-gradient(135deg, hsl(var(--warm-orange)/0.08) 0%, hsl(var(--warm-purple)/0.05) 100%);
-    border: 1px solid hsl(var(--warm-orange)/0.2);
-  }
-
-  .card-cool {
-    background: linear-gradient(135deg, hsl(var(--cool-teal)/0.08) 0%, hsl(var(--accent-blue)/0.05) 100%);
-    border: 1px solid hsl(var(--cool-teal)/0.2);
+  .card-elevated {
+    @apply bg-card border border-border;
+    box-shadow: var(--shadow-medium);
   }
 
   .geometric-accent {

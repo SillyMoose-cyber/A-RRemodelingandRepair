@@ -154,19 +154,9 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Diagonal Divider */}
-      <div className="relative h-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10"></div>
-        <svg className="absolute bottom-0 w-full h-24" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,120 L1200,0 L1200,120 Z" fill="hsl(var(--background))" />
-        </svg>
-        {/* Floating construction tools */}
-        
-        <div className="absolute top-1/3 right-1/3 w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center animate-float" style={{
-        animationDelay: '1s'
-      }}>
-          <Home className="h-3 w-3 text-accent" />
-        </div>
+      {/* Clean Section Divider */}
+      <div className="relative h-6">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-border to-transparent"></div>
       </div>
 
       {/* Services Overview */}
@@ -207,24 +197,9 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Construction Wave Divider */}
-      <div className="relative h-20 overflow-hidden">
-        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,60 Q300,0 600,60 T1200,60 L1200,120 L0,120 Z" fill="hsl(var(--primary) / 0.05)" />
-          <path d="M0,80 Q300,20 600,80 T1200,80 L1200,120 L0,120 Z" fill="hsl(var(--background))" />
-        </svg>
-        {/* Animated construction elements */}
-        <div className="absolute top-1/2 left-1/5 w-10 h-10 bg-gradient-to-br from-primary/15 to-accent/10 rounded-full flex items-center justify-center animate-float">
-          <Bath className="h-5 w-5 text-primary" />
-        </div>
-        <div className="absolute top-1/4 right-1/4 w-8 h-8 bg-gradient-to-br from-accent/15 to-primary/10 rounded-lg flex items-center justify-center animate-float" style={{
-        animationDelay: '2s'
-      }}>
-          <ChefHat className="h-4 w-4 text-accent" />
-        </div>
-        <div className="absolute bottom-1/4 left-1/2 w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center animate-pulse">
-          <Thermometer className="h-3 w-3 text-primary" />
-        </div>
+      {/* Minimal Geometric Divider */}
+      <div className="relative h-8 bg-gradient-to-r from-transparent via-primary/10 to-transparent">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-px bg-primary"></div>
       </div>
 
       {/* Services Grid */}
@@ -276,29 +251,9 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Tool Belt Divider */}
-      <div className="relative h-16 bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="flex items-center gap-8">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/15 rounded-xl flex items-center justify-center animate-bounce-gentle">
-              <Wrench className="h-6 w-6 text-primary" />
-            </div>
-            <div className="w-2 h-2 bg-primary/40 rounded-full animate-pulse"></div>
-            <div className="w-10 h-10 bg-gradient-to-br from-accent/20 to-primary/15 rounded-lg flex items-center justify-center animate-bounce-gentle" style={{
-            animationDelay: '0.5s'
-          }}>
-              <Home className="h-5 w-5 text-accent" />
-            </div>
-            <div className="w-2 h-2 bg-accent/40 rounded-full animate-pulse" style={{
-            animationDelay: '1s'
-          }}></div>
-            <div className="w-8 h-8 bg-gradient-to-br from-primary/20 to-secondary/15 rounded-full flex items-center justify-center animate-bounce-gentle" style={{
-            animationDelay: '1s'
-          }}>
-              <TreePine className="h-4 w-4 text-primary" />
-            </div>
-          </div>
-        </div>
+      {/* Professional Section Break */}
+      <div className="relative h-4">
+        <div className="absolute left-0 right-0 top-1/2 h-px bg-gradient-to-r from-transparent via-border via-border to-transparent"></div>
       </div>
 
       {/* Service Areas Section */}
@@ -318,21 +273,8 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Blueprint Zigzag Divider */}
-      <div className="relative h-24 overflow-hidden bg-gradient-to-b from-background to-accent/5">
-        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0 L100,60 L200,0 L300,60 L400,0 L500,60 L600,0 L700,60 L800,0 L900,60 L1000,0 L1100,60 L1200,0 L1200,120 L0,120 Z" fill="none" stroke="hsl(var(--primary) / 0.3)" strokeWidth="2" strokeDasharray="5,5" />
-          <path d="M0,120 L1200,120 L1200,80 L0,80 Z" fill="hsl(var(--accent) / 0.05)" />
-        </svg>
-        {/* Construction blueprint elements */}
-        <div className="absolute top-1/3 left-1/6 w-4 h-4 border-2 border-primary/30 bg-background rounded-sm flex items-center justify-center">
-          <div className="w-1 h-1 bg-primary/50 rounded-full"></div>
-        </div>
-        <div className="absolute top-2/3 right-1/5 w-6 h-6 border-2 border-accent/30 bg-background rounded-full flex items-center justify-center">
-          <div className="w-2 h-2 bg-accent/50 rounded-full"></div>
-        </div>
-        <div className="absolute top-1/2 left-1/2 w-3 h-3 border border-primary/40 bg-primary/10 rounded-sm rotate-45"></div>
-      </div>
+      {/* Simple Transition */}
+      <div className="h-6 bg-gradient-to-b from-background to-accent/5"></div>
 
       {/* CTA Section */}
       <section className="section-padding py-12 md:py-16 bg-gradient-to-br from-accent/5 to-secondary/10 relative overflow-hidden">

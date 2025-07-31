@@ -169,6 +169,23 @@ const Services = () => {
         </div>
       </div>
 
+      {/* Service Areas Section */}
+      <section className="section-padding py-8 bg-gradient-to-r from-secondary/10 to-accent/10 border-y border-border/50">
+        <div className="max-container">
+          <div className="text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 gradient-text">Serving Georgetown & Surrounding Areas</h3>
+            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+              {['Georgetown', 'Lexington', 'Frankfort', 'Versailles', 'Midway'].map((area, index) => <Badge key={index} variant="secondary" className="text-sm px-3 py-1 hover:bg-primary/10 transition-colors duration-200">
+                  {area}
+                </Badge>)}
+              <Badge variant="outline" className="text-sm px-3 py-1 bg-gradient-to-r from-primary/20 to-accent/20 border-primary/30 text-primary font-medium hover:bg-primary/10 transition-all duration-200">
+                And More...
+              </Badge>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Overview */}
       <section className="section-padding py-12 md:py-16 bg-gradient-to-br from-accent/10 to-secondary/10 relative">
         <div className="max-container">
@@ -283,22 +300,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Service Areas Section */}
-      <section className="section-padding py-8 bg-gradient-to-r from-secondary/10 to-accent/10 border-y border-border/50">
-        <div className="max-container">
-          <div className="text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 gradient-text">Serving Georgetown & Surrounding Areas</h3>
-            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-              {['Georgetown', 'Lexington', 'Frankfort', 'Versailles', 'Midway'].map((area, index) => <Badge key={index} variant="secondary" className="text-sm px-3 py-1 hover:bg-primary/10 transition-colors duration-200">
-                  {area}
-                </Badge>)}
-              <Badge variant="outline" className="text-sm px-3 py-1 bg-gradient-to-r from-primary/20 to-accent/20 border-primary/30 text-primary font-medium hover:bg-primary/10 transition-all duration-200">
-                And More...
-              </Badge>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Blueprint Zigzag Divider */}
       <div className="relative h-24 overflow-hidden bg-gradient-to-b from-background to-accent/5">

@@ -165,15 +165,6 @@ const Index = () => {
 
       <Separator className="my-4 md:my-8" />
 
-      {/* Customer Reviews */}
-      <section className="py-10 md:py-16">
-        <div className="max-container">
-          <ReviewsCarousel />
-        </div>
-      </section>
-
-      <Separator className="my-4 md:my-8" />
-
       {/* Value Proposition */}
       <section className="section-padding py-8 md:py-20 bg-muted/20">
         <div className="max-container">
@@ -213,6 +204,15 @@ const Index = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <Separator className="my-4 md:my-8" />
+
+      {/* Customer Reviews */}
+      <section className="py-10 md:py-16">
+        <div className="max-container">
+          <ReviewsCarousel />
         </div>
       </section>
 

@@ -100,12 +100,14 @@ const Index = () => {
            </h1>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4 md:mb-8 border border-white/20">
               <h2 className="text-xl md:text-2xl xl:text-3xl font-bold text-white drop-shadow-md">
-                Quality Work. <span className="text-yellow-300">No Nonsense.</span>
+                Quality Work. <span className="text-blue-400">No Nonsense.</span>
               </h2>
             </div>
-            <p className="text-lg md:text-xl text-white/90 mb-4 md:mb-10 leading-relaxed max-w-3xl mx-auto drop-shadow-md">
-              At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
-            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 max-w-3xl mx-auto mb-4 md:mb-10">
+              <p className="text-lg md:text-xl text-white leading-relaxed drop-shadow-md">
+                At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
+              </p>
+            </div>
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
                 <Button size="lg" className="text-lg px-8 magnetic-btn hover-glow" asChild>
                   <a href="tel:5023707415">

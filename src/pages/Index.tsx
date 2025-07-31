@@ -6,103 +6,74 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { 
-  CheckCircle, 
-  Clock, 
-  DollarSign, 
-  Shield, 
-  Users, 
-  Home,
-  Phone,
-  ArrowRight,
-  Award,
-  Hammer,
-  Zap,
-  Droplets,
-  Paintbrush,
-  Star,
-  Calendar,
-  TrendingUp,
-  Calculator,
-  Wrench,
-  PaintBucket,
-  HardHat,
-  Ruler,
-  Drill
-} from "lucide-react";
-
+import { CheckCircle, Clock, DollarSign, Shield, Users, Home, Phone, ArrowRight, Award, Hammer, Zap, Droplets, Paintbrush, Star, Calendar, TrendingUp, Calculator, Wrench, PaintBucket, HardHat, Ruler, Drill } from "lucide-react";
 const Index = () => {
-  const features = [
-    {
-      icon: Clock,
-      title: "Fast Response Times",
-      description: "We show up when we say we will — and get to work."
-    },
-    {
-      icon: DollarSign,
-      title: "Fair, Upfront Pricing",
-      description: "You'll know the full cost before we begin."
-    },
-    {
-      icon: Shield,
-      title: "Quality Over Corners",
-      description: "We take pride in doing things the right way."
-    },
-    {
-      icon: Home,
-      title: "Respect for Your Space",
-      description: "Clean, professional, and mess-free."
-    },
-    {
-      icon: Users,
-      title: "Local + Loyal",
-      description: "Most of our work comes from referrals."
-    },
-    {
-      icon: Award,
-      title: "We Stand Behind Our Work",
-      description: "If it's not right, we'll make it right — no questions asked."
-    }
-  ];
-
-  const processSteps = [
-    {
-      number: "1",
-      title: "Get in Touch",
-      description: "Call or text us at (502) 370-7415. Tell us what you need — we'll listen."
-    },
-    {
-      number: "2", 
-      title: "Get a Quote",
-      description: "We'll give you honest pricing and explain what the job involves."
-    },
-    {
-      number: "3",
-      title: "Get to Work", 
-      description: "We show up on time, do it right the first time, and treat your home with care."
-    },
-    {
-      number: "4",
-      title: "Get It Done",
-      description: "No loose ends. No mess left behind. Just results you can count on."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+  const features = [{
+    icon: Clock,
+    title: "Fast Response Times",
+    description: "We show up when we say we will — and get to work."
+  }, {
+    icon: DollarSign,
+    title: "Fair, Upfront Pricing",
+    description: "You'll know the full cost before we begin."
+  }, {
+    icon: Shield,
+    title: "Quality Over Corners",
+    description: "We take pride in doing things the right way."
+  }, {
+    icon: Home,
+    title: "Respect for Your Space",
+    description: "Clean, professional, and mess-free."
+  }, {
+    icon: Users,
+    title: "Local + Loyal",
+    description: "Most of our work comes from referrals."
+  }, {
+    icon: Award,
+    title: "We Stand Behind Our Work",
+    description: "If it's not right, we'll make it right — no questions asked."
+  }];
+  const processSteps = [{
+    number: "1",
+    title: "Get in Touch",
+    description: "Call or text us at (502) 370-7415. Tell us what you need — we'll listen."
+  }, {
+    number: "2",
+    title: "Get a Quote",
+    description: "We'll give you honest pricing and explain what the job involves."
+  }, {
+    number: "3",
+    title: "Get to Work",
+    description: "We show up on time, do it right the first time, and treat your home with care."
+  }, {
+    number: "4",
+    title: "Get It Done",
+    description: "No loose ends. No mess left behind. Just results you can count on."
+  }];
+  return <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       
       {/* Hero Section */}
       <section className="section-padding py-8 md:py-20 relative overflow-hidden">
         {/* Layered background effects */}
-        <div className="absolute inset-0" style={{ background: 'var(--gradient-hero)' }}></div>
+        <div className="absolute inset-0" style={{
+        background: 'var(--gradient-hero)'
+      }}></div>
         <div className="absolute inset-0 pattern-dots"></div>
         
         {/* Floating construction icons */}
-        <Hammer className="floating-icon w-8 h-8 top-10 left-10 animate-float" style={{ animationDelay: '0s' }} />
-        <Paintbrush className="floating-icon w-6 h-6 top-32 right-20 animate-float" style={{ animationDelay: '2s' }} />
-        <Zap className="floating-icon w-7 h-7 bottom-40 left-16 animate-float" style={{ animationDelay: '4s' }} />
-        <Droplets className="floating-icon w-5 h-5 top-48 right-32 animate-float" style={{ animationDelay: '1s' }} />
+        <Hammer className="floating-icon w-8 h-8 top-10 left-10 animate-float" style={{
+        animationDelay: '0s'
+      }} />
+        <Paintbrush className="floating-icon w-6 h-6 top-32 right-20 animate-float" style={{
+        animationDelay: '2s'
+      }} />
+        <Zap className="floating-icon w-7 h-7 bottom-40 left-16 animate-float" style={{
+        animationDelay: '4s'
+      }} />
+        <Droplets className="floating-icon w-5 h-5 top-48 right-32 animate-float" style={{
+        animationDelay: '1s'
+      }} />
         
         {/* Geometric accent shapes */}
         <div className="geometric-accent w-96 h-96 -top-48 -right-48 transform rotate-45"></div>
@@ -152,8 +123,12 @@ const Index = () => {
       <section className="section-padding py-8 md:py-16 bg-muted/30 relative overflow-hidden">
         {/* Background pattern and floating elements */}
         <div className="absolute inset-0 pattern-grid opacity-5"></div>
-        <TrendingUp className="floating-icon w-6 h-6 top-8 right-20 animate-float" style={{ animationDelay: '1.5s' }} />
-        <Star className="floating-icon w-5 h-5 bottom-12 left-24 animate-float" style={{ animationDelay: '3s' }} />
+        <TrendingUp className="floating-icon w-6 h-6 top-8 right-20 animate-float" style={{
+        animationDelay: '1.5s'
+      }} />
+        <Star className="floating-icon w-5 h-5 bottom-12 left-24 animate-float" style={{
+        animationDelay: '3s'
+      }} />
         
         <div className="max-container relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -191,9 +166,15 @@ const Index = () => {
       <section className="section-padding py-8 md:py-20 bg-muted/20 relative overflow-hidden">
         {/* Background enhancements */}
         <div className="absolute inset-0 pattern-dots opacity-30"></div>
-        <Shield className="floating-icon w-7 h-7 top-16 left-12 animate-float" style={{ animationDelay: '2s' }} />
-        <Award className="floating-icon w-6 h-6 bottom-20 right-16 animate-float" style={{ animationDelay: '4s' }} />
-        <CheckCircle className="floating-icon w-5 h-5 top-40 right-40 animate-float" style={{ animationDelay: '1s' }} />
+        <Shield className="floating-icon w-7 h-7 top-16 left-12 animate-float" style={{
+        animationDelay: '2s'
+      }} />
+        <Award className="floating-icon w-6 h-6 bottom-20 right-16 animate-float" style={{
+        animationDelay: '4s'
+      }} />
+        <CheckCircle className="floating-icon w-5 h-5 top-40 right-40 animate-float" style={{
+        animationDelay: '1s'
+      }} />
         
         {/* Geometric overlays */}
         <div className="geometric-accent w-80 h-80 -top-40 -left-40 transform rotate-12"></div>
@@ -210,9 +191,10 @@ const Index = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {features.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                 <Card key={index} className="text-center h-full card-elevated hover:shadow-lg hover-scale transition-all duration-300 group fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+            const IconComponent = feature.icon;
+            return <Card key={index} className="text-center h-full card-elevated hover:shadow-lg hover-scale transition-all duration-300 group fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <CardContent className="p-4 sm:p-6">
                     <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center icon-bounce">
                       <IconComponent className="h-7 w-7 text-primary" />
@@ -220,9 +202,8 @@ const Index = () => {
                     <h3 className="text-lg sm:text-xl font-semibold mb-3">{feature.title}</h3>
                     <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
 
           <div className="text-center mt-4 md:mt-12">
@@ -244,8 +225,12 @@ const Index = () => {
       <section className="py-8 md:py-16 relative overflow-hidden">
         {/* Subtle background texture */}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-muted/10 to-background"></div>
-        <Users className="floating-icon w-6 h-6 top-12 left-20 animate-float" style={{ animationDelay: '3s' }} />
-        <Star className="floating-icon w-5 h-5 bottom-16 right-24 animate-float" style={{ animationDelay: '1.5s' }} />
+        <Users className="floating-icon w-6 h-6 top-12 left-20 animate-float" style={{
+        animationDelay: '3s'
+      }} />
+        <Star className="floating-icon w-5 h-5 bottom-16 right-24 animate-float" style={{
+        animationDelay: '1.5s'
+      }} />
         
         <div className="max-container relative z-10">
           <ReviewsCarousel />
@@ -264,19 +249,29 @@ const Index = () => {
         <div className="absolute top-10 left-10 floating-icon">
           <Hammer className="w-6 h-6 text-primary/20" />
         </div>
-        <div className="absolute bottom-20 right-20 floating-icon" style={{ animationDelay: '1s' }}>
+        <div className="absolute bottom-20 right-20 floating-icon" style={{
+        animationDelay: '1s'
+      }}>
           <Wrench className="w-8 h-8 text-accent/20" />
         </div>
-        <div className="absolute top-32 right-32 floating-icon" style={{ animationDelay: '2s' }}>
+        <div className="absolute top-32 right-32 floating-icon" style={{
+        animationDelay: '2s'
+      }}>
           <PaintBucket className="w-5 h-5 text-secondary/20" />
         </div>
-        <div className="absolute bottom-32 left-32 floating-icon" style={{ animationDelay: '3s' }}>
+        <div className="absolute bottom-32 left-32 floating-icon" style={{
+        animationDelay: '3s'
+      }}>
           <HardHat className="w-7 h-7 text-primary/15" />
         </div>
-        <div className="absolute top-1/2 left-16 floating-icon" style={{ animationDelay: '4s' }}>
+        <div className="absolute top-1/2 left-16 floating-icon" style={{
+        animationDelay: '4s'
+      }}>
           <Ruler className="w-6 h-6 text-accent/15" />
         </div>
-        <div className="absolute top-20 right-16 floating-icon" style={{ animationDelay: '5s' }}>
+        <div className="absolute top-20 right-16 floating-icon" style={{
+        animationDelay: '5s'
+      }}>
           <Drill className="w-5 h-5 text-secondary/15" />
         </div>
         
@@ -294,20 +289,18 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {processSteps.map((step, index) => {
-              const stepIcons = [Phone, Calculator, Hammer, CheckCircle];
-              const StepIcon = stepIcons[index];
-              
-              return (
-                <div key={index} className="text-center relative fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
+            const stepIcons = [Phone, Calculator, Hammer, CheckCircle];
+            const StepIcon = stepIcons[index];
+            return <div key={index} className="text-center relative fade-in" style={{
+              animationDelay: `${index * 0.2}s`
+            }}>
                   {/* Enhanced Connection Line with Arrow */}
-                  {index < processSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-12 left-full w-12 h-0.5 transform translate-x-6">
+                  {index < processSteps.length - 1 && <div className="hidden lg:block absolute top-12 left-full w-12 h-0.5 transform translate-x-6">
                       <div className="w-full h-full bg-gradient-to-r from-primary via-accent to-primary opacity-40 animate-pulse"></div>
                       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1">
                         <div className="w-2 h-2 bg-primary rotate-45 opacity-60"></div>
                       </div>
-                    </div>
-                  )}
+                    </div>}
                   
                   {/* Interactive Step Card */}
                   <div className="card-elevated hover-scale hover-glow magnetic-btn p-6 rounded-xl bg-card/70 backdrop-blur-sm border border-border/50 transition-all duration-300 group">
@@ -326,27 +319,14 @@ const Index = () => {
                     <h3 className="text-xl font-semibold mb-3 gradient-text group-hover:scale-105 transition-transform duration-300">{step.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
           
-          <div className="mt-20 text-center fade-in" style={{ animationDelay: '1s' }}>
-            <div className="card-elevated bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm rounded-xl p-10 border border-border/50 shadow-lg max-w-3xl mx-auto hover-glow">
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mr-4">
-                  <Star className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold gradient-text">Ready to Get Started?</h3>
-              </div>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Transform your space with our proven process. Let's start with a <span className="accent-text">free consultation</span> to discuss your vision.
-              </p>
-              <Button size="lg" className="magnetic-btn bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                <Phone className="w-5 h-5 mr-2" />
-                Get Your Free Consultation
-              </Button>
-            </div>
+          <div className="mt-20 text-center fade-in" style={{
+          animationDelay: '1s'
+        }}>
+            
           </div>
         </div>
       </section>
@@ -357,10 +337,18 @@ const Index = () => {
       <section className="section-padding py-8 md:py-16 bg-muted/20 relative overflow-hidden">
         {/* Final section enhancements */}
         <div className="absolute inset-0 pattern-dots opacity-20"></div>
-        <Home className="floating-icon w-8 h-8 top-12 left-24 animate-float" style={{ animationDelay: '0.5s' }} />
-        <Paintbrush className="floating-icon w-6 h-6 bottom-20 left-16 animate-float" style={{ animationDelay: '2.5s' }} />
-        <Droplets className="floating-icon w-7 h-7 top-32 right-28 animate-float" style={{ animationDelay: '1.8s' }} />
-        <Zap className="floating-icon w-5 h-5 bottom-32 right-40 animate-float" style={{ animationDelay: '3.2s' }} />
+        <Home className="floating-icon w-8 h-8 top-12 left-24 animate-float" style={{
+        animationDelay: '0.5s'
+      }} />
+        <Paintbrush className="floating-icon w-6 h-6 bottom-20 left-16 animate-float" style={{
+        animationDelay: '2.5s'
+      }} />
+        <Droplets className="floating-icon w-7 h-7 top-32 right-28 animate-float" style={{
+        animationDelay: '1.8s'
+      }} />
+        <Zap className="floating-icon w-5 h-5 bottom-32 right-40 animate-float" style={{
+        animationDelay: '3.2s'
+      }} />
         
         {/* Large geometric background */}
         <div className="geometric-accent w-[120%] h-64 -bottom-32 -left-20 transform rotate-3"></div>
@@ -392,8 +380,6 @@ const Index = () => {
 
       <Footer />
       <FloatingCTA />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

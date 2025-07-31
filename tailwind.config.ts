@@ -56,13 +56,6 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				'blue-collar': 'hsl(var(--blue-collar))',
-				'primary-light': 'hsl(var(--primary-light))',
-				'accent-blue': 'hsl(var(--accent-blue))',
-				'construction-orange': 'hsl(var(--construction-orange))',
-				'safety-yellow': 'hsl(var(--safety-yellow))',
-				'steel-gray': 'hsl(var(--steel-gray))',
-				'concrete-gray': 'hsl(var(--concrete-gray))',
-				'workshop-brown': 'hsl(var(--workshop-brown))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

@@ -130,12 +130,7 @@ const Services = () => {
               {/* Hero headline with enhanced styling */}
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 md:mb-10 leading-tight text-white drop-shadow-xl">
                 Transform Your Home with
-                <span className="block text-white font-bold px-4 py-2 mx-auto w-fit rounded-lg relative" style={{
-                  background: 'rgba(0, 0, 0, 0.15)',
-                  backdropFilter: 'blur(4px)',
-                  textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 0 15px hsl(var(--primary) / 0.3)',
-                  border: '1px solid rgba(255,255,255,0.1)'
-                }}>
+                <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x">
                   Expert Care
                 </span>
               </h1>

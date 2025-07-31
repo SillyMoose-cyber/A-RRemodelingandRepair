@@ -34,56 +34,56 @@ const Services = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding py-16 md:py-24 bg-gradient-to-br from-background via-secondary/20 to-accent/20 relative overflow-hidden">
-        {/* Background Patterns */}
-        <div className="absolute inset-0 pattern-dots opacity-30"></div>
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-primary/10 to-transparent rounded-full -translate-x-48 -translate-y-48"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-accent/10 to-transparent rounded-full translate-x-48 translate-y-48"></div>
+      <section className="section-padding py-16 md:py-24 bg-gradient-to-br from-background via-secondary/10 to-accent/5 relative overflow-hidden">
+        {/* Subtle Background Patterns */}
+        <div className="absolute inset-0 pattern-dots opacity-10"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-primary/5 via-transparent to-transparent rounded-full -translate-y-1/3 translate-x-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-accent/5 via-transparent to-transparent rounded-full translate-y-1/3 -translate-x-1/3"></div>
         
-        {/* Enhanced Floating Icons */}
+        {/* Clean Floating Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center animate-float shadow-lg">
-            <Wrench className="h-8 w-8 text-primary" />
+          <div className="floating-icon absolute top-20 left-[10%] w-12 h-12 bg-gradient-to-br from-primary/15 to-primary/5 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+            <Wrench className="h-6 w-6 text-primary" />
           </div>
-          <div className="absolute top-32 right-20 w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{
-          animationDelay: '1s'
-        }}>
-            <Bath className="h-6 w-6 text-accent" />
+          <div className="floating-icon absolute top-32 right-[15%] w-10 h-10 bg-gradient-to-br from-accent/15 to-accent/5 rounded-xl flex items-center justify-center backdrop-blur-sm" style={{animationDelay: '1.5s'}}>
+            <Home className="h-5 w-5 text-accent" />
           </div>
-          <div className="absolute bottom-20 left-20 w-14 h-14 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{
-          animationDelay: '2s'
-        }}>
-            <Home className="h-7 w-7 text-primary" />
+          <div className="floating-icon absolute bottom-24 left-[20%] w-8 h-8 bg-gradient-to-br from-secondary/20 to-secondary/5 rounded-lg flex items-center justify-center backdrop-blur-sm" style={{animationDelay: '3s'}}>
+            <Bath className="h-4 w-4 text-primary" />
           </div>
-          <div className="absolute bottom-32 right-10 w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center animate-float shadow-lg" style={{
-          animationDelay: '0.5s'
-        }}>
-            <ChefHat className="h-5 w-5 text-primary" />
-          </div>
-          <div className="absolute top-1/2 left-1/4 w-4 h-4 bg-accent/40 rounded-full animate-pulse"></div>
-          <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary/40 rounded-full animate-pulse" style={{
-          animationDelay: '1.5s'
-        }}></div>
         </div>
         
         <div className="max-container relative z-10">
           <div className="text-center max-w-4xl mx-auto fade-in">
             {/* Trust Badges */}
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              
-              
-              
+              <Badge variant="outline" className="bg-background/80 backdrop-blur-sm border-primary/20 text-primary font-medium px-4 py-2">
+                ⚡ Free Estimates
+              </Badge>
+              <Badge variant="outline" className="bg-background/80 backdrop-blur-sm border-primary/20 text-primary font-medium px-4 py-2">
+                🏆 Licensed & Insured
+              </Badge>
+              <Badge variant="outline" className="bg-background/80 backdrop-blur-sm border-primary/20 text-primary font-medium px-4 py-2">
+                📍 Georgetown Local
+              </Badge>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 gradient-text leading-tight">
-              Professional Home Services You Can Trust
+              Transform Your Home with Expert Care
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
-              From emergency repairs to complete renovations, we deliver exceptional craftsmanship with reliable service. Every project backed by our commitment to quality and customer satisfaction.
+              Quality repairs, stunning remodels, and smart upgrades for Georgetown homeowners. Every project completed with precision, on time, and within budget.
             </p>
             
             {/* Quick Contact */}
-            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="tel:5023707415" className="inline-flex items-center gap-2 text-lg font-semibold text-primary hover:text-primary/80 transition-colors">
+                <Phone className="h-5 w-5" />
+                (502) 370-7415
+              </a>
+              <span className="hidden sm:block text-muted-foreground">•</span>
+              <span className="text-muted-foreground">Call today for your free estimate</span>
+            </div>
           </div>
         </div>
       </section>

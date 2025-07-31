@@ -130,7 +130,16 @@ const Services = () => {
               {/* Hero headline with enhanced styling */}
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 md:mb-10 leading-tight text-white drop-shadow-xl">
                 Transform Your Home with
-                <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x">
+                <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x shadow-2xl" style={{
+                  textShadow: '0 0 20px hsl(var(--primary) / 0.4), 0 4px 8px rgba(0,0,0,0.3)',
+                  WebkitTextStroke: '1px hsl(var(--primary) / 0.1)',
+                  background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)))',
+                  backgroundClip: 'text',
+                  padding: '0.2rem 0.5rem',
+                  backdropFilter: 'blur(2px)',
+                  borderRadius: '0.5rem',
+                  position: 'relative'
+                }}>
                   Expert Care
                 </span>
               </h1>

@@ -87,9 +87,9 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding py-12 md:py-20 relative overflow-hidden">
-        {/* Clean gradient background */}
-        <div className="absolute inset-0" style={{ background: 'var(--gradient-hero)' }}></div>
+      <section className="section-padding py-12 md:py-20 relative overflow-hidden section-accent">
+        {/* Enhanced gradient background */}
+        <div className="absolute inset-0 pattern-warm-dots" style={{ background: 'var(--gradient-hero)' }}></div>
         
         <div className="max-container relative z-10">
           <div className="text-center max-w-4xl mx-auto">
@@ -132,30 +132,30 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding py-12 md:py-16 bg-muted/30">
+      <section className="section-padding py-12 md:py-16" style={{ background: 'var(--gradient-section-alt)' }}>
         <div className="max-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="group">
-              <div className="card-subtle rounded-xl p-6 hover:shadow-md transition-all duration-300">
-                <div className="stats-counter mb-2 text-primary">15+</div>
+              <div className="card-warm rounded-xl p-6 transition-all duration-300">
+                <div className="stats-counter mb-2">15+</div>
                 <p className="text-foreground font-medium">Years Experience</p>
               </div>
             </div>
             <div className="group">
-              <div className="card-subtle rounded-xl p-6 hover:shadow-md transition-all duration-300">
-                <div className="stats-counter mb-2 text-primary">500+</div>
+              <div className="card-warm rounded-xl p-6 transition-all duration-300">
+                <div className="stats-counter mb-2">500+</div>
                 <p className="text-foreground font-medium">Projects Completed</p>
               </div>
             </div>
             <div className="group">
-              <div className="card-subtle rounded-xl p-6 hover:shadow-md transition-all duration-300">
-                <div className="stats-counter mb-2 text-primary">98%</div>
+              <div className="card-warm rounded-xl p-6 transition-all duration-300">
+                <div className="stats-counter mb-2">98%</div>
                 <p className="text-foreground font-medium">Customer Satisfaction</p>
               </div>
             </div>
             <div className="group">
-              <div className="card-subtle rounded-xl p-6 hover:shadow-md transition-all duration-300">
-                <div className="stats-counter mb-2 text-primary">24hr</div>
+              <div className="card-warm rounded-xl p-6 transition-all duration-300">
+                <div className="stats-counter mb-2">24hr</div>
                 <p className="text-foreground font-medium">Response Time</p>
               </div>
             </div>
@@ -175,7 +175,7 @@ const Index = () => {
       <Separator className="my-8" />
 
       {/* Value Proposition */}
-      <section className="section-padding py-12 md:py-20 bg-muted/20">
+      <section className="section-padding py-12 md:py-20 bg-muted/20 pattern-dots">
         <div className="max-container">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
@@ -190,10 +190,11 @@ const Index = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                 <Card key={index} className="text-center h-full card-elevated hover:shadow-lg transition-all duration-300 group">
+                 <Card key={index} className="text-center h-full card-feature transition-all duration-300 group">
                   <CardContent className="p-4 sm:p-6">
-                    <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <IconComponent className="h-7 w-7 text-primary" />
+                    <div className="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center relative overflow-hidden" 
+                         style={{ background: 'var(--gradient-warm)' }}>
+                      <IconComponent className="h-7 w-7 text-white relative z-10" />
                     </div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-3">{feature.title}</h3>
                     <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
@@ -204,7 +205,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-8 md:mt-12">
-            <div className="callout-box max-w-2xl mx-auto">
+            <div className="callout-box accent-border max-w-2xl mx-auto">
               <p className="text-lg font-medium text-foreground mb-2">
                 When you hire A&R, you're not just checking a box.
               </p>
@@ -219,8 +220,8 @@ const Index = () => {
       <Separator className="my-8" />
 
       {/* Process Section */}
-      <section className="section-padding py-10 md:py-16">
-        <div className="max-container">
+      <section className="section-padding py-10 md:py-16 section-accent" style={{ background: 'var(--gradient-section-alt)' }}>
+        <div className="max-container relative z-10">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Process</h2>
             <p className="text-xl text-muted-foreground">
@@ -230,15 +231,17 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {processSteps.map((step, index) => (
-              <div key={index} className="text-center relative group">
-                {/* Connection Line */}
+              <div key={index} className="text-center relative group process-step-enhanced">
+                {/* Enhanced Connection Line */}
                 {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-6 h-0.5 transform translate-x-4 bg-border"></div>
+                  <div className="hidden lg:block absolute top-8 left-full w-6 h-0.5 transform translate-x-4 bg-gradient-to-r from-primary to-accent-warm"></div>
                 )}
                 
-                <div className="relative">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold">
-                    {step.number}
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center text-white text-xl font-bold relative overflow-hidden"
+                       style={{ background: 'var(--gradient-primary)' }}>
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/10"></div>
+                    <span className="relative z-10">{step.number}</span>
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{step.description}</p>
@@ -248,7 +251,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-8 md:mt-12">
-            <div className="callout-box max-w-2xl mx-auto">
+            <div className="callout-box accent-border max-w-2xl mx-auto">
               <p className="text-lg font-medium">
                 That's it. No overcomplicated steps. Just solid work from start to finish.
               </p>
@@ -260,7 +263,7 @@ const Index = () => {
       <Separator className="my-8" />
 
       {/* Service Highlights */}
-      <section className="section-padding py-12 md:py-16 bg-muted/20">
+      <section className="section-padding py-12 md:py-16 bg-muted/20 pattern-grid">
         <div className="max-container">
           <div className="text-center mb-8 md:mb-12">
             <div className="max-w-4xl mx-auto">
@@ -268,7 +271,8 @@ const Index = () => {
                 From leaky faucets to radiant floor systems, no job is too big or too small. We show up when we say we will, do the work right the first time, and leave your space cleaner than we found it. That's why so many of our customers call us back — and send their friends our way.
               </p>
               
-              <div className="card-elevated rounded-2xl p-6 md:p-8 text-center">
+              <div className="card-warm rounded-2xl p-6 md:p-8 text-center relative overflow-hidden">
+                <div className="geometric-accent top-0 left-0 w-full h-2"></div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 gradient-text">
                   Ready to upgrade your space or fix what's broken?
                 </h3>
@@ -276,7 +280,7 @@ const Index = () => {
                   <p className="text-xl md:text-2xl font-bold">
                     📞 Call <a href="tel:5023707415" className="accent-text hover:underline transition-colors">(502) 370-7415</a>
                   </p>
-                  <div className="trust-badge">
+                  <div className="trust-badge magnetic-btn">
                     ⚡ Fast, reliable help guaranteed
                   </div>
                 </div>

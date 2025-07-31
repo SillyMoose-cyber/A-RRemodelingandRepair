@@ -88,10 +88,10 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="section-padding py-12 md:py-20 relative overflow-hidden">
-        {/* Multi-layer Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/15"></div>
-        <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-accent/8"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%),radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.12),transparent_50%)]"></div>
+        {/* Rich Multi-layer Background */}
+        <div className="absolute inset-0" style={{ background: 'var(--gradient-hero)' }}></div>
+        <div className="absolute inset-0 bg-gradient-radial from-primary/12 via-transparent to-accent/15"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--warm-orange)/0.2),transparent_50%),radial-gradient(circle_at_70%_80%,hsl(var(--cool-teal)/0.18),transparent_50%)]"></div>
         
         {/* Animated Background Shapes */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-xl animate-float"></div>
@@ -149,8 +149,8 @@ const Index = () => {
 
       {/* Stats Section */}
       <section className="section-padding py-12 md:py-16 relative overflow-hidden">
-        {/* Clean, Elegant Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-background to-accent/4"></div>
+        {/* Rich Section Background */}
+        <div className="absolute inset-0" style={{ background: 'var(--gradient-section-1)' }}></div>
         
         {/* Subtle Floating Elements */}
         <div className="absolute top-0 left-1/4 w-32 h-32 bg-gradient-to-br from-primary/8 to-transparent rounded-full blur-2xl animate-float"></div>
@@ -159,40 +159,40 @@ const Index = () => {
         <div className="max-container relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="fade-in group">
-              <div className="relative bg-card rounded-xl p-6 border border-border hover:border-primary/40 transition-all duration-300 hover-scale">
+              <div className="relative card-tinted rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover-scale shadow-lg">
                 <div className="stats-counter mb-2 text-primary">15+</div>
-                <p className="text-muted-foreground font-medium">Years Experience</p>
+                <p className="text-foreground font-medium">Years Experience</p>
               </div>
             </div>
             <div className="fade-in group" style={{ animationDelay: '0.1s' }}>
-              <div className="relative bg-card rounded-xl p-6 border border-border hover:border-accent/40 transition-all duration-300 hover-scale">
-                <div className="stats-counter mb-2 text-accent">500+</div>
-                <p className="text-muted-foreground font-medium">Projects Completed</p>
+              <div className="relative card-warm rounded-xl p-6 hover:border-orange-400/50 transition-all duration-300 hover-scale shadow-lg">
+                <div className="stats-counter mb-2" style={{ color: 'hsl(var(--warm-orange))' }}>500+</div>
+                <p className="text-foreground font-medium">Projects Completed</p>
               </div>
             </div>
             <div className="fade-in group" style={{ animationDelay: '0.2s' }}>
-              <div className="relative bg-card rounded-xl p-6 border border-border hover:border-primary/40 transition-all duration-300 hover-scale">
-                <div className="stats-counter mb-2 text-primary">98%</div>
-                <p className="text-muted-foreground font-medium">Customer Satisfaction</p>
+              <div className="relative card-cool rounded-xl p-6 hover:border-teal-400/50 transition-all duration-300 hover-scale shadow-lg">
+                <div className="stats-counter mb-2" style={{ color: 'hsl(var(--cool-teal))' }}>98%</div>
+                <p className="text-foreground font-medium">Customer Satisfaction</p>
               </div>
             </div>
             <div className="fade-in group" style={{ animationDelay: '0.3s' }}>
-              <div className="relative bg-card rounded-xl p-6 border border-border hover:border-accent/40 transition-all duration-300 hover-scale">
-                <div className="stats-counter mb-2 text-accent">24hr</div>
-                <p className="text-muted-foreground font-medium">Response Time</p>
+              <div className="relative card-tinted rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover-scale shadow-lg">
+                <div className="stats-counter mb-2 text-primary">24hr</div>
+                <p className="text-foreground font-medium">Response Time</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Decorative Separator */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+      {/* Rich Decorative Separator */}
+      <div className="w-full h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
 
       {/* Customer Reviews */}
       <section className="py-16 relative overflow-hidden">
-        {/* Sophisticated Minimal Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-muted/30 via-background to-primary/5"></div>
+        {/* Rich Reviews Background */}
+        <div className="absolute inset-0" style={{ background: 'var(--gradient-section-2)' }}></div>
         
         {/* Subtle Quote Accents */}
         <div className="absolute top-10 left-10 text-4xl text-primary/20 font-serif">"</div>
@@ -206,13 +206,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Decorative Separator */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+      {/* Rich Decorative Separator */}
+      <div className="w-full h-1 bg-gradient-to-r from-transparent via-cool-teal/40 to-transparent"></div>
 
       {/* Value Proposition */}
       <section className="section-padding py-12 md:py-20 relative overflow-hidden">
-        {/* Clean, Professional Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/3 to-accent/4"></div>
+        {/* Rich Value Proposition Background */}
+        <div className="absolute inset-0" style={{ background: 'var(--gradient-section-3)' }}></div>
         
         {/* Elegant Geometric Accent */}
         <div className="absolute top-10 right-10 w-24 h-24 bg-gradient-to-br from-primary/10 to-accent/8 rounded-lg rotate-12"></div>
@@ -232,10 +232,10 @@ const Index = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                 <Card key={index} className="text-center h-full hover-scale transition-all duration-300 group bg-card border-border hover:border-primary/30 hover:shadow-lg">
+                 <Card key={index} className="text-center h-full hover-scale transition-all duration-300 group card-tinted hover:border-primary/40 hover:shadow-xl">
                   <CardContent className="p-4 sm:p-6 relative">
-                    <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-primary/15 to-accent/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300">
-                      <IconComponent className="h-7 w-7 text-primary" />
+                    <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-primary/25 to-accent/15 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg">
+                      <IconComponent className="h-7 w-7 text-primary drop-shadow-sm" />
                     </div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
                     <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
@@ -258,13 +258,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Decorative Separator */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+      {/* Rich Decorative Separator */}
+      <div className="w-full h-1 bg-gradient-to-r from-transparent via-warm-purple/40 to-transparent"></div>
 
       {/* Process Section */}
       <section className="section-padding py-10 md:py-16 relative overflow-hidden">
-        {/* Clean Professional Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-muted/20 via-background to-primary/4"></div>
+        {/* Rich Process Background */}
+        <div className="absolute inset-0" style={{ background: 'var(--gradient-vibrant)' }}></div>
         
         {/* Subtle Accent Shape */}
         <div className="absolute top-0 right-1/4 w-32 h-32 bg-gradient-to-br from-primary/8 to-transparent rounded-full blur-xl"></div>
@@ -299,20 +299,20 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-8 md:mt-12">
-            <p className="text-lg text-blue-collar font-bold bg-card rounded-lg p-4 border border-border">
+            <p className="text-lg text-blue-collar font-bold card-warm rounded-lg p-4 shadow-lg">
               That's it. No overcomplicated steps. Just solid work from start to finish.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Decorative Separator */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+      {/* Rich Decorative Separator */}
+      <div className="w-full h-1 bg-gradient-to-r from-transparent via-vibrant-pink/40 to-transparent"></div>
 
       {/* Service Highlights */}
       <section className="section-padding py-12 md:py-16 relative overflow-hidden">
-        {/* Sophisticated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/8 via-background to-primary/10"></div>
+        {/* Rich Service Background */}
+        <div className="absolute inset-0" style={{ background: 'var(--gradient-warm)' }}></div>
         
         {/* Elegant Accent Elements */}
         <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-2xl"></div>
@@ -326,7 +326,7 @@ const Index = () => {
               </p>
               
               <div className="relative group">
-                <div className="bg-card rounded-2xl p-6 md:p-8 border border-border hover:border-primary/30 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <div className="card-cool rounded-2xl p-6 md:p-8 hover:border-primary/40 transition-all duration-300 shadow-xl hover:shadow-2xl">
                   <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 gradient-text">
                     Ready to upgrade your space or fix what's broken?
                   </h3>

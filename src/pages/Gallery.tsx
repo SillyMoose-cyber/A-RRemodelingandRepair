@@ -6,28 +6,64 @@ import { Card, CardContent } from "@/components/ui/card";
 const Gallery = () => {
 const projects = [
     { 
-      title: "Luxury Master Bathroom Renovation", 
-      category: "Complete Renovation",
-      image: "/lovable-uploads/014db96e-63d3-495c-9c6e-6cad27f31762.png",
-      description: "Modern design with custom tile work, premium fixtures, and elegant finishes"
+      title: "Modern Subway Tile Shower", 
+      category: "Custom Installation",
+      image: "/lovable-uploads/bathroom-renovation-1.png",
+      description: "Classic subway tile installation with premium fixtures and modern design"
     },
     { 
-      title: "Premium Shower & Vanity Installation", 
-      category: "Custom Installation",
-      image: "/lovable-uploads/51066e8a-25f9-4e5d-a745-c036c9b49414.png",
-      description: "Walk-in shower with detailed tile work and high-end vanity installation"
+      title: "Luxury Master Bathroom Renovation", 
+      category: "Complete Renovation",
+      image: "/lovable-uploads/bathroom-renovation-2.png",
+      description: "Complete transformation with marble countertops and elegant finishes"
+    },
+    { 
+      title: "Walk-In Shower Design", 
+      category: "Shower Renovation",
+      image: "/lovable-uploads/bathroom-renovation-3.png",
+      description: "Spacious walk-in shower with detailed tile work and glass enclosure"
+    },
+    { 
+      title: "Custom Vanity Installation", 
+      category: "Vanity Installation",
+      image: "/lovable-uploads/bathroom-renovation-4.png",
+      description: "High-end vanity with marble countertop and modern hardware"
+    },
+    { 
+      title: "Tile & Stonework Project", 
+      category: "Tile & Stonework",
+      image: "/lovable-uploads/bathroom-renovation-5.png",
+      description: "Precision tile installation with natural stone accents"
     },
     { 
       title: "Contemporary Guest Bathroom", 
       category: "Complete Renovation",
-      image: "/lovable-uploads/619eead7-6c32-40f4-a829-969fd6f76959.png",
-      description: "Full transformation featuring modern fixtures and quality materials"
+      image: "/lovable-uploads/bathroom-renovation-6.png",
+      description: "Full guest bathroom renovation with modern fixtures and quality materials"
     },
     { 
-      title: "Custom Tile & Flooring Project", 
-      category: "Tile & Flooring",
-      image: "/lovable-uploads/ec188d80-7ea4-48ec-9b98-df53123b7f29.png",
-      description: "Precision tile installation with luxury vinyl plank flooring"
+      title: "Premium Shower & Niche Work", 
+      category: "Custom Installation",
+      image: "/lovable-uploads/bathroom-renovation-7.png",
+      description: "Custom shower installation with built-in niche and premium tile work"
+    },
+    { 
+      title: "Elegant Bathroom Transformation", 
+      category: "Complete Renovation",
+      image: "/lovable-uploads/bathroom-renovation-8.png",
+      description: "Full bathroom transformation featuring elegant design and quality craftsmanship"
+    },
+    { 
+      title: "Custom Tile Pattern Work", 
+      category: "Tile & Stonework",
+      image: "/lovable-uploads/bathroom-renovation-9.png",
+      description: "Intricate tile pattern installation with attention to detail and precision"
+    },
+    { 
+      title: "Luxury Bathroom Renovation", 
+      category: "Complete Renovation",
+      image: "/lovable-uploads/bathroom-renovation-10.png",
+      description: "High-end bathroom renovation with premium materials and expert installation"
     },
   ];
 
@@ -52,7 +88,7 @@ const projects = [
       {/* Gallery Grid */}
       <section className="section-padding py-16">
         <div className="max-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="overflow-hidden group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="aspect-[4/3] overflow-hidden">

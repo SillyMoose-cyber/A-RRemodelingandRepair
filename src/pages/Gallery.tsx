@@ -4,30 +4,30 @@ import FloatingCTA from "@/components/FloatingCTA";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Gallery = () => {
-  const bathroomProjects = [
+const projects = [
     { 
-      title: "Modern Master Bathroom Remodel", 
+      title: "Modern Complete Renovation", 
       category: "Complete Renovation",
       image: "/lovable-uploads/014db96e-63d3-495c-9c6e-6cad27f31762.png",
-      description: "Custom tile work with subway tile and accent mosaic details"
+      description: "Expert craftsmanship with custom tile work and premium finishes"
     },
     { 
-      title: "Luxury Shower Installation", 
-      category: "Shower Renovation",
+      title: "Premium Installation Project", 
+      category: "Custom Installation",
       image: "/lovable-uploads/51066e8a-25f9-4e5d-a745-c036c9b49414.png",
-      description: "Walk-in shower with premium tile and fixtures"
+      description: "High-end fixtures and detailed tile work with professional installation"
     },
     { 
-      title: "Contemporary Bathroom Transformation", 
+      title: "Contemporary Space Transformation", 
       category: "Complete Renovation",
       image: "/lovable-uploads/619eead7-6c32-40f4-a829-969fd6f76959.png",
-      description: "Modern vanity installation with granite countertops"
+      description: "Modern design with quality materials and expert installation"
     },
     { 
-      title: "Custom Tile Work & Flooring", 
-      category: "Tile Installation",
+      title: "Custom Tile & Flooring Work", 
+      category: "Tile & Flooring",
       image: "/lovable-uploads/ec188d80-7ea4-48ec-9b98-df53123b7f29.png",
-      description: "Luxury vinyl plank flooring with detailed tile work"
+      description: "Precision tile installation with quality flooring solutions"
     },
   ];
 
@@ -40,10 +40,10 @@ const Gallery = () => {
         <div className="max-container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Bathroom Renovations & Tile Work
+              Our Work Gallery
             </h1>
             <p className="text-xl text-muted-foreground">
-              Real bathroom transformations from across Central Kentucky. From custom tile installations to complete renovations, see the quality craftsmanship that sets A&R apart.
+              Real transformations from across Central Kentucky. From custom installations to complete renovations, see the quality craftsmanship and attention to detail that sets A&R apart.
             </p>
           </div>
         </div>
@@ -53,7 +53,7 @@ const Gallery = () => {
       <section className="section-padding py-16">
         <div className="max-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {bathroomProjects.map((project, index) => (
+            {projects.map((project, index) => (
               <Card key={index} className="overflow-hidden group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img 
@@ -81,9 +81,9 @@ const Gallery = () => {
       <section className="section-padding py-16 bg-primary/5">
         <div className="max-container">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Bathroom?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Space?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              From custom tile work to complete renovations, let's bring your bathroom vision to life with the same attention to detail you see here.
+              From custom installations to complete renovations, let's bring your vision to life with the same attention to detail and quality craftsmanship you see here.
             </p>
             <a 
               href="tel:5023707415"

@@ -6,28 +6,28 @@ import { Card, CardContent } from "@/components/ui/card";
 const Gallery = () => {
 const projects = [
     { 
-      title: "Modern Complete Renovation", 
+      title: "Luxury Master Bathroom Renovation", 
       category: "Complete Renovation",
       image: "/lovable-uploads/014db96e-63d3-495c-9c6e-6cad27f31762.png",
-      description: "Expert craftsmanship with custom tile work and premium finishes"
+      description: "Modern design with custom tile work, premium fixtures, and elegant finishes"
     },
     { 
-      title: "Premium Installation Project", 
+      title: "Premium Shower & Vanity Installation", 
       category: "Custom Installation",
       image: "/lovable-uploads/51066e8a-25f9-4e5d-a745-c036c9b49414.png",
-      description: "High-end fixtures and detailed tile work with professional installation"
+      description: "Walk-in shower with detailed tile work and high-end vanity installation"
     },
     { 
-      title: "Contemporary Space Transformation", 
+      title: "Contemporary Guest Bathroom", 
       category: "Complete Renovation",
       image: "/lovable-uploads/619eead7-6c32-40f4-a829-969fd6f76959.png",
-      description: "Modern design with quality materials and expert installation"
+      description: "Full transformation featuring modern fixtures and quality materials"
     },
     { 
-      title: "Custom Tile & Flooring Work", 
+      title: "Custom Tile & Flooring Project", 
       category: "Tile & Flooring",
       image: "/lovable-uploads/ec188d80-7ea4-48ec-9b98-df53123b7f29.png",
-      description: "Precision tile installation with quality flooring solutions"
+      description: "Precision tile installation with luxury vinyl plank flooring"
     },
   ];
 

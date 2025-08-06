@@ -4,17 +4,31 @@ import FloatingCTA from "@/components/FloatingCTA";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Gallery = () => {
-  // Placeholder data - will be replaced with actual photos later
-  const placeholderProjects = [
-    { title: "Kitchen Remodel", category: "Kitchen" },
-    { title: "Bathroom Renovation", category: "Bathroom" },
-    { title: "Deck Construction", category: "Outdoor" },
-    { title: "Tile Installation", category: "Flooring" },
-    { title: "Plumbing Upgrade", category: "Plumbing" },
-    { title: "Basement Remodel", category: "Interior" },
-    { title: "Patio Build", category: "Outdoor" },
-    { title: "Vanity Installation", category: "Bathroom" },
-    { title: "Cabinet Installation", category: "Kitchen" },
+  const bathroomProjects = [
+    { 
+      title: "Modern Master Bathroom Remodel", 
+      category: "Complete Renovation",
+      image: "/lovable-uploads/014db96e-63d3-495c-9c6e-6cad27f31762.png",
+      description: "Custom tile work with subway tile and accent mosaic details"
+    },
+    { 
+      title: "Luxury Shower Installation", 
+      category: "Shower Renovation",
+      image: "/lovable-uploads/51066e8a-25f9-4e5d-a745-c036c9b49414.png",
+      description: "Walk-in shower with premium tile and fixtures"
+    },
+    { 
+      title: "Contemporary Bathroom Transformation", 
+      category: "Complete Renovation",
+      image: "/lovable-uploads/619eead7-6c32-40f4-a829-969fd6f76959.png",
+      description: "Modern vanity installation with granite countertops"
+    },
+    { 
+      title: "Custom Tile Work & Flooring", 
+      category: "Tile Installation",
+      image: "/lovable-uploads/ec188d80-7ea4-48ec-9b98-df53123b7f29.png",
+      description: "Luxury vinyl plank flooring with detailed tile work"
+    },
   ];
 
   return (
@@ -26,10 +40,10 @@ const Gallery = () => {
         <div className="max-container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              See Our Work in Action
+              Bathroom Renovations & Tile Work
             </h1>
             <p className="text-xl text-muted-foreground">
-              Real projects from real customers across Central Kentucky. From quick fixes to complete transformations, here's what quality craftsmanship looks like.
+              Real bathroom transformations from across Central Kentucky. From custom tile installations to complete renovations, see the quality craftsmanship that sets A&R apart.
             </p>
           </div>
         </div>
@@ -38,20 +52,24 @@ const Gallery = () => {
       {/* Gallery Grid */}
       <section className="section-padding py-16">
         <div className="max-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {placeholderProjects.map((project, index) => (
-              <Card key={index} className="overflow-hidden group hover:shadow-lg transition-shadow">
-                <div className="aspect-square bg-gradient-to-br from-muted to-muted/60 flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <span className="text-2xl">📸</span>
-                    </div>
-                    <p className="text-sm">Photo Coming Soon</p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {bathroomProjects.map((project, index) => (
+              <Card key={index} className="overflow-hidden group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <CardContent className="p-4">
-                  <h3 className="font-semibold mb-1">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground">{project.category}</p>
+                <CardContent className="p-6">
+                  <div className="mb-2">
+                    <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
+                      {project.category}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-lg mb-2">{project.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -63,9 +81,9 @@ const Gallery = () => {
       <section className="section-padding py-16 bg-primary/5">
         <div className="max-container">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Bathroom?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Let's discuss your vision and create something amazing together.
+              From custom tile work to complete renovations, let's bring your bathroom vision to life with the same attention to detail you see here.
             </p>
             <a 
               href="tel:5023707415"

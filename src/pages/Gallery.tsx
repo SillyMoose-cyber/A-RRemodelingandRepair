@@ -42,12 +42,6 @@ const projects = [
       description: "Precision tile installation with mosaic accent strip and professional craftsmanship"
     },
     { 
-      title: "Natural Stone Shower Design", 
-      category: "Tile & Stonework",
-      image: "/lovable-uploads/f960e028-48c4-4d43-a179-c358e56e14b3f.png",
-      description: "Elegant natural stone shower with built-in bench and glass enclosure"
-    },
-    { 
       title: "Luxury Marble Shower Installation", 
       category: "Custom Installation",
       image: "/lovable-uploads/258ff2f5-2dff-45ce-9482-eb613116c011.png",

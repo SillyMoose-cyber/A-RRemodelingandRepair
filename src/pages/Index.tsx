@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { CheckCircle, Clock, DollarSign, Shield, Users, Home, Phone, ArrowRight, Award, Hammer, Zap, Droplets, Paintbrush, Star, Calendar, TrendingUp, Calculator, Wrench, PaintBucket, HardHat, Ruler, Drill } from "lucide-react";
+import { CheckCircle, Clock, DollarSign, Shield, Users, Home, Phone, ArrowRight, Award, Hammer, Zap, Droplets, Paintbrush, Star, Calendar, TrendingUp, Calculator, Wrench, PaintBucket, HardHat, Ruler, Drill, Eye } from "lucide-react";
 const Index = () => {
   const features = [{
     icon: Clock,
@@ -119,6 +119,12 @@ const Index = () => {
                   <a href="/services">
                     View Services
                     <ArrowRight className="h-5 w-5 ml-2" />
+                  </a>
+                </Button>
+                <Button variant="secondary" size="lg" className="text-lg px-8 magnetic-btn" asChild>
+                  <a href="/gallery">
+                    <Eye className="h-5 w-5 mr-2" />
+                    View Our Work
                   </a>
                 </Button>
               </div>

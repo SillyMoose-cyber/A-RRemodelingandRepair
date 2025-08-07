@@ -6,64 +6,64 @@ import { Card, CardContent } from "@/components/ui/card";
 const Gallery = () => {
 const projects = [
     { 
-      title: "Modern Subway Tile Shower", 
-      category: "Custom Installation",
-      image: "/lovable-uploads/bathroom-renovation-1.png",
-      description: "Classic subway tile installation with premium fixtures and modern design"
-    },
-    { 
-      title: "Luxury Master Bathroom Renovation", 
-      category: "Complete Renovation",
-      image: "/lovable-uploads/bathroom-renovation-2.png",
-      description: "Complete transformation with marble countertops and elegant finishes"
-    },
-    { 
-      title: "Walk-In Shower Design", 
-      category: "Shower Renovation",
-      image: "/lovable-uploads/bathroom-renovation-3.png",
-      description: "Spacious walk-in shower with detailed tile work and glass enclosure"
-    },
-    { 
-      title: "Custom Vanity Installation", 
-      category: "Vanity Installation",
-      image: "/lovable-uploads/bathroom-renovation-4.png",
-      description: "High-end vanity with marble countertop and modern hardware"
-    },
-    { 
-      title: "Tile & Stonework Project", 
-      category: "Tile & Stonework",
-      image: "/lovable-uploads/bathroom-renovation-5.png",
-      description: "Precision tile installation with natural stone accents"
-    },
-    { 
       title: "Contemporary Guest Bathroom", 
       category: "Complete Renovation",
-      image: "/lovable-uploads/bathroom-renovation-6.png",
-      description: "Full guest bathroom renovation with modern fixtures and quality materials"
+      image: "/lovable-uploads/998d145d-9c71-4869-bb02-6bd3e0fb45fa.png",
+      description: "Full guest bathroom with glass shower door, white cabinetry, and quality fixtures"
     },
     { 
-      title: "Premium Shower & Niche Work", 
-      category: "Custom Installation",
-      image: "/lovable-uploads/bathroom-renovation-7.png",
-      description: "Custom shower installation with built-in niche and premium tile work"
-    },
-    { 
-      title: "Elegant Bathroom Transformation", 
-      category: "Complete Renovation",
-      image: "/lovable-uploads/bathroom-renovation-8.png",
-      description: "Full bathroom transformation featuring elegant design and quality craftsmanship"
-    },
-    { 
-      title: "Custom Tile Pattern Work", 
+      title: "Modern Subway Tile Installation", 
       category: "Tile & Stonework",
-      image: "/lovable-uploads/bathroom-renovation-9.png",
-      description: "Intricate tile pattern installation with attention to detail and precision"
+      image: "/lovable-uploads/1a06ec64-ad8f-45bb-a135-eb62900e7462.png",
+      description: "Classic subway tile work in progress with premium materials and precise installation"
     },
     { 
-      title: "Luxury Bathroom Renovation", 
+      title: "Custom Vanity with Granite Top", 
+      category: "Vanity Installation",
+      image: "/lovable-uploads/896a4458-dada-4136-aeeb-b02c394fb2e9.png",
+      description: "White vanity with beautiful granite countertop, modern fixtures, and luxury vinyl flooring"
+    },
+    { 
+      title: "Complete Bathroom Transformation", 
       category: "Complete Renovation",
-      image: "/lovable-uploads/bathroom-renovation-10.png",
-      description: "High-end bathroom renovation with premium materials and expert installation"
+      image: "/lovable-uploads/4f423b3a-38bb-4e6a-9d40-e9e0edf9cb3f.png",
+      description: "Before and after showcase of complete bathroom renovation with subway tile and custom features"
+    },
+    { 
+      title: "Walk-In Shower with Built-In Niche", 
+      category: "Shower Renovation",
+      image: "/lovable-uploads/3595e3e9-86e2-4e9b-a983-c801e6a4a44d.png",
+      description: "Spacious walk-in shower featuring glass enclosure, built-in storage niche, and modern fixtures"
+    },
+    { 
+      title: "Detailed Shower Tile Work", 
+      category: "Custom Installation",
+      image: "/lovable-uploads/03500558-780a-4ed0-a6be-78c674e822a8.png",
+      description: "Precision tile installation with mosaic accent strip and professional craftsmanship"
+    },
+    { 
+      title: "Natural Stone Shower Design", 
+      category: "Tile & Stonework",
+      image: "/lovable-uploads/f960e028-48c4-4d43-a179-c358e56e14b3f.png",
+      description: "Elegant natural stone shower with built-in bench and glass enclosure"
+    },
+    { 
+      title: "Luxury Marble Shower Installation", 
+      category: "Custom Installation",
+      image: "/lovable-uploads/258ff2f5-2dff-45ce-9482-eb613116c011.png",
+      description: "High-end marble tile shower with mosaic floor and professional installation"
+    },
+    { 
+      title: "White Subway Tile with Storage Niches", 
+      category: "Shower Renovation",
+      image: "/lovable-uploads/702348a6-f200-48e6-a65f-f085d93445c5.png",
+      description: "Clean white subway tile installation with multiple built-in storage niches"
+    },
+    { 
+      title: "Custom Glass Shower Enclosure", 
+      category: "Complete Renovation",
+      image: "/lovable-uploads/08042d26-02c6-4685-b3e0-f6878b817247.png",
+      description: "Modern bathroom with custom glass shower enclosure and quality materials throughout"
     },
   ];
 

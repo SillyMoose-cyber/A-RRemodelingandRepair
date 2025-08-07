@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Link } from "react-router-dom";
 import { CheckCircle, Clock, DollarSign, Shield, Users, Home, Phone, ArrowRight, Award, Hammer, Zap, Droplets, Paintbrush, Star, Calendar, TrendingUp, Calculator, Wrench, PaintBucket, HardHat, Ruler, Drill, Eye } from "lucide-react";
 const Index = () => {
   const features = [{
@@ -117,17 +118,17 @@ const Index = () => {
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" className="text-lg px-8 magnetic-btn" asChild>
-                    <a href="/services">
+                    <Link to="/services">
                       View Services
                       <ArrowRight className="h-5 w-5 ml-2" />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
                 <Button variant="secondary" size="lg" className="text-lg px-8 magnetic-btn" asChild>
-                  <a href="/gallery">
+                  <Link to="/gallery">
                     <Eye className="h-5 w-5 mr-2" />
                     View Our Work
-                  </a>
+                  </Link>
                 </Button>
               </div>
           </div>

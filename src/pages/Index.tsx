@@ -108,19 +108,21 @@ const Index = () => {
                 At A&R Remodeling & Repair, we specialize in turning houses into homes — whether you need a quick plumbing fix or a full kitchen remodel. Based in Georgetown, Kentucky, we proudly serve homeowners across Central KY with dependable service, honest pricing, and craftsmanship that speaks for itself.
               </p>
             </div>
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-                <Button size="lg" className="text-lg px-8 magnetic-btn hover-glow" asChild>
-                  <a href="tel:5023707415">
-                    <Phone className="h-5 w-5 mr-2" />
-                    Call (502) 370-7415
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 magnetic-btn" asChild>
-                  <a href="/services">
-                    View Services
-                    <ArrowRight className="h-5 w-5 ml-2" />
-                  </a>
-                </Button>
+              <div className="flex flex-col gap-6 justify-center items-center">
+                <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
+                  <Button size="lg" className="text-lg px-8 magnetic-btn hover-glow" asChild>
+                    <a href="tel:5023707415">
+                      <Phone className="h-5 w-5 mr-2" />
+                      Call (502) 370-7415
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" className="text-lg px-8 magnetic-btn" asChild>
+                    <a href="/services">
+                      View Services
+                      <ArrowRight className="h-5 w-5 ml-2" />
+                    </a>
+                  </Button>
+                </div>
                 <Button variant="secondary" size="lg" className="text-lg px-8 magnetic-btn" asChild>
                   <a href="/gallery">
                     <Eye className="h-5 w-5 mr-2" />
